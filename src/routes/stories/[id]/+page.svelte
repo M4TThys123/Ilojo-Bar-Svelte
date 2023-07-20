@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { PageData } from './$types';
 	import gsap from 'gsap';
-	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+	// import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 	import { onMount } from 'svelte';
 	export let data: PageData;
 

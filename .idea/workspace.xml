@@ -61,6 +61,7 @@
       <option name="presentableId" value="Default" />
       <updated>1686567920088</updated>
       <workItem from="1686567923502" duration="3333000" />
+      <workItem from="1689809941878" duration="1572000" />
     </task>
     <servers />
   </component>
@@ -71,9 +72,10 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/lib/components/Header03.svelte</url>
-          <line>29</line>
-          <option name="timeStamp" value="2" />
+          <url>file://$PROJECT_DIR$/src/routes/+page.svelte</url>
+          <line>38</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

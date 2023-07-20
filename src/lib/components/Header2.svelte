@@ -1,6 +1,6 @@
 <script lang="ts">
     export let stories: { title: string, id: number }[] = [];
-  
+    import 'bootstrap/dist/css/bootstrap.min.css';
   </script>
   
   <nav class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top">
@@ -35,10 +35,10 @@
               </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="about">About</a>
+              <a class="nav-link" href="/">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="storypage">Help</a>
+              <a class="nav-link" href="/">Help</a>
             </li>
            
             <li class="nav-item">

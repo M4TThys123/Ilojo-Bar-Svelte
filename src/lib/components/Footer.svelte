@@ -1,4 +1,4 @@
-   <div class=" my-5">
+<div class=" my-5">
     <!-- Footer -->
     <footer class="text-center text-white" style="background-color: black">
       <!-- Grid container -->
@@ -12,7 +12,7 @@
             <!-- Grid column -->
             <div class="col-md-2">
               <h6 class="text-uppercase font-weight-bold">
-                <a href="/about" class="text-white">Home</a>
+                <a href="/" class="text-white">Home</a>
               </h6>
             </div>
             <!-- Grid column -->
@@ -20,7 +20,7 @@
             <!-- Grid column -->
             <div class="col-md-2">
               <h6 class="text-uppercase font-weight-bold">
-                <a href="#!" class="text-white">Stories</a>
+                <a href="/" class="text-white">Stories</a>
               </h6>
             </div>
             <!-- Grid column -->
@@ -28,7 +28,7 @@
             <!-- Grid column -->
             <div class="col-md-2">
               <h6 class="text-uppercase font-weight-bold">
-                <a href="#!" class="text-white">About us</a>
+                <a href="/" class="text-white">About us</a>
               </h6>
             </div>
             <!-- Grid column -->
@@ -36,7 +36,7 @@
             <!-- Grid column -->
             <div class="col-md-2">
               <h6 class="text-uppercase font-weight-bold">
-                <a href="#!" class="text-white">Help</a>
+                <a href="/" class="text-white">Help</a>
               </h6>
             </div>
             <!-- Grid column -->
@@ -44,7 +44,7 @@
             <!-- Grid column -->
             <div class="col-md-2">
               <h6 class="text-uppercase font-weight-bold">
-                <a href="#!" class="text-white">Contact</a>
+                <a href="/" class="text-white">Contact</a>
               </h6>
             </div>
             <!-- Grid column -->
