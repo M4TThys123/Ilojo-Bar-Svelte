@@ -15,6 +15,7 @@
       <list>
         <option value="+page.svelte" />
         <option value="TypeScript File" />
+        <option value="Header" />
       </list>
     </option>
   </component>
@@ -62,6 +63,8 @@
       <updated>1686567920088</updated>
       <workItem from="1686567923502" duration="3333000" />
       <workItem from="1689809941878" duration="1572000" />
+      <workItem from="1694784434003" duration="4000" />
+      <workItem from="1694784446351" duration="3300000" />
     </task>
     <servers />
   </component>
@@ -74,7 +77,6 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/routes/+page.svelte</url>
           <line>38</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
