@@ -45,7 +45,6 @@
                     <li class="nav-item dropdown">
                         <a
                                 class="nav-link dropdown-toggle"
-                                href="/stories"
                                 id="navbarDropdown"
                                 role="button"
                                 data-bs-toggle="dropdown"
