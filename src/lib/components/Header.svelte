@@ -6,12 +6,24 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand" href="/">
-                <img
-                        src="/assets/images/logo-ilojo-bar.webp"
-                        alt="Ilojo Bar Logo"
-                        class="header__link__image"
-                        width="128"
-                />
+<!--                <picture>-->
+<!--                    <source srcset="/assets/images/logo-ilojo-bar.webp" type="image/webp">-->
+<!--                    <source srcset="/assets/images/logo-ilojo-bar.png" type="image/png">-->
+<!--                    <img src="/assets/images/logo-ilojo-bar.webp"-->
+<!--                         alt="Ilojo Bar Logo"-->
+<!--                         width="128"-->
+<!--                         class="header__link__image"-->
+<!--                         >-->
+<!--                </picture>-->
+                <picture class="dark">
+                    <source srcset="/assets/images/logo-ilojo-bar-dark.webp" type="image/webp">
+                    <source srcset="/assets/images/logo-ilojo-bar-dark.png" type="image/png">
+                    <img src="/assets/images/logo-ilojo-bar-dark.webp"
+                         alt="Ilojo Bar Logo"
+                         width="128"
+                         class="header__link__image"
+                    >
+                </picture>
             </a>
             <button
                     class="navbar-toggler"
@@ -25,7 +37,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+                <ul class="navbar-nav ms-auto mt-3">
                     <li class="nav-item">
                         <a class="nav-link" href="/">Home</a>
                     </li>
@@ -71,6 +83,11 @@
 <style>
     .header {
         padding: 0.75rem 1rem;
+        position: fixed;
+        z-index: 10;
+
+        transition: transform .5s ease-out;
+
     }
 
     nav {
@@ -99,12 +116,12 @@
 
     /* Style the navbar links */
     .navbar-dark .navbar-nav .nav-link {
-        color: #f8f9fa;
+        color: #00090b;
     }
 
     /* Style the navbar links on hover */
     .navbar-dark .navbar-nav .nav-link:hover {
-        color: #00090b;
+        color: #7a1006;
     }
 
     /* Style the navbar background */
@@ -124,6 +141,7 @@
     .dropdown-menu {
         background-color: black;
         border: none;
+
     }
 
     /* Style the dropdown items */

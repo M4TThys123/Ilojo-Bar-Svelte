@@ -35,7 +35,6 @@
 	}
 	/* button scrol down */
 	.moving-button {
-	font-family: "Austral-Sans_Stamp-Regular";
 	align-items: center;
 	position: relative;
 	width: 10em;

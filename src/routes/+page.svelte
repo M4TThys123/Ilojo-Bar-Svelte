@@ -46,7 +46,7 @@
 				id="overlay"
 				src="/assets/images/ilojo_bar_bw_3.png"
 				alt="Ilojo bar old with environment"
-			/>
+			/>d
 
 		</div>
 	</section>

@@ -1,4 +1,7 @@
 <script lang="ts">
+    // Style
+    import "../styles/style.css"
+
     // Componenten
     import Header from "$lib/components/Header.svelte";
     // import Footer from '$lib/components/Footer.svelte';
@@ -26,8 +29,8 @@
         min-height: 100vh;
     }
 
-    * {
-        font-family: 'Rubik', sans-serif;
-    }
+    /** {*/
+    /*    font-family: 'Rubik', sans-serif;*/
+    /*}*/
 </style>
 
