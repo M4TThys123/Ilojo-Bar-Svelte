@@ -63,14 +63,14 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/about">About</a>
+                        <a class="nav-link" >About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/help">Help</a>
+                        <a class="nav-link" >Help</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="/contact">Contact</a>
+                        <a class="nav-link" >Contact</a>
                     </li>
                 </ul>
             </div>
