@@ -37,7 +37,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-                <ul class="navbar-nav ms-auto mt-3">
+                <ul class="navbar-nav ms-auto mt-lg-0 mt-sm-3">
                     <li class="nav-item">
                         <a class="nav-link" href="/">Home</a>
                     </li>
