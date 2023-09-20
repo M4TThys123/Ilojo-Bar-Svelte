@@ -1,32 +1,77 @@
 <script lang="ts">
+    import HamburgerButton from "$lib/components/HamburgerButton.svelte";
+    import { onMount } from 'svelte';
+
+    onMount(() => {
+        window.addEventListener('scroll', handleScroll);
+    });
+
+
+    // Hygraph data
     export let stories: { title: string, id: number }[] = [];
+
+    // SCROLL
+    // If scroll true
+    //     -color: black;
+    //     -Img dark
+    //     -Blur
+    
+    // Date atributes
+    let isScrolled = false
+    let isHeaderBlur = true
+
+    // Functions
+    function handleScroll() {
+        // Update the 'scroll' variable to true when scrolling occurs
+        if (window.pageYOffset > 0) {
+            isScrolled = true;
+        } else {
+            isScrolled = false;
+        }
+    }
+    function openNav() {
+
+    }
+    function closeNav() {
+
+    }
+    function toggleNav() {
+
+    }
+
+
 </script>
 
-<header class="header">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top">
+<header class="header ">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top isHeaderBlur">
         <div class="container-fluid">
             <a class="navbar-brand" href="/">
-<!--                <picture>-->
-<!--                    <source srcset="/assets/images/logo-ilojo-bar.webp" type="image/webp">-->
-<!--                    <source srcset="/assets/images/logo-ilojo-bar.png" type="image/png">-->
-<!--                    <img src="/assets/images/logo-ilojo-bar.webp"-->
-<!--                         alt="Ilojo Bar Logo"-->
-<!--                         width="128"-->
-<!--                         class="header__link__image"-->
-<!--                         >-->
-<!--                </picture>-->
-                <picture class="dark">
-                    <source srcset="/assets/images/logo-ilojo-bar-dark.webp" type="image/webp">
-                    <source srcset="/assets/images/logo-ilojo-bar-dark.png" type="image/png">
-                    <img src="/assets/images/logo-ilojo-bar-dark.webp"
-                         alt="Ilojo Bar Logo"
-                         width="128"
-                         class="header__link__image"
-                    >
-                </picture>
+                {#if isScrolled}
+                    <!-- Dark image -->
+                    <picture>
+                        <source srcset="/assets/images/logo-ilojo-bar-dark.webp" type="image/webp">
+                        <source srcset="/assets/images/logo-ilojo-bar-dark.png" type="image/png">
+                        <img src="/assets/images/logo-ilojo-bar-dark.webp"
+                             alt="Ilojo Bar Logo"
+                             width="128"
+                             class="header__link__image"
+                        >
+                    </picture>
+                {:else}
+                    <!-- Light image -->
+                    <picture>
+                        <source srcset="/assets/images/logo-ilojo-bar.webp" type="image/webp">
+                        <source srcset="/assets/images/logo-ilojo-bar.png" type="image/png">
+                        <img src="/assets/images/logo-ilojo-bar.webp"
+                             alt="Ilojo Bar Logo"
+                             width="128"
+                             class="header__link__image"
+                        >
+                    </picture>
+                {/if}
             </a>
             <button
-                    class="navbar-toggler"
+                    class="navbar-toggler ham-button"
                     type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#navbarNav"
@@ -34,7 +79,8 @@
                     aria-expanded="false"
                     aria-label="Toggle navigation"
             >
-                <span class="navbar-toggler-icon"></span>
+<!--                <span class="navbar-toggler-icon"></span>-->
+                <HamburgerButton></HamburgerButton>
             </button>
             <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                 <ul class="navbar-nav ms-auto mt-lg-0 mt-sm-3">
@@ -89,6 +135,11 @@
 
     }
 
+    .navbar.no-background::before {
+        background: none; /* No background color */
+        backdrop-filter: none; /* No blur */
+    }
+
     nav {
         /* font-weight and font-size applied to nav directly */
         font-weight: 600;
@@ -111,6 +162,10 @@
     nav a.active:hover:after {
         background-color: #7a1006;
         transform: scaleX(1);
+    }
+
+    .ham-button{
+        border: none;
     }
 
     /* Style the navbar links */

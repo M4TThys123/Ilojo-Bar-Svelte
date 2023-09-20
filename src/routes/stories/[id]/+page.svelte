@@ -1,5 +1,6 @@
 <script lang="ts">
     import type {PageData} from './$types';
+    import HamburgerButton from "$lib/components/HamburgerButton.svelte";
 
     export let data: PageData;
 
@@ -11,12 +12,16 @@
     <title>Ilojo Bar - {data.title}</title>
 </svelte:head>
 
+
 <section class="story">
     <h1 class="story__title">{data.title}</h1>
     <div class="story__content">
         {@html data.content.html}
     </div>
 </section>
+
+<HamburgerButton></HamburgerButton>
+
 
 <style>
     .story {
