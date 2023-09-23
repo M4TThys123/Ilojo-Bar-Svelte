@@ -1,9 +1,9 @@
 <script lang="ts">
-	import HomeHeader from '../lib/components/HomeHeader.svelte';
+	import HomeHeader from '../../lib/components/HomeHeader.svelte';
 	import { gsap } from 'gsap';
 	import ScrollTrigger from 'gsap/dist/ScrollTrigger';
 	import { onMount } from 'svelte';
-	import Story from '../lib/components/Story.svelte';
+	import Story from '../../lib/components/Story.svelte';
 	import type { PageData } from './$types';
    export let data: PageData;
 

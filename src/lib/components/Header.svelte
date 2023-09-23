@@ -5,29 +5,24 @@
     onMount(() => {
         window.addEventListener('scroll', handleScroll);
     });
-
-
-    // Hygraph data
     export let stories: { title: string, id: number }[] = [];
-
-    // SCROLL
-    // If scroll true
-    //     -color: black;
-    //     -Img dark
-    //     -Blur
     
     // Date atributes
     let isScrolled = false
-    let isHeaderBlur = true
+    let isHeaderBlur = false
+    let isMenuOpen = false;
+
 
     // Functions
     function handleScroll() {
-        // Update the 'scroll' variable to true when scrolling occurs
         if (window.pageYOffset > 0) {
             isScrolled = true;
         } else {
             isScrolled = false;
         }
+
+        // Update isHeaderBlur based on isScrolled
+        isHeaderBlur = isScrolled;
     }
     function openNav() {
 
@@ -43,7 +38,7 @@
 </script>
 
 <header class="header ">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top isHeaderBlur">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top" class:no-background={!isHeaderBlur}>
         <div class="container-fluid">
             <a class="navbar-brand" href="/">
                 {#if isScrolled}
@@ -70,6 +65,7 @@
                     </picture>
                 {/if}
             </a>
+
             <button
                     class="navbar-toggler ham-button"
                     type="button"
@@ -80,10 +76,10 @@
                     aria-label="Toggle navigation"
             >
 <!--                <span class="navbar-toggler-icon"></span>-->
-                <HamburgerButton></HamburgerButton>
+                    <HamburgerButton ></HamburgerButton>
             </button>
             <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-                <ul class="navbar-nav ms-auto mt-lg-0 mt-sm-3">
+                <ul class="navbar-nav ms-auto mt-lg-0 mt-sm-3 mt-3">
                     <li class="nav-item">
                         <a class="nav-link" href="/">Home</a>
                     </li>
@@ -186,9 +182,15 @@
         left: 0;
         right: 0;
         bottom: 0;
+        z-index: -1;
+
         background: rgba(255, 255, 255, 0.3);
         backdrop-filter: blur(10px);
-        z-index: -1;
+    }
+
+    .no-background .navbar::before {
+        background: none !important; /* No background color */
+        backdrop-filter: none !important; /* No blur */
     }
 
     /* Style the dropdown menu */
