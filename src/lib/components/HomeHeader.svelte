@@ -37,6 +37,7 @@ import ScrollButton from "$lib/components/ScrollButton.svelte";
 		margin-top: .5rem;
 		font-size: 1.5rem;
 	}
+
 	/* button scrol down */
 	.moving-button {
 	align-items: center;
@@ -47,6 +48,7 @@ import ScrollButton from "$lib/components/ScrollButton.svelte";
 	background-color: transparent;
 	border: none;
 }
+
 	@keyframes moveUp {
   0% {
     transform: translateY(0);

@@ -19,6 +19,7 @@
         <option value="ScrollButton" />
         <option value="TypeScript File" />
         <option value="+page" />
+        <option value="HomeHero" />
       </list>
     </option>
   </component>
@@ -74,7 +75,7 @@
       <workItem from="1694979357316" duration="7870000" />
       <workItem from="1695147488460" duration="4039000" />
       <workItem from="1695155360101" duration="16204000" />
-      <workItem from="1695592812324" duration="8854000" />
+      <workItem from="1695592812324" duration="10788000" />
     </task>
     <servers />
   </component>
@@ -86,7 +87,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/routes/+page.svelte</url>
-          <line>40</line>
+          <line>43</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
@@ -104,6 +105,12 @@
           <line>49</line>
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/routes/+page.svelte</url>
+          <line>32</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

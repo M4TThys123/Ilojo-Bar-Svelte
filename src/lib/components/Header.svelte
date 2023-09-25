@@ -44,7 +44,7 @@
 
 </script>
 
-<header class="header ">
+<header class="header">
     <nav class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top" class:no-background={!isHeaderBlur}>
         <div class="container-fluid">
             <a class="navbar-brand" href="/">
@@ -55,7 +55,8 @@
                         <source srcset="/assets/images/logo-ilojo-bar-dark.png" type="image/png">
                         <img src="/assets/images/logo-ilojo-bar-dark.webp"
                              alt="Ilojo Bar Logo"
-                             width="128"
+                             width="100%"
+                             height="32px"
                              class="header__link__image"
                         >
                     </picture>
@@ -66,7 +67,8 @@
                         <source srcset="/assets/images/logo-ilojo-bar.png" type="image/png">
                         <img src="/assets/images/logo-ilojo-bar.webp"
                              alt="Ilojo Bar Logo"
-                             width="128"
+                             width="100%"
+                             height="32px"
                              class="header__link__image"
                         >
                     </picture>
