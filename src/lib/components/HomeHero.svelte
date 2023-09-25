@@ -13,7 +13,7 @@
 
 <style>
     section {
-        position: absolute;
+        position: fixed;
         z-index: 1;
         padding-top: 5.5rem;
         padding-bottom: 1.5rem;
@@ -28,6 +28,8 @@
         flex-direction: column;
         justify-content: space-between;
     }
+
+
     h2 {
         font-size: 2.5rem;
         font-weight: bold;
@@ -36,37 +38,6 @@
     p {
         margin-top: .5rem;
         font-size: 1.5rem;
-    }
-
-    /* button scrol down */
-    .moving-button {
-        align-items: center;
-        position: relative;
-        width: 10em;
-        margin-top: 60%;
-        animation: moveUp 2s infinite;
-        background-color: transparent;
-        border: none;
-    }
-
-    @keyframes moveUp {
-        0% {
-            transform: translateY(0);
-        }
-        50% {
-            transform: translateY(-20px);
-        }
-        100% {
-            transform: translateY(0);
-        }
-    }
-    .moving-button svg{
-        width: 5em;
-    }
-    .btn-text{
-        font-size: 1.5rem;
-        font-weight: 400;
-        color: white;
     }
 
     @media (max-width: 55rem) {

@@ -37,26 +37,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/matthijs/Documents/Coding/Bedrijven/Ilojo Bar/Ilojo-Bar-Svelte/static/assets/fonts&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Users/matthijs/Documents/Coding/Bedrijven/Ilojo Bar/Ilojo-Bar-Svelte/node_modules/typescript/lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/matthijs/Documents/Coding/Bedrijven/Ilojo Bar/Ilojo-Bar-Svelte/static/assets/images",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "/Users/matthijs/Documents/Coding/Bedrijven/Ilojo Bar/Ilojo-Bar-Svelte/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/static/assets/images" />
       <recent name="$PROJECT_DIR$/static/assets/fonts" />
       <recent name="$PROJECT_DIR$/src/routes/home" />
-      <recent name="$PROJECT_DIR$/static/assets/images" />
       <recent name="$PROJECT_DIR$/src/lib/components" />
     </key>
   </component>
@@ -75,7 +75,7 @@
       <workItem from="1694979357316" duration="7870000" />
       <workItem from="1695147488460" duration="4039000" />
       <workItem from="1695155360101" duration="16204000" />
-      <workItem from="1695592812324" duration="10788000" />
+      <workItem from="1695592812324" duration="15234000" />
     </task>
     <servers />
   </component>
@@ -85,11 +85,6 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/routes/+page.svelte</url>
-          <line>43</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/lib/components/Header.svelte</url>
           <line>47</line>
@@ -105,12 +100,6 @@
           <line>49</line>
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/routes/+page.svelte</url>
-          <line>32</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

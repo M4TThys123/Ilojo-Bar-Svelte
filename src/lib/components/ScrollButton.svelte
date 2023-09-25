@@ -1,4 +1,7 @@
-<button class="scroll_btn"><i></i><span>Scroll down or click</span></button>
+<button class="scroll_btn">
+    <i></i>
+    <span>Scroll down or click</span>
+</button>
 
 
 <style>

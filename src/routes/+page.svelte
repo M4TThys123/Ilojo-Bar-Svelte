@@ -1,65 +1,106 @@
 <script lang="ts">
-    import HomeHeader from '../lib/components/HomeHeader.svelte';
-    import {gsap} from 'gsap';
-    import ScrollTrigger from 'gsap/dist/ScrollTrigger';
-    import {onMount} from 'svelte';
-    import Story from '../lib/components/Story.svelte';
-    import type {PageData} from './$types';
+    import { onMount } from 'svelte';
+    import { gsap } from 'gsap';
+    import { ScrollTrigger } from 'gsap/ScrollTrigger';
+    import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
     import HomeHero from "$lib/components/HomeHero.svelte";
 
-    export let data: PageData;
 
+    // Register GSAP plugins
     onMount(() => {
-        gsap.registerPlugin(ScrollTrigger);
-        let scrollTL = gsap.timeline({
+        gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+
+        const tl = gsap.timeline();
+        const scrollTL = gsap.timeline({
             scrollTrigger: {
-                trigger: '.ilojo-bar-section',
+                trigger: '.img_cont',
                 start: 'top top',
-                end: '+=100%',
-                scrub: true,
-                pin: '.ilojo-bar-section'
-            }
+                end: 'bottom top',
+                scrub: 1,
+                pin: true,
+                snap: 1,
+            },
         });
+
+        tl.from('header img', {
+            translateY: '-210%',
+            rotation: '-10',
+            duration: 2.5,
+            ease: 'elastic',
+            delay: 0.5,
+        }).from('.mask_span', { y: '150%', duration: 0.7, stagger: 0.2 }, '<15%').from('.scroll_btn', {
+            translateY: '300px',
+            ease: 'Power1.easeOut',
+        }, '<');
+
         scrollTL
-            .from('.scroll_cont', {scale: 1}, '<')
-            .fromTo('#color_building', {opacity: 0}, {opacity: 1}, '<')
-            .fromTo('#test', {opacity: 0}, {opacity: 1}, '<')
-            .fromTo('#story-windows', {opacity: 0}, {opacity: 1}, '<')
-            .fromTo('#background', {opacity: 1}, {opacity: 0}, '-=50%')
-            .fromTo('#overlay', {opacity: 1, scale: 1}, {opacity: 0, scale: 1.05}, '<25%');
+            .fromTo('.scroll_btn', { opacity: 1, duration: 0.3 }, { opacity: 0 })
+            .from('.scroll_cont', { scale: 1 }, '<')
+            .fromTo('#color_building', { opacity: 0 }, { opacity: 1 }, '<')
+            .fromTo('#background', { opacity: 1 }, { opacity: 0 }, '-=50%')
+            .fromTo(
+                '#overlay',
+                { opacity: 1, scale: 1 },
+                { opacity: 0, scale: 1.05 },
+                '<25%'
+            )
+            .from(
+                '.discover_cont',
+                { opacity: 0, zIndex: 0, scale: 0.9, rotation: -3 },
+                { opacity: 1, zIndex: 2, scale: 1, rotation: 0 },
+                '<'
+            )
+            .from('.see_model_cont', { translateX: '100%', opacity: '0' }, '<')
+            .addLabel('end');
+
+        const btn = document.querySelector('footer button');
+        btn.addEventListener('click', () => {
+            const target = scrollTL.scrollTrigger.trigger;
+            gsap.to(window, {
+                scrollTo: {
+                    y: target,
+                    offsetY: 0,
+                },
+                duration: 2.2,
+            });
+        });
     });
 </script>
 
-<!--<HomeHeader/>-->
+
 <HomeHero></HomeHero>
-<section class="ilojo-bar-section">
+
+<section class="img_cont">
     <div class="scroll_cont">
-        <img
-                id="background"
-                src="/assets/images/ilojo_bar_bw_1.jpg"
-                alt="Ilojo bar old with environment"
-                loading="eager"
-                style="z-index: 999"
-        />
-        <img id="color_building" src="/assets/images/ilojo_bar_bw_2.png" alt="Colored Ilojo bar"/>
-
-        <img
-                id="overlay"
-                src="/assets/images/ilojo_bar_bw_3.png"
-                alt="Ilojo bar old with environment"
-        />d
-
+        <picture>
+            <source srcset="/assets/images/ilojo_bar_bw_2.webp" type="image/webp">
+            <source srcset="/assets/images/ilojo_bar_bw_2.png" type="image/png">
+            <img src="/assets/images/ilojo_bar_bw_2.png" alt="Colored Ilojo bar" width="1772px" height="1772px">
+        </picture>
+        <picture>
+            <source srcset="/assets/images/ilojo_bar_bw_1.webp" type="image/webp">
+            <source srcset="/assets/images/ilojo_bar_bw_1.jpg" type="image/jpeg">
+            <img id="background" src="/assets/images/ilojo_bar_bw_1.jpg" alt="Ilojo bar old with environment"
+                 width="1772px" height="1772px">
+        </picture>
+        <picture>
+            <source srcset="/assets/images/ilojo_bar_bw_2.webp" type="image/webp">
+            <source srcset="/assets/images/ilojo_bar_bw_2.png" type="image/png">
+            <img id="color_building" src="/assets/images/ilojo_bar_bw_2.png" alt="Colored Ilojo bar"
+                 width="1772px" height="1772px">
+        </picture>
+        <picture>
+            <source srcset="/assets/images/ilojo_bar_bw_3.webp" type="image/webp">
+            <source srcset="/assets/images/ilojo_bar_bw_3.png" type="image/png">
+            <img id="overlay" src="/assets/images/ilojo_bar_bw_3.png" alt="Ilojo bar old with environment"
+                 width="1772px" height="1772px">
+        </picture>
     </div>
 </section>
 
-
 <style>
-    main {
-        padding: 0;
-        overflow: hidden;
-    }
-
-    section {
+    /*Scrolltrigger section */
+    .img_cont {
         background-repeat: no-repeat;
         background-position: center center;
         background-size: cover;
@@ -74,7 +115,7 @@
         height: 100%;
     }
 
-    section img {
+    .img_cont img {
         width: 100%;
         height: 100%;
         object-fit: cover;
@@ -87,59 +128,8 @@
         transform-origin: 80% 50%;
     }
 
-    #background,
-    #overlay,
-    #color_building {
+    #background, #overlay, #color_building {
         opacity: 0;
-    }
-
-    /* .windoIcons{
-
-    } */
-    #story-windows {
-        position: relative;
-        display: grid;
-        place-items: center;
-        background-color: transparent;
-        z-index: 9999;
-        width: 125%;
-        height: 100%;
-    }
-
-    .click-story {
-        font-family: "Austral-Sans_Stamp-Regular";
-        font-size: 1em;
-        font-weight: lighter;
-        margin-bottom: -21%;
-        color: white;
-        animation: moveUp 5s infinite;
-
-    }
-
-    @keyframes moveUp {
-        0% {
-            transform: scale(0.5);
-        }
-        50% {
-            transform: scale(0.9);
-        }
-        100% {
-            transform: scale(0.5);
-        }
-    }
-
-    @media (max-width: 55rem) {
-        section img {
-            object-position: 62% center !important;
-        }
-
-        #color_building {
-            display: none;
-        }
-
-        .click-story {
-            display: none;
-        }
     }
 </style>
 
