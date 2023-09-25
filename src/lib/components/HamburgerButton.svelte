@@ -5,7 +5,6 @@
         console.log('klik werkt')
         isOpen = !isOpen;
         console.log(isOpen)
-
     }
 </script>
 

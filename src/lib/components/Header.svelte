@@ -1,12 +1,15 @@
 <script lang="ts">
     import HamburgerButton from "$lib/components/HamburgerButton.svelte";
-    import { onMount } from 'svelte';
+    import {onMount} from 'svelte';
+    // For the route path
+    import {page} from '$app/stores';
+
 
     onMount(() => {
         window.addEventListener('scroll', handleScroll);
     });
     export let stories: { title: string, id: number }[] = [];
-    
+
     // Date atributes
     let isScrolled = false
     let isHeaderBlur = false
@@ -23,13 +26,17 @@
 
         // Update isHeaderBlur based on isScrolled
         isHeaderBlur = isScrolled;
+        console.log(isScrolled)
     }
+
     function openNav() {
 
     }
+
     function closeNav() {
 
     }
+
     function toggleNav() {
 
     }
@@ -67,6 +74,7 @@
             </a>
 
             <button
+                    class:visible={isScrolled}
                     class="navbar-toggler ham-button"
                     type="button"
                     data-bs-toggle="collapse"
@@ -75,24 +83,29 @@
                     aria-expanded="false"
                     aria-label="Toggle navigation"
             >
-<!--                <span class="navbar-toggler-icon"></span>-->
-                    <HamburgerButton ></HamburgerButton>
+                <!--                <span class="navbar-toggler-icon"></span>-->
+                <HamburgerButton></HamburgerButton>
             </button>
+
             <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                 <ul class="navbar-nav ms-auto mt-lg-0 mt-sm-3 mt-3">
                     <li class="nav-item">
-                        <a class="nav-link" href="/">Home</a>
+                        <a class="nav-link"
+                           class:nav-link__scroll={isScrolled}
+                           class:nav-link__active={$page.url.pathname === '/'}
+                           href="/">HOME</a>
                     </li>
 
                     <li class="nav-item dropdown">
                         <a
                                 class="nav-link dropdown-toggle"
+                                class:nav-link__scroll={isScrolled}
                                 id="navbarDropdown"
                                 role="button"
                                 data-bs-toggle="dropdown"
                                 aria-expanded="false"
                         >
-                            Stories
+                            STORIES
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             {#each stories as story (story.id)}
@@ -105,14 +118,19 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" >About</a>
+                        <a class="nav-link"
+                           class:nav-link__scroll={isScrolled}
+                            >ABOUT</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" >Help</a>
+                        <a class="nav-link"
+                           class:nav-link__scroll={isScrolled}>3D MODEL</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" >Contact</a>
+                        <a class="nav-link"
+                           class:nav-link__scroll={isScrolled}
+                        >STORYBOOK</a>
                     </li>
                 </ul>
             </div>
@@ -155,23 +173,41 @@
         transition: transform .5s ease-out;
     }
 
-    nav a.active:hover:after {
-        background-color: #7a1006;
-        transform: scaleX(1);
+    /*nav a.active:hover:after {*/
+    /*    background-color: #7a1006;*/
+    /*    transform: scaleX(1);*/
+    /*}*/
+
+
+    .ham-button {
+        border: none;
+
+        visibility: hidden;
+        opacity: 0;
     }
 
-    .ham-button{
-        border: none;
+    .visible {
+        visibility: visible !important;
+        opacity: 1 !important;
     }
 
     /* Style the navbar links */
-    .navbar-dark .navbar-nav .nav-link {
-        color: #00090b;
+    .nav-link {
+        color: var(--light);
+    }
+
+    .nav-link__scroll {
+        color: var(--dark);
     }
 
     /* Style the navbar links on hover */
     .navbar-dark .navbar-nav .nav-link:hover {
-        color: #7a1006;
+        color: var(--red);
+    }
+
+    /* Style the navbar links */
+    .nav-link__active {
+        color: var(--redLight);
     }
 
     /* Style the navbar background */

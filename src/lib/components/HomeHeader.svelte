@@ -5,7 +5,7 @@ import ScrollButton from "$lib/components/ScrollButton.svelte";
 <section>
 	<div class="para-container">
 		<h2>Welcome to the <br /> Stories of Ilojo Bar</h2>
-		<p>Read exciting stories about Ilojo Bar</p>
+		<p>Discover 9 stories about the shattered bar of Lagos</p>
 	</div>
 
 	<ScrollButton></ScrollButton>
@@ -15,8 +15,8 @@ import ScrollButton from "$lib/components/ScrollButton.svelte";
 	section {
 		position: absolute;
 		z-index: 1;
-		padding-top: 7rem;
-		padding-bottom: 3rem;
+		padding-top: 5.5rem;
+		padding-bottom: 1.5rem;
 		left: 50%;
 		transform: translate(-50%);
 		text-align: center;
@@ -34,6 +34,7 @@ import ScrollButton from "$lib/components/ScrollButton.svelte";
 	}
 
 	p {
+		margin-top: .5rem;
 		font-size: 1.5rem;
 	}
 	/* button scrol down */

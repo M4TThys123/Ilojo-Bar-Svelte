@@ -1,5 +1,12 @@
 :root {
+    /*Colors*/
+    --dark: #101010;
+    --light: #F3F3F3;
+    --grey: #c7c7c7;
+    --red: #8c0500;
+    --redLight: #da2a2a;
 
+    --header-height: 45px;
 }
 
 /*@font-face {*/
@@ -12,12 +19,34 @@
 /*    font-display: swap;*/
 /*}*/
 
+/*@font-face {*/
+/*    font-family: 'Black Ground';*/
+/*    src: url('../../static/assets/fonts/Black-Ground.woff2') format('woff2'),*/
+/*    url('../../static/assets/fonts/Black-Ground.woff') format('woff');*/
+/*    font-weight: normal;*/
+/*    font-style: normal;*/
+/*    font-display: swap;*/
+/*}*/
+
+/*@font-face {*/
+/*    font-family: 'Austral Sans';*/
+/*    src: url('../../static/assets/fonts/AustralSansStamp-Regular.woff2') format('woff2'),*/
+/*    url('../../static/assets/fonts/AustralSansStamp-Regular.woff') format('woff');*/
+
+/*    font-weight: normal;*/
+/*    font-style: normal;*/
+/*    font-display: swap;*/
+/*}*/
+
 *{
 }
 
 body {
+    /*font-family: 'Austral Sans', sans-serif !important;*/
     font-family: 'Rubik', sans-serif;
     background-color: #7a1006
 }
+
+
 
 
