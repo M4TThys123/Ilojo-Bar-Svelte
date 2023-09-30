@@ -1,18 +1,31 @@
 <script>
     let isOpen = false;
+    export let backgoundColor;
+    export let prop
+    export let isScrolled
 
+
+    console.log(`isScrolled: ${isScrolled}`)
+    console.log({isScrolled})
+
+    console.log(`prop: ${prop}`)
+    console.log({prop})
     function toggleMenu() {
-        console.log('klik werkt')
         isOpen = !isOpen;
-        console.log(isOpen)
     }
 </script>
 
 <div id="ham-burger"
      class={isOpen ? 'open' : ''}
      on:click={toggleMenu}>
-    <span></span>
-    <span></span>
+    <span
+            style="background-color: {backgoundColor};">
+
+    </span>
+    <span
+            class:white-background={false}>
+
+    </span>
     <span></span>
     <span></span>
 </div>

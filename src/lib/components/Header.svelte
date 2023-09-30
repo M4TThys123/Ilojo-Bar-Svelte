@@ -26,7 +26,6 @@
 
         // Update isHeaderBlur based on isScrolled
         isHeaderBlur = isScrolled;
-        console.log(isScrolled)
     }
 
     function openNav() {
@@ -44,9 +43,8 @@
 
 </script>
 
-<header class="header">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top" class:no-background={!isHeaderBlur}>
-        <div class="container-fluid">
+<header class="header" class:no-background={!isHeaderBlur}>
+    <nav class="navbar navbar-expand-lg navbar-dark  fixed-top">
             <a class="navbar-brand" href="/">
                 {#if isScrolled}
                     <!-- Dark image -->
@@ -86,18 +84,13 @@
                     aria-label="Toggle navigation"
             >
                 <!--                <span class="navbar-toggler-icon"></span>-->
-                <HamburgerButton></HamburgerButton>
+                <HamburgerButton
+                        prop={isScrolled}
+                        backgoundColor="red"></HamburgerButton>
             </button>
 
             <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                 <ul class="navbar-nav ms-auto mt-lg-0 mt-sm-3 mt-3">
-                    <li class="nav-item">
-                        <a class="nav-link"
-                           class:nav-link__scroll={isScrolled}
-                           class:nav-link__active={$page.url.pathname === '/'}
-                           href="/">HOME</a>
-                    </li>
-
                     <li class="nav-item dropdown">
                         <a
                                 class="nav-link dropdown-toggle"
@@ -107,12 +100,12 @@
                                 data-bs-toggle="dropdown"
                                 aria-expanded="false"
                         >
-                            STORIES
+                            DISCOVER STORIES
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             {#each stories as story (story.id)}
                                 <li>
-                                    <a href={`/stories/${story.id}`} class="dropdown-item" data-sveltekit-reload>
+                                    <a href={`/discover/${story.id}`} class="dropdown-item" data-sveltekit-reload>
                                         {story.title}
                                     </a>
                                 </li>
@@ -122,7 +115,7 @@
                     <li class="nav-item">
                         <a class="nav-link"
                            class:nav-link__scroll={isScrolled}
-                            >ABOUT</a>
+                            >GUESTBOOK</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link"
@@ -131,12 +124,12 @@
 
                     <li class="nav-item">
                         <a class="nav-link"
+                           class:nav-link__active={$page.url.pathname === '/credits'}
                            class:nav-link__scroll={isScrolled}
-                        >STORYBOOK</a>
+                        >CREDITS</a>
                     </li>
                 </ul>
             </div>
-        </div>
     </nav>
 </header>
 
@@ -149,18 +142,29 @@
 
         transition: transform .5s ease-out;
 
+        z-index: 10;
+        width: 100%;
+        padding: 1.5rem 1.875rem 1rem;
     }
 
-    .navbar.no-background::before {
+    .header.no-background::before {
         background: none; /* No background color */
         backdrop-filter: none; /* No blur */
     }
 
     nav {
-        /* font-weight and font-size applied to nav directly */
+        padding: 0 !important;
         font-weight: 600;
         font-size: 1.2em;
+
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 120rem;
+        margin: auto;
     }
+
 
     /* Styling for the active link */
     nav a.active:after {
@@ -184,8 +188,8 @@
     .ham-button {
         border: none;
 
-        visibility: hidden;
-        opacity: 0;
+        /*!*visibility: hidden;*!*/
+        /*opacity: 0;*/
     }
 
     .visible {
@@ -213,7 +217,7 @@
     }
 
     /* Style the navbar background */
-    .navbar::before {
+    .header::before {
         content: "";
         position: absolute;
         top: 0;

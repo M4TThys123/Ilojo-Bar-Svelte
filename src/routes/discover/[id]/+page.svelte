@@ -3,9 +3,8 @@
     import HamburgerButton from "$lib/components/HamburgerButton.svelte";
 
     export let data: PageData;
+
     console.log(data)
-
-
 
 </script>
 
@@ -13,9 +12,6 @@
     <title>Ilojo Bar - {data.title}</title>
 </svelte:head>
 
-<pre>
-    {{data}}
-</pre>
 
 <section class="story">
     <h1 class="story__title">{data.title}</h1>
@@ -23,6 +19,9 @@
         {@html data.content.html}
     </div>
 </section>
+
+<HamburgerButton></HamburgerButton>
+
 
 <style>
     .story {
@@ -37,7 +36,7 @@
     }
 
     .story__title {
-        font-size: 40px;
+        /*font-size: 40px;*/
         font-weight: normal;
         line-height: 1.1em;
         text-align: center;
@@ -67,25 +66,28 @@
         line-height: 1.2em;
 
         /*!* Statiche fix *\*/
-        max-width: 35ch;
+        /*max-width: 35ch;*/
 }
 
 /* content global styling */
     :global(.story__content p) {
-        margin: 0 auto;
-        width: 85%;
-        padding: 1em 0 1em 0;
-    }
+        margin-top: 0.3em;
+        font-size: 22px;
+        line-height: 1.2em;
+}
 
-    :global(.story__content img) {
-        width: 85%;
-        height: 25em;
-        object-fit: fill;
-        border-radius: 15px;
-        margin-left: 4.5em;
-    }
+:global(.story__content img) {
+    width: 85%;
+    height: 25em;
+    object-fit: fill;
+    border-radius: 15px;
+    margin-left: 4.5em;
+}
 
-    /* content specifiek styling */
+/* content specifiek styling */
+    :global(.story__content >p){
+
+    }
     :global(.story__content > img:nth-child(2)) {
         width: 16em;
         height: 25em;
