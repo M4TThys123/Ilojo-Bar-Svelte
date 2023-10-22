@@ -4,7 +4,7 @@
     import ScrollTrigger from 'gsap/dist/ScrollTrigger';
     import HomeHero from "$lib/components/HomeHero.svelte";
 
-    const oldPicture = true
+    const oldPicture = false
 
 
     // Register GSAP plugins

@@ -4,7 +4,6 @@
     // For the route path
     import {page} from '$app/stores';
 
-
     onMount(() => {
         window.addEventListener('scroll', handleScroll);
     });
@@ -12,9 +11,8 @@
 
     // Date atributes
     let isScrolled = false
-    let isHeaderBlur = false
-    let isMenuOpen = false;
-
+    let isBlur = false
+    let isNavOpen = false;
 
     // Functions
     function handleScroll() {
@@ -23,201 +21,137 @@
         } else {
             isScrolled = false;
         }
-
-        // Update isHeaderBlur based on isScrolled
-        isHeaderBlur = isScrolled;
-    }
-
-    function openNav() {
-
     }
 
     function closeNav() {
-
+        console.log('closeNav() kanker')
     }
 
     function toggleNav() {
-
+        console.log('toggleNav()')
+        isNavOpen = !isNavOpen;
+        isScrolled = true
+        console.log(isNavOpen)
     }
-
-
 </script>
 
-<header class="header" class:no-background={!isHeaderBlur}>
-    <nav class="navbar navbar-expand-lg navbar-dark  fixed-top">
-            <a class="navbar-brand" href="/">
-                {#if isScrolled}
-                    <!-- Dark image -->
-                    <picture>
-                        <source srcset="/assets/images/logo-ilojo-bar-dark.webp" type="image/webp">
-                        <source srcset="/assets/images/logo-ilojo-bar-dark.png" type="image/png">
-                        <img src="/assets/images/logo-ilojo-bar-dark.webp"
-                             alt="Ilojo Bar Logo"
-                             width="100%"
-                             height="32px"
-                             class="header__link__image"
-                        >
-                    </picture>
-                {:else}
-                    <!-- Light image -->
-                    <picture>
-                        <source srcset="/assets/images/logo-ilojo-bar.webp" type="image/webp">
-                        <source srcset="/assets/images/logo-ilojo-bar.png" type="image/png">
-                        <img src="/assets/images/logo-ilojo-bar.webp"
-                             alt="Ilojo Bar Logo"
-                             width="100%"
-                             height="32px"
-                             class="header__link__image"
-                        >
-                    </picture>
-                {/if}
-            </a>
+<header class:no-background={!isScrolled}>
+    <nav>
+        <a class="logo-link" href="/" on:click={closeNav}>
+            {#if isScrolled}
+                <!-- Dark image -->
+                <picture>
+                    <source srcset="/assets/images/logo-ilojo-bar-dark.webp" type="image/webp">
+                    <source srcset="/assets/images/logo-ilojo-bar-dark.png" type="image/png">
+                    <img src="/assets/images/logo-ilojo-bar-dark.webp"
+                         alt="Ilojo Bar Logo"
+                         width="100%"
+                         height="32px"
+                         class="header__link__image"
+                    >
+                </picture>
+            {:else}
+                <!-- Light image -->
+                <picture>
+                    <source srcset="/assets/images/logo-ilojo-bar.webp" type="image/webp">
+                    <source srcset="/assets/images/logo-ilojo-bar.png" type="image/png">
+                    <img src="/assets/images/logo-ilojo-bar.webp"
+                         alt="Ilojo Bar Logo"
+                         width="100%"
+                         height="32px"
+                         class="header__link__image"
+                    >
+                </picture>
+            {/if}
+        </a>
 
-            <button
-                    class:visible={isScrolled}
-                    class="navbar-toggler ham-button"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#navbarNav"
-                    aria-controls="navbarNav"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation"
-            >
-                <!--                <span class="navbar-toggler-icon"></span>-->
-                <HamburgerButton
-                        prop={isScrolled}
-                        backgoundColor="red"></HamburgerButton>
-            </button>
 
-            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-                <ul class="navbar-nav ms-auto mt-lg-0 mt-sm-3 mt-3">
-                    <li class="nav-item dropdown">
-                        <a
-                                class="nav-link dropdown-toggle"
-                                class:nav-link__scroll={isScrolled}
-                                id="navbarDropdown"
-                                role="button"
-                                data-bs-toggle="dropdown"
-                                aria-expanded="false"
-                        >
-                            DISCOVER STORIES
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            {#each stories as story (story.id)}
-                                <li>
-                                    <a href={`/discover/${story.id}`} class="dropdown-item" data-sveltekit-reload>
-                                        {story.title}
-                                    </a>
-                                </li>
-                            {/each}
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link"
-                           class:nav-link__scroll={isScrolled}
-                            >GUESTBOOK</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link"
-                           class:nav-link__scroll={isScrolled}>3D MODEL</a>
-                    </li>
+        <div class="nav-menu" id="navbarNav">
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a
+                            class="nav-link dropdown-toggle"
+                            class:nav-link__scroll={isScrolled}
+                            on:click={closeNav}
+                            id="navbarDropdown"
+                            role="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                    >
+                        DISCOVER STORIES
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        {#each stories as story (story.id)}
+                            <li>
+                                <a href={`/discover/${story.id}`} class="dropdown-item" data-sveltekit-reload
+                                   on:click={closeNav}>
+                                    {story.title}
+                                </a>
+                            </li>
+                        {/each}
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"
+                       class:nav-link__scroll={isScrolled}
+                       on:click={closeNav}
+                    >GUESTBOOK</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"
+                       class:nav-link__scroll={isScrolled}
+                       on:click={closeNav}
+                    >3D MODEL</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"
+                       class:nav-link__active={$page.url.pathname === '/credits'}
+                       class:nav-link__scroll={isScrolled}
+                       on:click={closeNav}
+                    >CREDITS</a>
+                </li>
+            </ul>
+        </div>
 
-                    <li class="nav-item">
-                        <a class="nav-link"
-                           class:nav-link__active={$page.url.pathname === '/credits'}
-                           class:nav-link__scroll={isScrolled}
-                        >CREDITS</a>
-                    </li>
-                </ul>
-            </div>
+        <button class="ham-button"
+                on:click={toggleNav}>
+            <HamburgerButton
+                    isNavOpen={isNavOpen}
+                    backgoundColor="white">
+            </HamburgerButton>
+        </button>
+
     </nav>
 </header>
 
-
 <style>
-    .header {
+    /* Header Styles */
+    header {
         padding: 0.75rem 1rem;
         position: fixed;
-        z-index: 10;
-
-        transition: transform .5s ease-out;
-
-        z-index: 10;
+        top: 0;
+        z-index: 999;
         width: 100%;
-        padding: 1.5rem 1.875rem 1rem;
+        transition: all 0.3s ease;
     }
 
-    .header.no-background::before {
-        background: none; /* No background color */
-        backdrop-filter: none; /* No blur */
-    }
-
+    /* Navigation Styles */
     nav {
+        position: fixed;
+        max-width: 120rem;
+
+        margin: auto;
         padding: 0 !important;
+
         font-weight: 600;
         font-size: 1.2em;
 
-        position: relative;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        max-width: 120rem;
-        margin: auto;
     }
 
-
-    /* Styling for the active link */
-    nav a.active:after {
-        content: '';
-        width: 100%;
-        transform: scaleX(0);
-        height: 3px;
-        bottom: 2px;
-        left: 0;
-        background-color: #f8f9fa;
-        transform-origin: bottom right;
-        transition: transform .5s ease-out;
-    }
-
-    /*nav a.active:hover:after {*/
-    /*    background-color: #7a1006;*/
-    /*    transform: scaleX(1);*/
-    /*}*/
-
-
-    .ham-button {
-        border: none;
-
-        /*!*visibility: hidden;*!*/
-        /*opacity: 0;*/
-    }
-
-    .visible {
-        visibility: visible !important;
-        opacity: 1 !important;
-    }
-
-    /* Style the navbar links */
-    .nav-link {
-        color: var(--light);
-    }
-
-    .nav-link__scroll {
-        color: var(--dark);
-    }
-
-    /* Style the navbar links on hover */
-    .navbar-dark .navbar-nav .nav-link:hover {
-        color: var(--red);
-    }
-
-    /* Style the navbar links */
-    .nav-link__active {
-        color: var(--redLight);
-    }
-
-    /* Style the navbar background */
-    .header::before {
+    nav::before {
         content: "";
         position: absolute;
         top: 0;
@@ -225,30 +159,128 @@
         right: 0;
         bottom: 0;
         z-index: -1;
-
         background: rgba(255, 255, 255, 0.3);
         backdrop-filter: blur(10px);
     }
 
-    .no-background .navbar::before {
-        background: none !important; /* No background color */
-        backdrop-filter: none !important; /* No blur */
+    nav.no-background::before {
+        background: none;
+        backdrop-filter: none;
     }
 
-    /* Style the dropdown menu */
+
+
+    /*.nav-list {*/
+    /*    margin-bottom: 0;*/
+    /*    display: flex;*/
+    /*    justify-content: center;*/
+    /*    align-items: center;*/
+
+    /*    display: none;*/
+    /*}*/
+
+    .nav-list{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        height: 100vh;
+        padding: 5rem 1rem;
+
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+
+        transition: transform .3s ease-out;
+        /*transform: translateY(-100%);*/
+    }
+
+    .nav-list__open{
+        visibility: visible;
+    }
+
+    /* Navigation Item Styles */
+    .nav-item {
+        margin-bottom: 1em;
+    }
+
+    /* Logo Link Styles */
+    .logo-link {
+        z-index: 999999;
+    }
+
+    /* Navigation Link Styles */
+    .nav-link {
+        transition: .3s;
+        color: var(--light);
+    }
+
+    .nav-link:hover {
+        text-decoration: underline;
+        color: red;
+    }
+
+    /* Hamburger Button Styles */
+    .ham-button {
+        border: none;
+        background: none;
+    }
+
+    .visible {
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+
+    .nav-link__scroll {
+        color: var(--dark);
+    }
+
+    .nav-link__active {
+        color: var(--redLight);
+    }
+
+    /* Dropdown Menu Styles */
     .dropdown-menu {
         background-color: black;
         border: none;
-
+        display: none;
     }
 
-    /* Style the dropdown items */
+    /* Dropdown Item Styles */
     .dropdown-item {
         color: #fff;
     }
 
-    /* Style the dropdown item when it's hovered */
     .dropdown-item:hover {
         background-color: #555;
     }
+
+    /* SM (for tablets - screens ≥ than 768px wide) */
+    @media (width >= 768px) {
+
+    }
+
+    /* MD (for small laptops - screens ≥ than 992px wide) */
+    @media (width >= 992px) {
+
+    }
+
+    /* LG (for laptops and desktops - screens ≥ than 1200px wide) */
+    @media (width >= 1200px) {
+        nav{
+            height: 45px;
+        }
+
+        .nav-list{
+            display: flex;
+        }
+
+        .nav-item {
+            margin-right: 2em;
+        }
+    }
 </style>
+

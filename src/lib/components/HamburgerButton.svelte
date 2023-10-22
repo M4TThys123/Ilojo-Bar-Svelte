@@ -1,15 +1,10 @@
 <script>
     let isOpen = false;
+    export let isNavOpen;
+    console.log(`de prop is: ${isNavOpen}`)
+    console.log(isNavOpen)
     export let backgoundColor;
-    export let prop
-    export let isScrolled
 
-
-    console.log(`isScrolled: ${isScrolled}`)
-    console.log({isScrolled})
-
-    console.log(`prop: ${prop}`)
-    console.log({prop})
     function toggleMenu() {
         isOpen = !isOpen;
     }
