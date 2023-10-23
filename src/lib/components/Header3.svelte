@@ -12,8 +12,10 @@
 
     // Date atributes
     let isScrolled = false
-    let isHeaderBlur = false
-    let isMenuOpen = false;
+    let isBlur = false
+    let isNavOpen = false;
+    let isDropdownOpen = false;
+
 
 
     // Functions
@@ -25,7 +27,11 @@
         }
 
         // Update isHeaderBlur based on isScrolled
-        isHeaderBlur = isScrolled;
+        isBlur = isScrolled;
+    }
+
+    function toggleDropdown() {
+        isDropdownOpen = !isDropdownOpen;
     }
 
     function openNav() {
@@ -37,13 +43,26 @@
     }
 
     function toggleNav() {
+        console.log(`Standaart waarde Nav en is isNavOpen: ${isNavOpen}`);
+        isNavOpen = !isNavOpen;
+        console.log(`Na de functie is nav: ${isNavOpen}`);
 
+        if (isNavOpen) {
+            isScrolled = true;
+            isBlur = true;
+            document.body.classList.add('no-scroll'); // Add the class to disable scrolling
+            console.log(`Nu opent de Nav en is isNavOpen: ${isNavOpen}`);
+        } else {
+            isScrolled = false;
+            isBlur = false;
+            document.body.classList.remove('no-scroll'); // Remove the class to enable scrolling
+            console.log(`Nu sluit de Nav en is isNavOpen: ${isNavOpen}`);
+        }
     }
-
 
 </script>
 
-<header class="header" class:no-background={!isHeaderBlur}>
+<header class="header" class:no-background={!isBlur}>
     <nav class="navbar navbar-expand-lg navbar-dark  fixed-top">
             <a class="navbar-brand" href="/">
                 {#if isScrolled}
@@ -55,7 +74,7 @@
                              alt="Ilojo Bar Logo"
                              width="100%"
                              height="32px"
-                             class="header__link__image"
+                             class="header-link__image"
                         >
                     </picture>
                 {:else}
@@ -67,7 +86,7 @@
                              alt="Ilojo Bar Logo"
                              width="100%"
                              height="32px"
-                             class="header__link__image"
+                             class="header-link__image"
                         >
                     </picture>
                 {/if}
@@ -75,6 +94,7 @@
 
             <button
                     class:visible={isScrolled}
+                    on:click={toggleNav}
                     class="navbar-toggler ham-button"
                     type="button"
                     data-bs-toggle="collapse"
@@ -95,6 +115,7 @@
                         <a
                                 class="nav-link dropdown-toggle"
                                 class:nav-link__scroll={isScrolled}
+                                on:click={toggleDropdown}
                                 id="navbarDropdown"
                                 role="button"
                                 data-bs-toggle="dropdown"
@@ -102,7 +123,7 @@
                         >
                             DISCOVER STORIES
                         </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown" class:open={isDropdownOpen}>
                             {#each stories as story (story.id)}
                                 <li>
                                     <a href={`/discover/${story.id}`} class="dropdown-item" data-sveltekit-reload>
@@ -112,6 +133,7 @@
                             {/each}
                         </ul>
                     </li>
+
                     <li class="nav-item">
                         <a class="nav-link"
                            class:nav-link__scroll={isScrolled}
@@ -135,16 +157,17 @@
 
 
 <style>
-    .header {
+    header {
         padding: 0.75rem 1rem;
         position: fixed;
         z-index: 10;
 
         transition: transform .5s ease-out;
 
-        z-index: 10;
         width: 100%;
-        padding: 1.5rem 1.875rem 1rem;
+        /*transition: all 0.3s ease;*/
+
+        /*padding: 1.5rem 1.875rem 1rem;*/
     }
 
     .header.no-background::before {
@@ -240,6 +263,14 @@
         background-color: black;
         border: none;
 
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out; /* Adjust the duration and easing as needed */
+    }
+
+    .open {
+        max-height: 700px; /* Adjust the max-height to your desired value */
+        transition: max-height 0.3s ease-in-out; /* Include transition properties when it opens */
     }
 
     /* Style the dropdown items */
