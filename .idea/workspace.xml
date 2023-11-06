@@ -17,9 +17,9 @@
         <option value="Header" />
         <option value="HamburgerButton" />
         <option value="ScrollButton" />
-        <option value="TypeScript File" />
-        <option value="+page" />
         <option value="HomeHero" />
+        <option value="+page" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -42,7 +42,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/matthijs/Documents/Coding/Bedrijven/Ilojo Bar/Ilojo-Bar-Svelte/src/lib/components&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/matthijs/Documents/Coding/Bedrijven/Ilojo Bar/Ilojo-Bar-Svelte/static/assets/images&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -55,9 +55,9 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/static/assets/images" />
       <recent name="$PROJECT_DIR$/src/lib/components" />
       <recent name="$PROJECT_DIR$/src/routes" />
-      <recent name="$PROJECT_DIR$/static/assets/images" />
       <recent name="$PROJECT_DIR$/static/assets/fonts" />
       <recent name="$PROJECT_DIR$/src/routes/home" />
     </key>
@@ -81,7 +81,10 @@
       <workItem from="1696073969673" duration="12083000" />
       <workItem from="1697133761663" duration="598000" />
       <workItem from="1697580379055" duration="14444000" />
-      <workItem from="1697974140809" duration="5843000" />
+      <workItem from="1697974140809" duration="9994000" />
+      <workItem from="1698176021137" duration="643000" />
+      <workItem from="1698183096919" duration="22287000" />
+      <workItem from="1698792319267" duration="7411000" />
     </task>
     <servers />
   </component>
@@ -103,13 +106,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="NONE" type="javascript">
           <url>file://$PROJECT_DIR$/src/routes/+page.svelte</url>
-          <line>147</line>
+          <line>139</line>
           <log-expression expression="        .img_cont{&#10;            object-position: 62% center !important;&#10;        }&#10;    }" language="JavaScript" />
           <option name="timeStamp" value="11" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/routes/+page.svelte</url>
-          <line>151</line>
+          <line>143</line>
           <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
@@ -143,7 +146,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/routes/+page.svelte</url>
-          <line>10</line>
+          <line>7</line>
           <option name="timeStamp" value="20" />
         </line-breakpoint>
       </breakpoints>

@@ -1,32 +1,22 @@
 <script>
-    let isOpen = false;
+    export let isBlur;
     export let isNavOpen;
-    console.log(`de prop is: ${isNavOpen}`)
-    console.log(isNavOpen)
-    export let backgoundColor;
-
-    function toggleMenu() {
-        isOpen = !isOpen;
-    }
 </script>
 
 <div id="ham-burger"
-     class={isOpen ? 'open' : ''}
-     on:click={toggleMenu}>
-    <span
-            style="background-color: {backgoundColor};">
-
-    </span>
-    <span
-            class:white-background={false}>
-
-    </span>
-    <span></span>
-    <span></span>
+     class={isNavOpen ? 'open' : ''}>
+    <span class:dark={isBlur}></span>
+    <span class:dark={isBlur}></span>
+    <span class:dark={isBlur}></span>
+    <span class:dark={isBlur}></span>
 </div>
 
 
 <style>
+    .dark{
+        background: var(--dark) !important;
+        transition: background .25s;
+    }
 
     #ham-burger {
         width: 32px;
@@ -39,34 +29,36 @@
         -webkit-transition: .5s ease-in-out;
         -moz-transition: .5s ease-in-out;
         -o-transition: .5s ease-in-out;
-        transition: .5s ease-in-out;
+        transition: transform .5s ease-in-out;
         cursor: pointer;
     }
 
-     #ham-burger span {
-         display: block;
-         position: absolute;
-         height: 5px;
-         width: 100%;
-         background: #00090b;
-         border-radius: 4px;
-         opacity: 1;
-         left: 0;
-         -webkit-transform: rotate(0deg);
-         -moz-transform: rotate(0deg);
-         -o-transform: rotate(0deg);
-         transform: rotate(0deg);
-         -webkit-transition: .25s ease-in-out;
-         -moz-transition: .25s ease-in-out;
-         -o-transition: .25s ease-in-out;
-         transition: .25s ease-in-out;
-     }
+    #ham-burger span {
+        display: block;
+        position: absolute;
+        height: 5px;
+        width: 100%;
+        background: var(--light);
+        border-radius: 4px;
+        opacity: 1;
+        left: 0;
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+        -webkit-transition: .25s ease-in-out;
+        -moz-transition: .25s ease-in-out;
+        -o-transition: .25s ease-in-out;
+        transition:  .25s ease-in-out, background .25s;
+        /*transition: background 0.5s;*/
+
+    }
 
     #ham-burger span:nth-child(1) {
         top: 5px;
     }
 
-    #ham-burger span:nth-child(2),#ham-burger span:nth-child(3) {
+    #ham-burger span:nth-child(2), #ham-burger span:nth-child(3) {
         top: 15px;
     }
 

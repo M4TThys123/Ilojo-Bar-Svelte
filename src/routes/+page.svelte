@@ -4,9 +4,6 @@
     import ScrollTrigger from 'gsap/dist/ScrollTrigger';
     import HomeHero from "$lib/components/HomeHero.svelte";
 
-    const oldPicture = false
-
-
     // Register GSAP plugins
     onMount(() => {
         gsap.registerPlugin(ScrollTrigger);
@@ -23,16 +20,23 @@
             },
         });
 
-        tl.from('.para-container h2', {
+        tl.from('.home-hero__image', {
             translateY: '-210%',
             rotation: '-10',
             duration: 2.5,
             ease: 'elastic',
             delay: 0.5,
-        }).from('.mask_span', {y: '150%', duration: 0.7, stagger: 0.2}, '<15%').from('.scroll_btn', {
-            translateY: '300px',
-            ease: 'Power1.easeOut',
-        }, '<');
+        })
+
+            .from('.mask_span', {
+                y: '150%',
+                duration: 0.7,
+                stagger: 0.2
+            }, '<15%')
+            .from('.scroll_btn', {
+                translateY: '300px',
+                ease: 'Power1.easeOut',
+            }, '<');
 
         scrollTL
             .fromTo('.scroll_btn', {opacity: 1, duration: 0.3}, {opacity: 0})
@@ -84,24 +88,12 @@
             <img id="background" src="/assets/images/ilojo_bar_bw_1.jpg" alt="Ilojo bar old with environment"
                  width="1772px" height="1772px">
         </picture>
-        {#if oldPicture}
-<!--            Oude Afbeelding-->
             <picture>
                 <source srcset="/assets/images/ilojo_bar_bw_2.webp" type="image/webp">
                 <source srcset="/assets/images/ilojo_bar_bw_2.png" type="image/png">
                 <img class="color_building" src="/assets/images/ilojo_bar_bw_2.png" alt="Colored Ilojo bar"
                      width="1772px" height="1772px">
             </picture>
-        {:else}
-<!--            Nieuwe Afbeelding-->
-            <picture>
-                <source srcset="/assets/images/ilojo_bar_bw_2_new.webp" type="image/webp">
-                <source srcset="/assets/images/ilojo_bar_bw_2_new.png" type="image/png">
-                <img class="color_building" src="/assets/images/ilojo_bar_bw_2_new.png" alt="Colored Ilojo bar"
-                     width="1772px" height="1772px">
-            </picture>
-        {/if}
-
         <picture>
             <source srcset="/assets/images/ilojo_bar_bw_3.webp" type="image/webp">
             <source srcset="/assets/images/ilojo_bar_bw_3.png" type="image/png">

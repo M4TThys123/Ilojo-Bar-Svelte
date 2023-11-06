@@ -1,7 +1,5 @@
 <script lang="ts">
     import type {PageData} from './$types';
-    import HamburgerButton from "$lib/components/HamburgerButton.svelte";
-
     export let data: PageData;
 
     console.log(data.content.html)
@@ -20,8 +18,6 @@
     </div>
 </section>
 
-<HamburgerButton></HamburgerButton>
-
 
 <style>
     .story {
@@ -36,7 +32,6 @@
     }
 
     .story__title {
-        /*font-size: 40px;*/
         font-weight: normal;
         line-height: 1.1em;
         text-align: center;

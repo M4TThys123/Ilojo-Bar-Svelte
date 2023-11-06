@@ -3,9 +3,24 @@
 </script>
 
 <section>
-    <div class="para-container">
-        <h2>Welcome to the <br /> Stories of Ilojo Bar</h2>
-        <p>Discover 9 stories about the shattered bar of Lagos</p>
+    <div class="home-hero__container">
+<!--        <h2>Welcome to the <br /> Stories of Ilojo Bar</h2>-->
+
+        <picture>
+            <source srcset="/assets/images/logo-ilojo-bar.webp" type="image/webp">
+            <source srcset="/assets/images/logo-ilojo-bar.png" type="image/png">
+            <img src="/assets/images/logo-ilojo-bar.webp"
+                 alt="Ilojo Bar Logo"
+                 width="100%"
+                 height="32px"
+                 class="home-hero__image"
+            >
+        </picture>
+        <p class="subtitle">
+            <span>
+                <span  class="mask_span">Discover 9 stories about the shattered bar of Lagos</span>
+            </span>
+        </p>
     </div>
 
     <ScrollButton></ScrollButton>
@@ -17,38 +32,44 @@
         z-index: 1;
         padding-top: 5.5rem;
         padding-bottom: 1.5rem;
-        left: 50%;
-        transform: translate(-50%);
-        text-align: center;
-        max-width: 45rem;
+
         color: white;
 
         height: 100%;
+        width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        align-items: center;
+    }
+    .home-hero__container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
 
-    h2 {
-        font-size: 2.5rem;
-        font-weight: bold;
+    .home-hero__image{
+        height: 5.5em;
+        width: auto;
+        filter: drop-shadow(0px 0px 5px rgb(0 0 0 / .4));
+        margin-bottom: 2rem;
+    }
+
+    .mask_span {
+        display: inline-block;
+        transform: translateY(0%);
     }
 
     p {
+        font-size: 22px;
         margin-top: .5rem;
-        font-size: 1.5rem;
+        text-shadow: 0 0 5px rgb(0 0 0 / .4);
+        text-align: center;
     }
-
-    @media (max-width: 55rem) {
-        h2 {
-            font-size: 2rem;
-            white-space: nowrap;
-            line-height: 2.5rem;
-        }
-        p {
-            font-size: 1.2rem;
-            line-height: 1.5rem;
-        }
+    p > span{
+        display: inline-block;
+        overflow: hidden;
+        padding: 5px 5px;
     }
 </style>

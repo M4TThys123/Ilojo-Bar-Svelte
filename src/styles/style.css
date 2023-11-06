@@ -11,7 +11,7 @@
 
 /*@font-face {*/
 /*    font-family: 'Austral-Sans_Stamp-Regular';*/
-/*    font-display: swap;*/
+/*    font-display: swap;*/d
 /*    src: url('/assets/fonts/AustralSansStamp-Regular.woff2') format('woff2'),*/
 /*        url('/assets/fonts/AustralSansStamp-Regular.woff') format('woff');*/
 /*    font-weight: normal;*/
@@ -66,4 +66,20 @@ a {
 
 li {
     list-style-type: none;
+}
+
+p{
+    color: var(--light);
+}
+
+.content h1, .content h2{
+    color: var(--light)
+}
+.content h1 {
+    font-size: 32px;
+}
+
+.content h2{
+    font-size: 20px;
+
 }
