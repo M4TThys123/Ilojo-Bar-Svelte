@@ -55,11 +55,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/routes" />
+      <recent name="$PROJECT_DIR$/src/routes/3d-model" />
+      <recent name="$PROJECT_DIR$/src/routes/guestbook" />
       <recent name="$PROJECT_DIR$/static/assets/images" />
       <recent name="$PROJECT_DIR$/src/lib/components" />
-      <recent name="$PROJECT_DIR$/src/routes" />
-      <recent name="$PROJECT_DIR$/static/assets/fonts" />
-      <recent name="$PROJECT_DIR$/src/routes/home" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -84,7 +84,7 @@
       <workItem from="1697974140809" duration="9994000" />
       <workItem from="1698176021137" duration="643000" />
       <workItem from="1698183096919" duration="22287000" />
-      <workItem from="1698792319267" duration="9722000" />
+      <workItem from="1698792319267" duration="10123000" />
     </task>
     <servers />
   </component>
