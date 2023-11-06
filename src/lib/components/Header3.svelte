@@ -138,7 +138,7 @@
 
 
                 <li class="nav-item">
-                    <a class="nav-link"
+                    <a class="nav-link" href="/3d-model"
                        class:nav-link__scroll={isScrolled}>3D MODEL</a>
                 </li>
 
