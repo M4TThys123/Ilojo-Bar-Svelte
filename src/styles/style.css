@@ -72,7 +72,7 @@ p{
     color: var(--light);
 }
 
-.content h1, .content h2{
+ h1,  h2, h3, h4, h5{
     color: var(--light)
 }
 .content h1 {

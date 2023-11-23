@@ -132,6 +132,7 @@
 
                 <li class="nav-item">
                     <a class="nav-link" href="/timeline"
+                       class:nav-link__active={$page.url.pathname === '/timeline'}
                        class:nav-link__scroll={isScrolled}
                     >TIMELINE</a>
                 </li>
@@ -139,11 +140,14 @@
 
                 <li class="nav-item">
                     <a class="nav-link" href="/3d-model"
-                       class:nav-link__scroll={isScrolled}>3D MODEL</a>
+                       class:nav-link__scroll={isScrolled}
+                       class:nav-link__active={$page.url.pathname === '/3d-model'}>3D MODEL</a>
                 </li>
 
                 <li class="nav-item">
                     <a class="nav-link" href="/guestbook"
+                       class:nav-link__active={$page.url.pathname === '/guestbook'}
+
                        class:nav-link__scroll={isScrolled}
                     >GUESTBOOK</a>
                 </li>
