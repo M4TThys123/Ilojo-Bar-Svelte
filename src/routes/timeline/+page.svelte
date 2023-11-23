@@ -18,22 +18,19 @@
     </p>
 </section>
 
-<section class="timeline-section mt-5">
+<section class="timeline-section mt-4 mt-lg-5">
     <section class="timeline-container container">
         <section class="timeline">
             {#each data.timelines as { nummer, jaartal, titel, beschrijving, afbeelding }}
-                <div class="timeline-item">
-                    <div class="timeline-dot">
+                <div class="timeline-block">
+                    <div class="timeline-dot"></div>
 
-                    </div>
-
-                    <div class="timeline-inner row align-items-center mb-5">
-                        <div class="col-12 col-md-6 mb-3">
-                            <section class="story__image-background">
-                                <img class="story__image" src={afbeelding.url} alt="">
-                            </section>
+                    <div class="timeline-inner row align-items-center justify-content-md-between mb-5">
+                        <div class="timeline-image__wrapper col-12 col-md-5 mb-3">
+                                <img class="timeline-image" src={afbeelding.url} alt="">
                         </div>
-                        <section class="timeline-content col-12 col-md-6">
+
+                        <section class="timeline-content col-12 col-md-5">
                             <h3 class="timeline-jaartal">{jaartal}</h3>
                             <h4 class="timeline-subtitle">{titel}</h4>
                             <p class="timeline-para">{beschrijving}</p>
@@ -46,21 +43,53 @@
 </section>
 
 <style>
+
     /* General styles */
     .content {
         margin-top: 5em;
     }
 
     .timeline{
-
+        padding: 16px 0;
+    }
+    .timeline-container{
+        width: 100%;
+        max-width: 1140px;
+        padding-right: 0.75rem;
+        padding-left: 0.75rem;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .timeline-container::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 30px;
+        height: 100%;
+        width: 4px;
+        background: #d7e4ed;
     }
 
-    .timeline-item{
 
+    .timeline-block{
+        position: relative;
     }
 
     .timeline-dot{
+        background: var(--redLight);
 
+        position: absolute;
+        /*top: 200px;*/
+        bottom:  80px;
+        left: 10px;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        box-shadow: 0 0 0 4px #ffffff, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
+    }
+
+    .timeline-inner{
+        margin-left: 40px;
     }
 
     /* Image styles */
@@ -68,7 +97,11 @@
 
     }
 
-    .story__image {
+    .timeline-image__wrapper{
+
+    }
+
+    .timeline-image {
         width: 100%;
         display: block;
         border-width: 35px;
@@ -78,7 +111,9 @@
 
 
     /* Timeline content styles */
-    .timeline-content{}
+    .timeline-content{
+        order: 2
+    }
 
     .timeline-jaartal {
         font-size: 28px;
@@ -87,6 +122,7 @@
 
     .timeline-subtitle {
         /* Add specific styles for timeline subtitle here */
+        font-size: 20px;
     }
 
     .timeline-para {
@@ -99,28 +135,46 @@
         position: relative;
     }
 
-    .timeline-container::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 18px;
-        height: 100%;
-        width: 4px;
-        background: #d7e4ed;
-    }
 
-    .timeline-container {
-        padding-left: 4em;
-    }
-
-
-
-
-
-    /* Timeline item styles */
+    /* Timeline item styles*/
     /*styles voor links en rechts*/
-    /*.timeline-item:nth-child(even) .timeline-content {*/
-    /*    order: 2;*/
-    /*}*/
+
+
+
+
+    /* SM (for tablets - screens ≥ than 768px wide) */
+    @media (width >= 768px) {
+        /* CSS rules for tablets go here */
+        .timeline-container::before {
+            left: 50%;
+        }
+
+        .timeline-inner{
+            margin-left: 0px;
+        }
+        .timeline-dot{
+            left: calc(50% - 8px);
+            top: 50%;
+        }
+
+        .timeline-block:nth-child(even)  .timeline-content {
+            order: -1;
+            text-align: end;
+        }
+
+        }
+
+    /* MD (for small laptops - screens ≥ than 992px wide) */
+    @media (width >= 992px) {
+        /* CSS rules for small laptops go here */
+    }
+
+    /* LG (for laptops and desktops - screens ≥ than 1200px wide) */
+    @media (width >= 1200px) {
+        /* CSS rules for laptops and desktops go here */
+        .timeline-container{
+            max-width: 1520px;
+        }
+    }
 
 </style>
