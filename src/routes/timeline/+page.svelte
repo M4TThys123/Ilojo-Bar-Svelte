@@ -43,8 +43,9 @@
 </section>
 
 <style>
-    *{
-        color: var(--light)
+    * {
+        color: var(--light);
+        font-family: 'Rubik', sans-serif;
     }
 
     /* General styles */
