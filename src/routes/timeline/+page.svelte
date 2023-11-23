@@ -108,7 +108,7 @@
     .timeline-image {
         width: 100%;
         display: block;
-        border-width: 35px;
+        border-width: 20px;
         border-style: solid;
         border-image: url(/assets/images/timeline/frame.png) 30 round;
     }
@@ -171,6 +171,9 @@
     /* MD (for small laptops - screens ≥ than 992px wide) */
     @media (width >= 992px) {
         /* CSS rules for small laptops go here */
+        .timeline-image {
+            border-width: 35px;
+        }
     }
 
     /* LG (for laptops and desktops - screens ≥ than 1200px wide) */
