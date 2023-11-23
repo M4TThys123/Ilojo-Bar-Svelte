@@ -277,6 +277,7 @@
         z-index: -1;
         background: rgba(255, 255, 255, 0.3);
         backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px); /* WebKit (iOS Safari) syntax */
         transition: background 0.5s, backdrop-filter 0.5s;
     }
 
