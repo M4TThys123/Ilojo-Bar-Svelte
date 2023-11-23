@@ -70,7 +70,7 @@
                             <source srcset="/assets/images/logo-ilojo-bar-dark.png" type="image/png">
                             <img src="/assets/images/logo-ilojo-bar-dark.webp"
                                  alt="Ilojo Bar Logo"
-                                 width="100%"
+                                 width="95px"
                                  height="32px"
                                  class="header-link__image"
                             >
@@ -82,7 +82,7 @@
                             <source srcset="/assets/images/logo-ilojo-bar.png" type="image/png">
                             <img src="/assets/images/logo-ilojo-bar.webp"
                                  alt="Ilojo Bar Logo"
-                                 width="100%"
+                                 width="95px"
                                  height="32px"
                                  class="header-link__image"
                             >

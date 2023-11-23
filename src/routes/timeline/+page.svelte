@@ -43,6 +43,9 @@
 </section>
 
 <style>
+    *{
+        color: var(--light)
+    }
 
     /* General styles */
     .content {
