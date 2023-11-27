@@ -173,9 +173,7 @@
     header {
         padding: 0.75rem 1rem;
         position: fixed;
-        /*z-index: 10;*/
-        z-index: 100003;
-
+        z-index: 10;
         transition: transform .5s ease-out;
 
         width: 100%;
