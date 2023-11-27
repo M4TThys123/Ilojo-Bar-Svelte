@@ -46,9 +46,9 @@
 
   <footer>
     <div class="container footer-container">
-      <img class="footer-logo" src="/assets/images/logo-ilojo-bar-big.webp" alt="logo">
+      <img class="footer-logo mb-3" src="/assets/images/logo-ilojo-bar.webp" alt="logo">
 
-      <section class="footer-links">
+      <section class="footer-links mb-3">
         <a href="/stories" class="footer-link">Stories</a>
         <a href="/timeline" class="footer-link">Timeline</a>
         <a href="/" class="footer-link">3D Model</a>
@@ -62,7 +62,7 @@
       <div class="container">
         <div class="row d-flex justify-content-center">
           <div class="col-lg-8">
-            <p>
+            <p class="text-center">
               Ilojo Bar of Casa do Fernandez, a historic monument in Lagos, Nigeria, was unlawfully demolished in 2016. Built in the 19th century by Africans returning from Brazil, it holds a rich legacy. Explore the virtual monument and its captivating stories on our English-language website.
             </p>
           </div>
@@ -70,7 +70,7 @@
       </div>
     </section>
 
-    <div class="text-center p-3 copyright">
+    <div class="text-center p-3 copyright mt-4">
       &#169; {currentYear} Ilojo Bar
     </div>
   </footer>
