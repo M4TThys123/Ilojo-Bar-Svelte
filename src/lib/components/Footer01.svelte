@@ -55,7 +55,7 @@
 
       <!-- Section: Links -->
       <section class="footer-links">
-        <a href="/stories" class="footer-link">Stories</a>
+        <a href="" class="footer-link">Stories</a>
         <a href="/timeline" class="footer-link">Timeline</a>
         <a href="/" class="footer-link">3D Model</a>
         <a href="/" class="footer-link">Credits</a>
