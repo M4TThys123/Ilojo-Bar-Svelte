@@ -79,6 +79,11 @@ p{
     font-size: 32px;
 }
 
-.content h2{
+.content h2 {
     font-size: 20px;
+}
+
+/*Page Transition done state*/
+.done {
+    pointer-events: none;
 }

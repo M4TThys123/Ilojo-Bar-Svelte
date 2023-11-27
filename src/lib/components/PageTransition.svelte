@@ -84,9 +84,7 @@
         display: none;
     }
 
-    .page-transition-container.done {
-        pointer-events: none;
-    }
+
 
     .page-transition {
         position: absolute;
@@ -105,4 +103,11 @@
     .page-transition:last-child {
         background-color: var(--sec-page-transition-color);
     }
+
+    /*Page Transition done state*/
+    /*Place in the style.css*/
+    /*.done {*/
+    /*    pointer-events: none;*/
+    /*}*/
+
 </style>
