@@ -10,6 +10,7 @@
     // Data voor Header Component
     import type {PageData} from './$types';
     import Header3 from "$lib/components/Header3.svelte";
+    import Footer from "$lib/components/Footer.svelte";
 
     export let data: PageData;
 </script>
@@ -22,6 +23,8 @@
         <slot/>
     </main>
     <!--	    <Footer/>-->
+
+    <Footer></Footer>
 </div>
 
 <style>
