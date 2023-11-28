@@ -45,11 +45,11 @@
 
     padding: 0;
     margin: 0;
+    font-family: 'Rubik', sans-serif;
 }
 
 body {
     /*font-family: 'Austral Sans', sans-serif !important;*/
-    font-family: 'Rubik', sans-serif;
     background-color: #7a1006 !important;
 
     max-width: 100vw;
