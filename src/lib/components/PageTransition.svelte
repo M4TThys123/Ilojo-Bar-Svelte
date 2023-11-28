@@ -81,7 +81,7 @@
 <style>
     :root  {
         --prm-page-transition-color: var(--grey);
-        --sec-page-transition-color: var(--redLight);
+        --sec-page-transition-color: var(--red);
     }
     /* || Page Transition || */
     .page-transition-container {
