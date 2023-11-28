@@ -48,12 +48,12 @@
     <div class="container footer-container">
       <img class="footer-logo mb-3" src="/assets/images/logo-ilojo-bar.webp" alt="logo">
 
-      <section class="footer-links mb-3">
+      <nav class="footer-links mb-3">
         <a href="/" class="footer-link">Stories</a>
         <a href="/timeline" class="footer-link">Timeline</a>
         <a href="/" class="footer-link">3D Model</a>
         <a href="/" class="footer-link">Credits</a>
-      </section>
+      </nav>
     </div>
 
     <hr class="my-5" />

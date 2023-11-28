@@ -110,6 +110,7 @@
     }
     .transition-image{
         width: 100%;
+        filter: drop-shadow(0px 0px 5px rgb(0 0 0 / .4));
     }
 
     .page-transition:first-child {
