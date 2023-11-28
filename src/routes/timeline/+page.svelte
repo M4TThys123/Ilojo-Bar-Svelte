@@ -8,10 +8,10 @@
 </script>
 
 <!-- Render data from Hygraph -->
-<section class="timeline-hero content container">
-    <h1 class="text-center mb-4">Timeline</h1>
-    <h2 class="text-center mb-3">Discover the Legacy of Our Iconic Nigerian Building</h2>
-    <p>
+<section class="timeline-hero content">
+    <h1 class="mb-4">Timeline</h1>
+    <h2 class="mb-3">Discover the Legacy of Our Iconic Nigerian Building</h2>
+    <p class="timeline-para">
         Travel through time and explore the extraordinary history of our beloved Nigerian building. From the enchanting
         streets of the 1940s to the vibrant life of the 21st century, let us guide you on an enthralling journey through the
         heart and soul of this historical landmark.
@@ -48,9 +48,11 @@
         font-family: 'Rubik', sans-serif;
     }
 
-    /* General styles */
-    .content {
-        margin-top: 5em;
+    .timeline-hero{
+        padding: 0 1rem;
+    }
+    .timeline-para{
+        font-size: 18px;
     }
 
     .timeline{
