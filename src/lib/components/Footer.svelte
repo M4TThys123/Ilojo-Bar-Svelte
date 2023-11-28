@@ -49,10 +49,11 @@
       <img class="footer-logo mb-3" src="/assets/images/logo-ilojo-bar.webp" alt="logo">
 
       <nav class="footer-links mb-3">
-        <a href="/" class="footer-link">Stories</a>
-        <a href="/timeline" class="footer-link">Timeline</a>
-        <a href="/" class="footer-link">3D Model</a>
-        <a href="/" class="footer-link">Credits</a>
+        <a href="/" class="footer-link">STORIES</a>
+        <a href="/timeline" class="footer-link">TIMELINE</a>
+        <a href="/3d-model" class="footer-link">3D MODEL</a>
+        <a href="/credits" class="footer-link">GUESTBOOK</a>
+        <a href="/credits" class="footer-link">CREDITS</a>
       </nav>
     </div>
 
