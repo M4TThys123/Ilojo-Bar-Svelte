@@ -5,10 +5,12 @@
     let menuItems;
 
     onMount(() => {
-        // Check if running in the browser
         if (typeof window !== 'undefined') {
             const pageTransitionContainer = document.querySelector('.page-transition-container');
             const pageTransition = document.querySelectorAll('.page-transition');
+            const transitionImage = document.querySelector('.transition-image');
+
+            gsap.set(transitionImage, { opacity: 0 });
 
             pageTransition[0].classList.add('first');
             gsap.to(pageTransition, {
@@ -17,10 +19,11 @@
                 onComplete() {
                     pageTransitionContainer.classList.add('done');
                     pageTransition[0].classList.remove('first');
+
+                    gsap.to(transitionImage, { opacity: 1, duration: 1 });
                 },
             });
 
-            // Using the bind:this directive to get a reference to menu items
             menuItems = Array.from(document.querySelectorAll('nav a'));
 
             menuItems.forEach(item => {
@@ -43,10 +46,12 @@
     });
 
     onDestroy(() => {
-        // Check if running in the browser
         if (typeof window !== 'undefined') {
             const pageTransitionContainer = document.querySelector('.page-transition-container');
             const pageTransition = document.querySelectorAll('.page-transition');
+            const transitionImage = document.querySelector('.transition-image');
+
+            gsap.to(transitionImage, { opacity: 0, duration: 1 });
 
             pageTransition[0].classList.add('first');
             gsap.to(pageTransition, {
@@ -63,15 +68,20 @@
 
 <!-- PageTransition.svelte -->
 <div class="page-transition-container">
-    <div class="page-transition first"></div>
-    <div class="page-transition"></div>
+    <div class="page-transition first "></div>
+    <div class="page-transition d-flex justify-content-center align-items-center">
+        <div class="transition-image__wrapper">
+            <img src="/assets/images/logo-ilojo-bar-big.webp" class="transition-image">
+        </div>
+    </div>
 </div>
+
 
 
 <style>
     :root  {
-        --prm-page-transition-color: var(--redLight);
-        --sec-page-transition-color: var(--grey);
+        --prm-page-transition-color: var(--grey);
+        --sec-page-transition-color: var(--redLight);
     }
     /* || Page Transition || */
     .page-transition-container {
@@ -94,6 +104,12 @@
 
     .page-transition.first {
         z-index: 10001;
+    }
+    .transition-image__wrapper{
+        max-width: 10em;
+    }
+    .transition-image{
+        width: 100%;
     }
 
     .page-transition:first-child {
