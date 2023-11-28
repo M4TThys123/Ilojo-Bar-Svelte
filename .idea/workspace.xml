@@ -96,7 +96,7 @@
       <workItem from="1698792319267" duration="10794000" />
       <workItem from="1699451657697" duration="13177000" />
       <workItem from="1700582810030" duration="34496000" />
-      <workItem from="1701119238152" duration="14141000" />
+      <workItem from="1701119238152" duration="16841000" />
     </task>
     <servers />
   </component>
@@ -169,7 +169,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/routes/3d-model/+page.svelte</url>
-          <line>128</line>
+          <line>138</line>
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="23" />
         </line-breakpoint>

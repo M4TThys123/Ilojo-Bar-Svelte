@@ -13,10 +13,14 @@
     export let modelPath = '/assets/models/building.fbx'; // You can pass the model path as a prop
 
     onMount(() => {
+        progressBar = document.querySelector('#progress');
+
         setTimeout(() => {
             seeModel();
         }, 1000); // 2000 milliseconds (2 seconds) delay
     });
+
+
 
     function seeModel() {
         scene = new THREE.Scene();
@@ -49,7 +53,11 @@
                 buildingObj = object;
                 controls.enablePan = false;
                 scene.add(object);
-                progressBar.style.display = 'none';
+
+                // Hide the progress bar when the model is loaded
+                if (loadingBar) {
+                    loadingBar.style.display = 'none';
+                }
             },
             (xhr) => {
                 let percentage = (xhr.loaded / xhr.total) * 100;
@@ -65,6 +73,8 @@
         );
 
         window.addEventListener('resize', onWindowResize, false);
+
+        // renderer.setSize(window.innerWidth, window.innerHeight);
 
         renderer.setSize(window.innerWidth, window.innerHeight);
         renderer.setClearColor(0x000000, 0); // the default
