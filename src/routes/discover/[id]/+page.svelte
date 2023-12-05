@@ -11,8 +11,9 @@
 </svelte:head>
 
 
-<section class="story">
-    <h1 class="story__title">{data.title}</h1>
+<section class="story content">
+    <h1 class="story__title mb-4">{data.title}</h1>
+    <h2 class="story__title">{data.subtitle}</h2>
     <div class="story__content">
         {@html data.content.html}
     </div>
@@ -22,26 +23,12 @@
 <style>
     .story {
         display: grid;
-        place-items: center;
-        background-color: #7A1006;
         overflow-x: hidden;
 
         padding: 0.8rem 1rem;
         width: 100%;
-        margin-top: 4rem;
     }
 
-    .story__title {
-        font-weight: normal;
-        line-height: 1.1em;
-        text-align: center;
-        color: rgb(254, 248, 248);
-        padding-bottom: 1em;
-
-        font-weight: bold;
-        font-size: 2em;
-
-    }
     img{
         width: 40% !important;
     }
@@ -116,15 +103,6 @@
 
     /* responsive */
     @media (max-width: 60em) {
-        .story {
-            display: grid;
-            place-items: center;
-        }
-
-        .story__title {
-            font-size: 23px;
-        }
-
         .story__content {
             grid-template-columns: repeat(1, 1fr);
             width: 118%;

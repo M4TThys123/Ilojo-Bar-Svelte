@@ -1,8 +1,8 @@
 <script>
     import * as THREE from 'three';
     import {onMount} from "svelte";
-    import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
-    import { FBXLoader } from 'three/examples/jsm/loaders/FBXLoader.js';
+    import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls.js';
+    import {FBXLoader} from 'three/examples/jsm/loaders/FBXLoader.js';
 
     let scene, fbxLoader, hemiLight, spotLight, renderer, camera,
         controls, container, buildingObj, model;
@@ -19,7 +19,6 @@
             seeModel();
         }, 1000); // 2000 milliseconds (2 seconds) delay
     });
-
 
 
     function seeModel() {

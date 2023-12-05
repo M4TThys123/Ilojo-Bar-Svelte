@@ -76,6 +76,10 @@ p{
  h1,  h2, h3, h4, h5{
     color: var(--light)
 }
+ button{
+     border: none;
+     background: none;
+ }
 .content {
     margin-top: 8rem;
 }

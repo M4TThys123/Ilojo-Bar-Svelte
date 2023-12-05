@@ -52,7 +52,7 @@
         <a href="/" class="footer-link">STORIES</a>
         <a href="/timeline" class="footer-link">TIMELINE</a>
         <a href="/3d-model" class="footer-link">3D MODEL</a>
-        <a href="/credits" class="footer-link">GUESTBOOK</a>
+        <a href="/guesbook" class="footer-link">GUESTBOOK</a>
         <a href="/credits" class="footer-link">CREDITS</a>
       </nav>
     </div>
