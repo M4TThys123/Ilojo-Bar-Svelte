@@ -157,7 +157,9 @@
     }
 
     #scene-container {
-        margin-bottom: 100px;
+        /*margin-bottom: 100px;*/
+        position: absolute;
+        top: 40px;
     }
 
     .modelCanvas {
