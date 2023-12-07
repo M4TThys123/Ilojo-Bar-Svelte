@@ -84,7 +84,7 @@ p{
     margin-top: 8rem;
 }
 .content h1 {
-    font-size: 52px;
+    font-size: 42px;
 }
 
 .content h2 {
@@ -94,4 +94,12 @@ p{
 /*Page Transition done state*/
 .done {
     pointer-events: none;
+}
+
+/* SM (for tablets - screens ≥ than 768px wide) */
+@media (width >= 768px) {
+    /* CSS rules for tablets go here */
+    .content h1 {
+        font-size: 52px;
+    }
 }

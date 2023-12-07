@@ -6,7 +6,11 @@
 
 
     onMount(() => {
-        window.addEventListener('scroll', handleScroll);
+        if ($page.url.pathname !== '/') {
+            window.addEventListener('scroll', handleScroll);
+        }
+
+        window.addEventListener('click', handleClickOutside);
     });
     export let stories: { title: string, id: number }[] = [];
 
@@ -30,6 +34,15 @@
         }
     }
 
+    function handleClickOutside(event) {
+        const navElement = document.querySelector('.navbar');
+        const toggleButton = document.querySelector('.ham-button');
+
+        // Check if the clicked element is outside the navigation and is not the toggle button
+        if (navElement && !navElement.contains(event.target) && !toggleButton.contains(event.target)) {
+            closeNav();
+        }
+    }
     function toggleDropdown() {
         console.log('toggleDropdown gaat open')
         isDropdownOpen = !isDropdownOpen;
@@ -223,7 +236,7 @@
     }
 
     .dropdown-link{
-        color: var(--light);
+        color: var(--dark);
         font-size: 21px;
     }
 

@@ -1,6 +1,11 @@
 <script>
     export let isBlur;
     export let isNavOpen;
+
+    // if route = /
+    //     no blur when scrolling
+    //     no dark class on on hamburger menu after scrolling
+    //     But, when moble nav opens, activate blur & dark class like normal.
 </script>
 
 <div id="ham-burger"

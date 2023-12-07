@@ -97,7 +97,7 @@
       <workItem from="1698792319267" duration="10794000" />
       <workItem from="1699451657697" duration="13177000" />
       <workItem from="1700582810030" duration="34496000" />
-      <workItem from="1701119238152" duration="34472000" />
+      <workItem from="1701119238152" duration="40905000" />
     </task>
     <servers />
   </component>
@@ -109,7 +109,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/lib/components/Header.svelte</url>
-          <line>169</line>
+          <line>182</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
@@ -134,22 +134,22 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/lib/components/Header.svelte</url>
-          <line>109</line>
+          <line>122</line>
           <option name="timeStamp" value="15" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/lib/components/Header.svelte</url>
-          <line>146</line>
+          <line>159</line>
           <option name="timeStamp" value="16" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/lib/components/Header.svelte</url>
-          <line>152</line>
+          <line>165</line>
           <option name="timeStamp" value="17" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/lib/components/Header.svelte</url>
-          <line>160</line>
+          <line>173</line>
           <option name="timeStamp" value="18" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
@@ -184,6 +184,12 @@
           <line>15</line>
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/routes/3d-model/+page.svelte</url>
+          <line>162</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="26" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
