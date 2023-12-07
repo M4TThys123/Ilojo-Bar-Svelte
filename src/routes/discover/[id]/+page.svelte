@@ -52,7 +52,7 @@
     border-radius: 15px;
     width: 100%;
     height: auto;
-
+    margin-bottom: 1em;
 }
 
 /* content specifiek styling */
