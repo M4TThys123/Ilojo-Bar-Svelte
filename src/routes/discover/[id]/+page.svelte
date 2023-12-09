@@ -1,16 +1,31 @@
 <script lang="ts">
     import type {PageData} from './$types';
     export let data: PageData;
-    let pagination = [
+    console.log(data)
 
-    ]
-    console.log(data.stories)
-    console.log(data.stories[0])
-    console.log(data.stories[0].id)
-    console.log(data.stories[0].title)
-    console.log(data.stories[0].route)
+    let currentPage = data.route
+    console.log(currentPage)
 
+    let pagination = []
 
+    let hyData = data.stories
+    for (let i = 0; i < hyData.length; i++){
+        pagination.push({
+            route: hyData[i].route,
+            // id: hyData[i].id,
+        })
+    }
+    console.log(pagination)
+
+    // Find the index of the current page in the pagination array
+    let currentIndex = pagination.findIndex(item => item.route === currentPage);
+
+    // Get the previous and next pages
+    let previousIndex = currentIndex - 1 >= 0 ? currentIndex - 1 : null;
+    let nextIndex = currentIndex + 1 < pagination.length ? currentIndex + 1 : null;
+
+    let previousPage = previousIndex !== null ? pagination[previousIndex].route : null;
+    let nextPage = nextIndex !== null ? pagination[nextIndex].route : null;
 </script>
 
 <svelte:head>
@@ -25,16 +40,17 @@
         {@html data.content.html}
     </div>
 
-    <div class="story-pagination">
-        <a href="" class="previous pagination">
-            <span class="pagination-text">
-                &lt;  Previous
-            </span>
+    <div class="story-pagination mt-5 align-items-center">
+        <a href="{previousPage}" class="previous pagination">
+    <span class="pagination-text">
+        &lt;  Previous
+    </span>
         </a>
-        <a href="" class="next pagination">
-            <span class="pagination-text">
-                Next &gt;
-            </span>
+        <span>{currentPage}</span>
+        <a href="{nextPage}" class="next pagination">
+    <span class="pagination-text">
+        Next &gt; <br>
+    </span>
         </a>
     </div>
 </section>

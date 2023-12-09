@@ -69,7 +69,7 @@
 <!-- PageTransition.svelte -->
 <div class="page-transition-container">
     <div class="page-transition first "></div>
-    <div class="page-transition d-flex justify-content-center align-items-center">
+    <div class="page-transition d-flex justify-content-center align-items-center" style="">
         <div class="transition-image__wrapper">
             <img src="/assets/images/logo-ilojo-bar-big.webp" class="transition-image">
         </div>
@@ -80,8 +80,30 @@
 
 <style>
     :root  {
-        --prm-page-transition-color: var(--grey);
-        --sec-page-transition-color: var(--red);
+        /*!*Eerste versie*!*/
+        /*--prm-page-transition-color: var(--light);*/
+        /*--sec-page-transition-color: var(--light);*/
+
+        /*!*Tweede versie*!*/
+        /*--prm-page-transition-color: var(--grey);*/
+        /*--sec-page-transition-color: var(--red);*/
+
+        /*!*Versie Berat*!*/
+        /*--prm-page-transition-color: var(--grey);*/
+        /*--sec-page-transition-color: var(--grey);*/
+
+        /*!*Omgekeerde kleuren*!*/
+        --prm-page-transition-color: var(--red);
+        --sec-page-transition-color: var(--grey);
+
+        /*--prm-page-transition-color: var(--red);*/
+        /*--sec-page-transition-color: var(--red);*/
+
+        /*--sec-page-transition-color: var(--redLight);*/
+        /*--prm-page-transition-color: var(--red);*/
+
+        /*--prm-page-transition-color: var(--light);*/
+        /*--sec-page-transition-color: var(--light);*/
     }
     /* || Page Transition || */
     .page-transition-container {
