@@ -1,31 +1,57 @@
 <script lang="ts">
-    import type {PageData} from './$types';
+    import { onMount } from 'svelte';
+    import { goto } from '$app/navigation';
+
+    import type { PageData } from './$types';
+
     export let data: PageData;
-    console.log(data)
 
-    let currentPage = data.route
-    console.log(currentPage)
+    let currentPageRoute = data.route;
+    let currentPageId = data.id;
 
-    let pagination = []
+    let pagination = [];
 
-    let hyData = data.stories
-    for (let i = 0; i < hyData.length; i++){
+    let hyData = data.stories;
+    for (let i = 0; i < hyData.length; i++) {
         pagination.push({
             route: hyData[i].route,
-            // id: hyData[i].id,
-        })
+            id: hyData[i].id,
+        });
     }
-    console.log(pagination)
 
     // Find the index of the current page in the pagination array
-    let currentIndex = pagination.findIndex(item => item.route === currentPage);
+    let currentIndex = pagination.findIndex((item) => item.id === currentPageId);
 
     // Get the previous and next pages
     let previousIndex = currentIndex - 1 >= 0 ? currentIndex - 1 : null;
     let nextIndex = currentIndex + 1 < pagination.length ? currentIndex + 1 : null;
 
-    let previousPage = previousIndex !== null ? pagination[previousIndex].route : null;
-    let nextPage = nextIndex !== null ? pagination[nextIndex].route : null;
+    let previousPageId = previousIndex !== null ? pagination[previousIndex].id : null;
+    let nextPageId = nextIndex !== null ? pagination[nextIndex].id : null;
+
+    // Function to handle navigation to previous page
+    const navigateToPrevious = () => {
+        if (previousPageId !== null) {
+
+            goto(`/discover/${previousPageId}`);
+        }
+    };
+
+    // Function to handle navigation to next page
+    const navigateToNext = () => {
+        if (nextPageId !== null) {
+
+            goto(`/discover/${nextPageId}`);
+
+        }
+    };
+
+
+    // Use onMount to log pagination data when the component is mounted
+    onMount(() => {
+        console.log(pagination);
+
+    });
 </script>
 
 <svelte:head>
@@ -33,7 +59,7 @@
 </svelte:head>
 
 <section class="story content">
-    <span>{data.route}</span>
+<!--    <span>{data.route}</span>-->
     <h1 class="story__title mb-4">{data.title}</h1>
     <h2 class="story__title mb-3">{data.subtitle}</h2>
     <div class="story__content">
@@ -41,17 +67,29 @@
     </div>
 
     <div class="story-pagination mt-5 align-items-center">
-        <a href="{previousPage}" class="previous pagination">
-    <span class="pagination-text">
-        &lt;  Previous
-    </span>
+        <div class="previous-wrapper">
+        <a on:click={navigateToPrevious} class="previous pagination"
+           class:hide={previousPageId===null}>
+      <span class="pagination-text">
+        &lt; Previous
+          {previousPageId}
+      </span>
         </a>
-        <span>{currentPage}</span>
-        <a href="{nextPage}" class="next pagination">
-    <span class="pagination-text">
-        Next &gt; <br>
+            </div>
+
+
+        <span>
+      {currentPageRoute}
+            <!--{currentPageId}-->
     </span>
+    <div class="next-wrapper">
+        <a on:click={navigateToNext} class="next pagination">
+      <span class="pagination-text">
+        Next &gt;
+          <!--{nextPageId}-->
+      </span>
         </a>
+    </div>
     </div>
 </section>
 
@@ -123,14 +161,18 @@
         background-size: contain;
         background-repeat: no-repeat;
         text-decoration: none;
-        text-transform: uppercase;
+        /*text-transform: uppercase;*/
         /*width: auto;*/
         display: flex;
         justify-content: center;
         transition: transform .75s ease;
         width: 160px;
     }
-    .pagination-text{
+    .previous-wrapper, .next-wrapper{
+        width: 160px;
+    }
+
+    .pagination-text {
         color: var(--redLight);
         font-size: 1em;
         font-weight: bold;
@@ -143,5 +185,9 @@
 
     .next {
         /*text-align: right;*/
+    }
+
+    .hide{
+display: none;
     }
 </style>

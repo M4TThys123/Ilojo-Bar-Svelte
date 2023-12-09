@@ -8,6 +8,7 @@ export const load: PageServerLoad = async ({params}) => {
             title
             subtitle
             route
+            id
             content {
                 html
             }
