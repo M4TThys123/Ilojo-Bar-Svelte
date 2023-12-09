@@ -7,6 +7,7 @@ export const load: PageServerLoad = async ({ params }) => {
         story(where: {id: $id}) {
             title
             subtitle
+            route
             content {
                 html
             }
