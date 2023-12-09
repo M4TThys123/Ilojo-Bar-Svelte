@@ -72,7 +72,7 @@
            class:hide={previousPageId===null}>
       <span class="pagination-text">
         &lt; Previous
-          {previousPageId}
+          <!--{previousPageId}-->
       </span>
         </a>
             </div>
