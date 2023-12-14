@@ -93,8 +93,8 @@
         /*--sec-page-transition-color: var(--grey);*/
 
         /*!*Omgekeerde kleuren*!*/
-        --prm-page-transition-color: var(--red);
-        --sec-page-transition-color: var(--grey);
+        /*--prm-page-transition-color: var(--red);*/
+        /*--sec-page-transition-color: var(--grey);*/
 
         /*--prm-page-transition-color: var(--red);*/
         /*--sec-page-transition-color: var(--red);*/
@@ -104,6 +104,10 @@
 
         /*--prm-page-transition-color: var(--light);*/
         /*--sec-page-transition-color: var(--light);*/
+
+        --sec-page-transition-color: var(--redLight);
+        --sec-page-transition-color: var(--redLight);
+
     }
     /* || Page Transition || */
     .page-transition-container {

@@ -70,7 +70,7 @@
 
 </script>
 
-<header class="header" class:no-background={!isBlur}>
+<header class="header blur" class:no-background={!isBlur}>
     <nav class="navbar navbar-expand-lg navbar-dark  fixed-top">
         <div class="nav-logo__container">
             <div class="nav-logo__innner {isNavOpen && $page.url.pathname === '/' ? '' : $page.url.pathname === '/' ? 'hide' : ''}">
@@ -121,7 +121,7 @@
 
         <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
             <ul class="navbar-nav ms-auto mt-lg-0 mt-sm-3 mt-3">
-                <li class="nav-item"
+                <li class="nav-item has-children"
                     class:is-active={!isDropdownOpen}>
                     <div class="nav-text__container">
                         <a
@@ -138,7 +138,7 @@
                         </button>
                     </div>
 
-                    <ul  class:open={isDropdownOpen}>
+                    <ul  class:open={isDropdownOpen} class="nav-list__children">
                         {#each stories as story (story.id)}
                             <li>
                                 <a href={`/discover/${story.id}`} class="dropdown-link">
@@ -189,6 +189,22 @@
         visibility: hidden;
     }
 
+    /* Style the navbar background */
+    .blur::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+        background: rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px); /* WebKit (iOS Safari) syntax */
+        transition: background 0.5s, backdrop-filter 0.5s;
+    }
+
+
     header {
         padding: 0.75rem 1rem;
         position: fixed;
@@ -200,6 +216,10 @@
 
         /*padding: 1.5rem 1.875rem 1rem;*/
     }
+    header > *{
+        z-index: 100000;
+    }
+
 
     .header.no-background::before {
         background: none; /* No background color */
@@ -222,8 +242,61 @@
         padding: 0 !important;
     }
 
+    .has-children{
+        position: relative;
+    }
+
+
+    .nav-list__children {
+        position: absolute;
+        top: 3em;
+        /*left: -1rem;*/
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 1rem 1.75rem 0.75rem 1rem;
+        border-radius: 0.75rem;
+        background: var(--light);
+        color: #14151a;
+        pointer-events: none;
+        transform: translateY(-1em);
+        transition: transform .4s ease-out,opacity .2s ease-out;
+        box-shadow: 0px 32px 60px 32px rgba(20,21,26,.1);
+
+        opacity: 0;
+        opacity: 1;
+
+        z-index: 99999;
+    }
+
+    /*Hover Dropdown - Background*/
+    :hover.has-children
+    .nav-text__container,
+
+    :hover.nav-list__children
+    .nav-text__container
+    {
+        border-radius: 1.75rem;
+        background: var(--light);
+    }
+
+
+
+    /*Hover Dropdown - Background*/
+    :hover.has-children
+    .nav-list__children,
+
+    :hover.nav-list__children
+    .nav-list__children
+    {
+        opacity: 1;
+        background: var(--redLight);
+    }
+
+
     .nav-text__container{
         display: flex;
+        position: relative;
     }
 
     .nav-submenu__trigger{
@@ -302,20 +375,6 @@
         color: var(--redLight);
     }
 
-    /* Style the navbar background */
-    .header::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        z-index: -1;
-        background: rgba(255, 255, 255, 0.3);
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px); /* WebKit (iOS Safari) syntax */
-        transition: background 0.5s, backdrop-filter 0.5s;
-    }
 
     .no-background .navbar .header::before {
         background: none !important;
