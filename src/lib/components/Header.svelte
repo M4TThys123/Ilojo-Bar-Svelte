@@ -20,6 +20,12 @@
     let isNavOpen = false;
     let isDropdownOpen = false;
 
+    let navItems = [
+        {label: 'TIMELINE', url: '/timeline'},
+        {label: '3D MODEL', url: '/3d-model'},
+        {label: 'CREDITS', url: '/credits'},
+        {label: 'GUESTBOOK', url: '/guestbook'},
+    ]
 
     // Functions
     // /home scroll van 800
@@ -43,6 +49,7 @@
             closeNav();
         }
     }
+
     function toggleDropdown() {
         console.log('toggleDropdown gaat open')
         isDropdownOpen = !isDropdownOpen;
@@ -76,7 +83,6 @@
             <div class="nav-logo__innner {isNavOpen && $page.url.pathname === '/' ? '' : $page.url.pathname === '/' ? 'hide' : ''}">
                 <a class="nav-logo"
                    href="/">
-
                     {#if isBlur}
                         <!-- Dark image -->
                         <picture>
@@ -105,6 +111,7 @@
                 </a>
             </div>
         </div>
+
         <button
                 on:click={toggleNav}
                 class="navbar-toggler ham-button"
@@ -115,68 +122,69 @@
                 aria-expanded="false"
                 aria-label="Toggle navigation"
         >
-            <!--                <span class="navbar-toggler-icon"></span>-->
             <HamburgerButton {isBlur} {isNavOpen}></HamburgerButton>
         </button>
 
         <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-            <ul class="navbar-nav ms-auto mt-lg-0 mt-sm-3 mt-3">
-                <li class="nav-item has-children"
-                    class:is-active={!isDropdownOpen}>
-                    <div class="nav-text__container">
-                        <a
-                                class="nav-link"
-                                href="/discover"
-                                class:nav-link__active={$page.url.pathname === '/discover'}
-                                class:nav-link__scroll={isScrolled}
-                        >
-                            DISCOVER STORIES
-                        </a>
-                        <button class="nav-submenu__trigger"
-                                on:click={toggleDropdown}>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1)"><path d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z"></path></svg>
-                        </button>
+            <ul class="nav-list navbar-nav ms-auto mt-lg-0 mt-sm-3 mt-3">
+                <li class="nav-item has-children">
+                    <div class="backgound">
+                        <div class="nav-text__container">
+                            <a
+                                    class="nav-link dropdown-header"
+                                    href="/discover"
+                                    class:nav-link__active={$page.url.pathname === '/discover'}
+                                    class:nav-link__scroll={isScrolled}
+
+                                    on:mouseenter={toggleDropdown}
+                            >
+                            <span class="nav-text"
+                                  class:nav-text__scroll={isScrolled}
+                            >
+                                                            DISCOVER STORIES
+                            </span>
+                            </a>
+                            <button class="nav-submenu__trigger" on:click={toggleDropdown}>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
+                                     class="bullet-svg"
+                                     class:bullet-svg__scroll={isScrolled}>
+                                    <path d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z"></path>
+                                </svg>
+                            </button>
+                        </div>
+
+                        <ul class:active={isDropdownOpen} class="nav-list nav-list__children"
+                            on:mouseleave={toggleDropdown}>
+                            {#each stories as story (story.id)}
+                                <li class="nav-item nav-item__child">
+                                    <a href={`/discover/${story.id}`}
+                                       class="dropdown-link"
+                                       class:nav-link__active={$page.url.pathname === story.url}
+                                    >
+                                    <span class="nav-text">
+                                        {story.title}
+                                    </span>
+                                    </a>
+                                </li>
+                            {/each}
+                        </ul>
                     </div>
-
-                    <ul  class:open={isDropdownOpen} class="nav-list__children">
-                        {#each stories as story (story.id)}
-                            <li>
-                                <a href={`/discover/${story.id}`} class="dropdown-link">
-                                    {story.title}
-                                </a>
-                            </li>
-                        {/each}
-                    </ul>
                 </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="/timeline"
-                       class:nav-link__active={$page.url.pathname === '/timeline'}
-                       class:nav-link__scroll={isScrolled}
-                    >TIMELINE</a>
-                </li>
-
-
-                <li class="nav-item">
-                    <a class="nav-link" href="/3d-model"
-                       class:nav-link__scroll={isScrolled}
-                       class:nav-link__active={$page.url.pathname === '/3d-model'}>3D MODEL</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="/guestbook"
-                       class:nav-link__active={$page.url.pathname === '/guestbook'}
-
-                       class:nav-link__scroll={isScrolled}
-                    >GUESTBOOK</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="/credits"
-                       class:nav-link__active={$page.url.pathname === '/credits'}
-                       class:nav-link__scroll={isScrolled}
-                    >CREDITS</a>
-                </li>
+                {#each navItems as item}
+                    <li class="nav-item ">
+                        <div class="nav-text__container">
+                            <a
+                                    class="nav-link"
+                                    href={item.url}
+                                    class:nav-link__active={$page.url.pathname === item.url}
+                                    class:nav-link__scroll={isScrolled}
+                            >
+                                {item.label}
+                            </a>
+                        </div>
+                    </li>
+                {/each}
             </ul>
         </div>
     </nav>
@@ -184,12 +192,20 @@
 
 
 <style>
-    .hide {
-        opacity: 0;
-        visibility: hidden;
+    /*=============== HEADER ===============*/
+    header {
+        padding: 0.75rem 1rem;
+        position: fixed;
+        z-index: 10;
+        transition: transform .5s ease-out;
+
+        width: 100%;
+        /*transition: all 0.3s ease;*/
+
+        /*padding: 1.5rem 1.875rem 1rem;*/
     }
 
-    /* Style the navbar background */
+    /* Blur on header as a before*/
     .blur::before {
         content: "";
         position: absolute;
@@ -204,33 +220,18 @@
         transition: background 0.5s, backdrop-filter 0.5s;
     }
 
-
-    header {
-        padding: 0.75rem 1rem;
-        position: fixed;
-        z-index: 10;
-        transition: transform .5s ease-out;
-
-        width: 100%;
-        /*transition: all 0.3s ease;*/
-
-        /*padding: 1.5rem 1.875rem 1rem;*/
-    }
-    header > *{
-        z-index: 100000;
-    }
-
-
+    /* No blur on header */
     .header.no-background::before {
         background: none; /* No background color */
         backdrop-filter: none; /* No blur */
     }
 
+
+    /*=============== NAV ===============*/
     nav {
         padding: 0 !important;
         font-weight: 600;
         font-size: 1.2em;
-
         position: relative;
         display: flex;
         align-items: center;
@@ -238,80 +239,180 @@
         max-width: 120rem;
         margin: auto;
     }
-    .nav-item{
+
+    .ham-button {
+        border: none;
+    }
+
+    .nav-list {
+        gap: 1em;
+    }
+
+    .nav-item {
         padding: 0 !important;
     }
 
-    .has-children{
+    .has-children {
         position: relative;
+    }
+
+    .has-children::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 1em;
+    }
+
+    :hover .has-children .has-children::after{
+        background: var(--redLight);
+
+    }
+
+    .has-children .nav-text__container {
+        margin-left: 16px !important;
     }
 
 
     .nav-list__children {
         position: absolute;
+        left: 0;
         top: 3em;
-        /*left: -1rem;*/
         flex-direction: column;
         align-items: flex-start;
         justify-content: flex-start;
         padding: 1rem 1.75rem 0.75rem 1rem;
         border-radius: 0.75rem;
         background: var(--light);
-        color: #14151a;
-        pointer-events: none;
-        transform: translateY(-1em);
-        transition: transform .4s ease-out,opacity .2s ease-out;
-        box-shadow: 0px 32px 60px 32px rgba(20,21,26,.1);
-
+        color: var(--dark);
+        transition: transform .4s ease-out, opacity .2s ease-out;
+        box-shadow: 0px 32px 60px 32px rgba(20, 21, 26, .1);
         opacity: 0;
-        opacity: 1;
-
+        visibility: hidden;
         z-index: 99999;
     }
 
     /*Hover Dropdown - Background*/
     :hover.has-children
-    .nav-text__container,
-
+    .backgound,
     :hover.nav-list__children
-    .nav-text__container
-    {
+    .backgound {
         border-radius: 1.75rem;
         background: var(--light);
     }
 
+    :hover.has-children
+    .nav-link .nav-text,
+    :hover.nav-list__children
+    .nav-link .nav-text {
+        color: var(--dark);
+    }
+
+    :hover.has-children
+    .bullet-svg,
+    :hover.nav-list__children
+    .bullet-svg {
+        fill: var(--dark);
+    }
 
 
     /*Hover Dropdown - Background*/
     :hover.has-children
     .nav-list__children,
-
     :hover.nav-list__children
-    .nav-list__children
-    {
+    .nav-list__children {
         opacity: 1;
-        background: var(--redLight);
+        visibility: visible;
+        background: var(--light);
     }
 
 
-    .nav-text__container{
+    .nav-text__container {
         display: flex;
         position: relative;
     }
 
-    .nav-submenu__trigger{
-        height: 40px;
-        width: 40px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 8px 0 0 0;
+    .dropdown-header {
+        padding-right: 0px !important;
     }
 
-    .dropdown-link{
-        color: var(--dark);
-        font-size: 21px;
+    /*Hover Dropdown - Background*/
+    :hover.has-children
+    .dropdown-header::before,
+    :hover.nav-list__children
+    .dropdown-header::before {
+        background-color: var(--dark) !important;
     }
+
+    .nav-submenu__trigger {
+        height: 40px;
+        width: 32px;
+        display: flex;
+        align-items: center;
+        padding: 4px 0 0 0;
+    }
+
+    .nav-submenu__trigger svg {
+        margin-left: 6px;
+    }
+
+    .bullet-svg {
+        fill: var(--light);
+        transition: fill 0.3s ease;
+    }
+
+
+    .bullet-svg__scroll {
+        fill: var(--dark);
+    }
+
+    .dropdown-link {
+        font-size: 21px;
+        position: relative;
+        transition: transform .2s ease-out;
+    }
+
+    .dropdown-link::before {
+        content: "";
+        position: absolute;
+        top: calc(50% - 2px);
+        left: 0;
+        top: 35%;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: var(--dark);
+        clip-path: circle(0 at 50% 50%);
+        z-index: 99999999;
+        transform: translateY(calc(50% - 3px));
+        transition: clip-path .1s ease-out;
+    }
+
+    .nav-text {
+        display: block;
+        transition: transform .2s ease-out, color .3s ease;;
+
+    }
+
+    .nav-text__scroll {
+        color: var(--dark)
+    }
+
+    .dropdown-link .nav-text {
+        color: var(--dark);
+    }
+
+    .dropdown-link__active::before {
+        clip-path: circle(50% at 50% 50%) !important;
+    }
+
+    :hover.dropdown-link::before {
+        clip-path: circle(50% at 50% 50%) !important;
+    }
+
+    :hover.dropdown-link .nav-text {
+        transform: translateX(0.75rem);
+    }
+
 
     .nav-link {
         transition: color .5s;
@@ -325,48 +426,38 @@
         transition: transform 1s ease, color .3s ease;
     }
 
-    .nav-link:hover {
-        color: var(--red);
-    }
-
-    .nav-link:after {
-        content: '';
-        width: 100%;
-        transform: scaleX(0);
-        height: 3px;
-        bottom: 2px;
-        left: 0;
+    .nav-link::before {
+        content: "";
+        position: absolute;
+        top: calc(50% - 2px);
+        left: -3px;
+        top: 40%;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
         background-color: var(--light);
-        transform-origin: bottom right;
-        transition: transform .5s ease-out;
+        clip-path: circle(0 at 50% 50%);
+        z-index: 99999999;
+        transition: background-color 0.3s ease;
     }
 
-    nav a.nav-link__active:after {
-        background-color: var(--redLight);
-        transform: scaleX(1);
+    .nav-link__scroll::before {
+        background-color: var(--dark);
     }
 
-    /*nav a.active, nav a.active h2 {*/
-    /*    color: var(--redLight);*/
-    /*}*/
 
-    .ham-button {
-        border: none;
+    .nav-link__active::before {
+        clip-path: circle(50% at 50% 50%) !important;
 
-        /*!*visibility: hidden;*!*/
-        /*opacity: 0;*/
     }
 
-    .visible {
-        visibility: visible !important;
-        opacity: 1 !important;
+    :hover.nav-link::before {
+        clip-path: circle(50% at 50% 50%) !important;
+
     }
-
-    /* Style the navbar links */
-
 
     .nav-link__scroll {
-        color: var(--dark);
+        color: var(--dark) !important;
     }
 
 
@@ -382,35 +473,25 @@
         transition: background 0.5s, backdrop-filter 0.5s;
     }
 
-    /* Style the dropdown menu */
-    .dropdown-menu {
-        background-color: black;
-        border: none;
 
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.3s ease-in-out; /* Adjust the duration and easing as needed */
+    .hide {
+        opacity: 0;
+        visibility: hidden;
     }
 
-    .open {
-        max-height: 700px; /* Adjust the max-height to your desired value */
-        transition: max-height 0.3s ease-in-out; /* Include transition properties when it opens */
-    }
 
-    /* Style the dropdown items */
-    .dropdown-item {
-        color: #fff;
-    }
 
-    /* Style the dropdown item when it's hovered */
-    .dropdown-item:hover {
-        background-color: #555;
-    }
-
-    @media (min-width: 992px) {
+    /*===============  BREAKPOINTS ===============*/
+    /* MD (for small laptops - screens ≥ than 992px wide) */
+    @media (width >= 992px) {
         .nav-link {
             color: var(--light);
             font-size: 19px;
         }
+    }
+
+    /* LG (for laptops and desktops - screens ≥ than 1200px wide) */
+    @media (width >= 1200px) {
+
     }
 </style>
