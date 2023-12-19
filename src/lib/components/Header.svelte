@@ -26,12 +26,8 @@
         {label: 'CREDITS', url: '/credits'},
         {label: 'GUESTBOOK', url: '/guestbook'},
     ]
-
-    // Functions
-    // /home scroll van 800
-    // normale routes scroll van 0
     function handleScroll() {
-        if (window.pageYOffset > 0) {
+        if (window.pageYOffset > 65) {
             isScrolled = true;
             isBlur = true
         } else {
@@ -136,7 +132,6 @@
                                     class:nav-link__active={$page.url.pathname === '/discover'}
                                     class:nav-link__scroll={isScrolled}
 
-                                    on:mouseenter={toggleDropdown}
                             >
                             <span class="nav-text"
                                   class:nav-text__scroll={isScrolled}
@@ -154,7 +149,7 @@
                         </div>
 
                         <ul class:active={isDropdownOpen} class="nav-list nav-list__children"
-                            on:mouseleave={toggleDropdown}>
+                        >
                             {#each stories as story (story.id)}
                                 <li class="nav-item nav-item__child">
                                     <a href={`/discover/${story.id}`}
@@ -178,6 +173,7 @@
                                     class="nav-link"
                                     href={item.url}
                                     class:nav-link__active={$page.url.pathname === item.url}
+                                    class:nav-link__scroll={isScrolled}
                             >
                                 <span class="nav-text"
                                       class:nav-link__scroll={isScrolled}
@@ -264,65 +260,31 @@
         height: 1em;
     }
 
-    :hover .has-children .has-children::after{
-        background: var(--redLight);
-
-    }
 
 
 
 
     .nav-list__children {
-        position: absolute;
         left: 0;
-        top: 3em;
         flex-direction: column;
         align-items: flex-start;
         justify-content: flex-start;
         padding: 1rem 1.75rem 0.75rem 1rem;
-        border-radius: 0.75rem;
-        background: var(--light);
         color: var(--dark);
         transition: transform .4s ease-out, opacity .2s ease-out;
-        box-shadow: 0px 32px 60px 32px rgba(20, 21, 26, .1);
+
         opacity: 0;
         visibility: hidden;
+        display: none;
         z-index: 99999;
     }
 
-    /*Hover Dropdown - Background*/
-    :hover.has-children
-    .backgound,
-    :hover.nav-list__children
-    .backgound {
-        border-radius: 1.75rem;
-        background: var(--light);
-    }
-
-    :hover.has-children
-    .nav-link .nav-text,
-    :hover.nav-list__children
-    .nav-link .nav-text {
-        color: var(--dark);
-    }
-
-    :hover.has-children
-    .bullet-svg,
-    :hover.nav-list__children
-    .bullet-svg {
-        fill: var(--dark);
-    }
-
-
-    /*Hover Dropdown - Background*/
-    :hover.has-children
-    .nav-list__children,
-    :hover.nav-list__children
-    .nav-list__children {
+    .nav-list__children.active{
         opacity: 1;
         visibility: visible;
-        background: var(--light);
+        display: block;
     }
+
 
 
     .nav-text__container {
@@ -352,20 +314,25 @@
 
     .nav-submenu__trigger svg {
         margin-left: 6px;
+        margin-top: 6px;
+        width: 20px;
+        height: 20px;
+
     }
 
+
+
     .bullet-svg {
-        fill: var(--light);
+        fill: var(--dark);
         transition: fill 0.3s ease;
     }
 
 
-    .bullet-svg__scroll {
-        fill: var(--dark);
-    }
+
+
 
     .dropdown-link {
-        font-size: 21px;
+        font-size: 25px;
         position: relative;
         transition: transform .2s ease-out;
     }
@@ -389,11 +356,11 @@
     .nav-text {
         display: block;
         transition: transform .2s ease-out, color .3s ease;;
-
+        color: var(--dark);
     }
 
     .nav-text__scroll {
-        color: var(--dark)
+        color: var(--dark)!important;
     }
 
     .dropdown-link .nav-text {
@@ -408,7 +375,7 @@
         clip-path: circle(50% at 50% 50%) !important;
     }
 
-    :hover.dropdown-link .nav-text {
+    :hover.dropdown-link .nav-text{
         transform: translateX(0.75rem);
     }
 
@@ -434,21 +401,17 @@
         width: 6px;
         height: 6px;
         border-radius: 50%;
-        background-color: var(--light);
+        background-color: var(--dark);
         clip-path: circle(0 at 50% 50%);
         z-index: 99999999;
         transition: background-color 0.3s ease;
     }
 
     .nav-link__scroll::before {
-        background-color: var(--dark);
+        background-color: var(--dark) !important;
     }
 
 
-    .nav-link__active::before {
-        clip-path: circle(50% at 50% 50%) !important;
-
-    }
 
     :hover.nav-link::before {
         clip-path: circle(50% at 50% 50%) !important;
@@ -459,10 +422,8 @@
         color: var(--dark) !important;
     }
 
-
-    /* Style the navbar links */
-    .nav-link__active {
-        color: var(--redLight);
+    .nav-link__active::before {
+        clip-path: circle(50% at 50% 50%) !important;
     }
 
 
@@ -486,18 +447,87 @@
         .nav-text{
             /*color: var(--light) !important;*/
         }
+        .nav-link__active > .nav-text{
+            transform: translateX(0.75rem);
+        }
+        :hover.nav-link .nav-text{
+            transform: translateX(0.75rem);
+        }
     }
 
     /* MD (for small laptops - screens ≥ than 992px wide) */
     @media (width >= 992px) {
-        .nav-link {
+        .nav-text {
             color: var(--light);
             font-size: 19px;
         }
+
         .has-children .nav-text__container {
             margin-left: 16px !important;
         }
-    }
+
+        /*Hover Dropdown - Background*/
+        :hover.has-children
+        .backgound,
+        :hover.nav-list__children
+        .backgound {
+            border-radius: 1.75rem;
+            background: var(--light);
+        }
+
+        :hover.has-children
+        .nav-link .nav-text,
+        :hover.nav-list__children
+        .nav-link .nav-text {
+            color: var(--dark);
+        }
+
+        :hover.has-children
+        .bullet-svg,
+        :hover.nav-list__children
+        .bullet-svg {
+            fill: var(--dark);
+        }
+
+
+        /*Hover Dropdown - Background*/
+        :hover.has-children
+        .nav-list__children,
+        :hover.nav-list__children
+        .nav-list__children {
+            opacity: 1;
+            visibility: visible;
+            background: var(--light);
+            display: block;
+        }
+
+        .bullet-svg {
+            fill: var(--light);
+        }
+
+        .bullet-svg__scroll {
+            fill: var(--dark);
+        }
+        .nav-submenu__trigger svg {
+            margin-top: 0;
+            width: 12px;
+            height: 12px;
+        }
+
+        .nav-list__children{
+            position: absolute;
+            top: 3em;
+            border-radius: 0.75rem;
+            background: var(--light);
+            box-shadow: 0px 32px 60px 32px rgba(20, 21, 26, .1);
+        }
+        .nav-link::before {
+            background-color: var(--light);
+        }
+        .dropdown-link {
+            font-size: 21px;
+        }
+        }
 
     /* LG (for laptops and desktops - screens ≥ than 1200px wide) */
     @media (width >= 1200px) {

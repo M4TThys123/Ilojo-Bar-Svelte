@@ -20,7 +20,7 @@
 
 <section class="timeline-section mt-4 mt-lg-5">
     <section class="timeline-container container">
-        <section class="timeline">
+        <section class="timeline container">
             {#each data.timelines as { nummer, jaartal, titel, beschrijving, afbeelding }}
                 <div class="timeline-block">
                     <div class="timeline-dot"></div>

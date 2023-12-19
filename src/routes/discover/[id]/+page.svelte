@@ -198,8 +198,9 @@
         width: 100%;
         height: 20em;
     }
-    :global(.video-container ){
+    :global(.video-container){
         width: 100%;
+        margin-top: 2em;
     }
 
     /*===============  BREAKPOINTS ===============*/
