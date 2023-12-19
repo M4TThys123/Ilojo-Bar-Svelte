@@ -80,34 +80,9 @@
 
 <style>
     :root  {
-        /*!*Eerste versie*!*/
-        /*--prm-page-transition-color: var(--light);*/
-        /*--sec-page-transition-color: var(--light);*/
-
-        /*!*Tweede versie*!*/
-        /*--prm-page-transition-color: var(--grey);*/
-        /*--sec-page-transition-color: var(--red);*/
-
-        /*!*Versie Berat*!*/
-        /*--prm-page-transition-color: var(--grey);*/
-        /*--sec-page-transition-color: var(--grey);*/
-
-        /*!*Omgekeerde kleuren*!*/
-        /*--prm-page-transition-color: var(--red);*/
-        /*--sec-page-transition-color: var(--grey);*/
-
-        /*--prm-page-transition-color: var(--red);*/
-        /*--sec-page-transition-color: var(--red);*/
-
-        /*--sec-page-transition-color: var(--redLight);*/
-        /*--prm-page-transition-color: var(--red);*/
-
-        /*--prm-page-transition-color: var(--light);*/
-        /*--sec-page-transition-color: var(--light);*/
-
-        --sec-page-transition-color: var(--redLight);
-        --sec-page-transition-color: var(--redLight);
-
+        /*Versie met Femke*/
+        --prm-page-transition-color: var(--red);
+        --sec-page-transition-color: var(--red);
     }
     /* || Page Transition || */
     .page-transition-container {
@@ -119,8 +94,6 @@
     .no-js .page-transition-container {
         display: none;
     }
-
-
 
     .page-transition {
         position: absolute;
@@ -146,11 +119,4 @@
     .page-transition:last-child {
         background-color: var(--sec-page-transition-color);
     }
-
-    /*Page Transition done state*/
-    /*Place in the style.css*/
-    /*.done {*/
-    /*    pointer-events: none;*/
-    /*}*/
-
 </style>

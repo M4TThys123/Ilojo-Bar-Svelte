@@ -10,7 +10,7 @@
             window.addEventListener('scroll', handleScroll);
         }
 
-        window.addEventListener('click', handleClickOutside);
+        // window.addEventListener('click', handleClickOutside);
     });
     export let stories: { title: string, id: number }[] = [];
 
@@ -40,15 +40,15 @@
         }
     }
 
-    function handleClickOutside(event) {
-        const navElement = document.querySelector('.navbar');
-        const toggleButton = document.querySelector('.ham-button');
-
-        // Check if the clicked element is outside the navigation and is not the toggle button
-        if (navElement && !navElement.contains(event.target) && !toggleButton.contains(event.target)) {
-            closeNav();
-        }
-    }
+    // function handleClickOutside(event) {
+    //     const navElement = document.querySelector('.navbar');
+    //     const toggleButton = document.querySelector('.ham-button');
+    //
+    //     // Check if the clicked element is outside the navigation and is not the toggle button
+    //     if (navElement && !navElement.contains(event.target) && !toggleButton.contains(event.target)) {
+    //         closeNav();
+    //     }
+    // }
 
     function toggleDropdown() {
         console.log('toggleDropdown gaat open')
@@ -178,9 +178,10 @@
                                     class="nav-link"
                                     href={item.url}
                                     class:nav-link__active={$page.url.pathname === item.url}
-                                    class:nav-link__scroll={isScrolled}
                             >
-                                {item.label}
+                                <span class="nav-text"
+                                      class:nav-link__scroll={isScrolled}
+                                >{item.label}</span>
                             </a>
                         </div>
                     </li>
@@ -268,9 +269,7 @@
 
     }
 
-    .has-children .nav-text__container {
-        margin-left: 16px !important;
-    }
+
 
 
     .nav-list__children {
@@ -482,11 +481,21 @@
 
 
     /*===============  BREAKPOINTS ===============*/
+    /* XS (for phones - screens < than 768px wide) */
+    @media (width < 768px) {
+        .nav-text{
+            /*color: var(--light) !important;*/
+        }
+    }
+
     /* MD (for small laptops - screens ≥ than 992px wide) */
     @media (width >= 992px) {
         .nav-link {
             color: var(--light);
             font-size: 19px;
+        }
+        .has-children .nav-text__container {
+            margin-left: 16px !important;
         }
     }
 

@@ -8,7 +8,7 @@
 </script>
 
 <!-- Render data from Hygraph -->
-<section class="timeline-hero content">
+<section class="timeline-hero content container">
     <h1 class="mb-4">Timeline</h1>
     <h2 class="mb-3">Discover the Legacy of Our Iconic Nigerian Building</h2>
     <p class="timeline-para">

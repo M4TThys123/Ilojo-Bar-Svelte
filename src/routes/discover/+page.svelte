@@ -1,6 +1,13 @@
+<script lang="ts">
+    export let data
+    console.log(data)
+</script>
+
 <section class="discover-hero content">
     <h1>Discover stories</h1>
 </section>
+
+
 
 
 <div class="height">
