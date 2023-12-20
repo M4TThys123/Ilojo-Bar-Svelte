@@ -6,30 +6,35 @@
     console.log(data.stories)
 </script>
 
+<svelte:head>
+    <title>Ilojo Bar - Discover</title>
+</svelte:head>
+
 <section class="discover-hero content container">
-    <h1>Discover stories</h1>
+    <h1 class="mb-4">Discover stories</h1>
     <section class="discover-content">
         {#each data.stories as story}
             <div class="discover-story">
                 <a href={`/discover/${story.id}`} class="story__link">
-                    <figure class="story__link__frame">
-                        <div class="story__link__frame-content">
-                            <img
-                                    src={story.thumbnail.url}
-                                    alt={story.title}
-                                    class="story__link__frame-image"
+                    <div class="story-image__container">
+                        <img
+                                src={story.thumbnail.url}
+                                alt={story.title}
+                                class="story-image"
 
-                            />
-                        </div>
-                    </figure>
-                    {story.title}
-
+                        />
+                    </div>
+                    <h3>
+                        {story.title}
+                    </h3>
+                    <h4>
+                        {story.subtitle}
+                    </h4>
                 </a>
             </div>
         {/each}
-        </section>
+    </section>
 </section>
-
 
 
 
@@ -37,23 +42,28 @@
 
 </div>
 <style>
-    content{
-        margin-top: var(--header-height);
+    .discover-content{
     }
-    h1 {
-
+    .discover-story{
+    }
+    .story-image__container {
+        max-width: 450px;
+        width: 100%;
+        max-height: 450px;
     }
 
-    .height {
-        height: 200vh;
+    .story-image {
+        width: 100%;
+        display: block;
+        border-width: 20px;
+        border-style: solid;
+        border-image: url(/assets/images/timeline/frame.png) 30 round;
     }
 
-    .media-slider__slide {
-        width: 37.5vw;
-        height: 33.3333333333vw;
-        max-width: calc(9 * 5rem);
-        max-height: calc(8 * 5rem);
-        clip-path: inset(0 round 1.5rem);
-        margin-right: 1.5rem;
+    @media (width >= 992px) {
+        /* CSS rules for small laptops go here */
+        .story-image {
+            border-width: 35px;
+        }
     }
 </style>

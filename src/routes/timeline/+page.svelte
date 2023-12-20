@@ -7,6 +7,10 @@
     }
 </script>
 
+<svelte:head>
+    <title>Ilojo Bar - Timeline</title>
+</svelte:head>
+
 <!-- Render data from Hygraph -->
 <section class="timeline-hero content container">
     <h1 class="mb-4">Timeline</h1>

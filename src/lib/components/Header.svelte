@@ -26,6 +26,7 @@
         {label: 'CREDITS', url: '/credits'},
         {label: 'GUESTBOOK', url: '/guestbook'},
     ]
+
     function handleScroll() {
         if (window.pageYOffset > 65) {
             isScrolled = true;
@@ -261,9 +262,6 @@
     }
 
 
-
-
-
     .nav-list__children {
         left: 0;
         flex-direction: column;
@@ -279,12 +277,11 @@
         z-index: 99999;
     }
 
-    .nav-list__children.active{
+    .nav-list__children.active {
         opacity: 1;
         visibility: visible;
         display: block;
     }
-
 
 
     .nav-text__container {
@@ -321,14 +318,10 @@
     }
 
 
-
     .bullet-svg {
         fill: var(--dark);
         transition: fill 0.3s ease;
     }
-
-
-
 
 
     .dropdown-link {
@@ -353,6 +346,7 @@
         transition: clip-path .1s ease-out;
     }
 
+
     .nav-text {
         display: block;
         transition: transform .2s ease-out, color .3s ease;;
@@ -360,7 +354,7 @@
     }
 
     .nav-text__scroll {
-        color: var(--dark)!important;
+        color: var(--dark) !important;
     }
 
     .dropdown-link .nav-text {
@@ -375,7 +369,7 @@
         clip-path: circle(50% at 50% 50%) !important;
     }
 
-    :hover.dropdown-link .nav-text{
+    :hover.dropdown-link .nav-text {
         transform: translateX(0.75rem);
     }
 
@@ -398,19 +392,18 @@
         top: calc(50% - 2px);
         left: -3px;
         top: 40%;
-        width: 6px;
-        height: 6px;
+        width: 12px;
+        height: 12px;
         border-radius: 50%;
         background-color: var(--dark);
         clip-path: circle(0 at 50% 50%);
         z-index: 99999999;
-        transition: background-color 0.3s ease;
+        transition: background-color 0.3s ease, clip-path 0.3s ease;
     }
 
     .nav-link__scroll::before {
         background-color: var(--dark) !important;
     }
-
 
 
     :hover.nav-link::before {
@@ -440,17 +433,18 @@
     }
 
 
-
     /*===============  BREAKPOINTS ===============*/
     /* XS (for phones - screens < than 768px wide) */
     @media (width < 768px) {
-        .nav-text{
+        .nav-text {
             /*color: var(--light) !important;*/
         }
-        .nav-link__active > .nav-text{
+
+        .nav-link__active > .nav-text {
             transform: translateX(0.75rem);
         }
-        :hover.nav-link .nav-text{
+
+        :hover.nav-link .nav-text {
             transform: translateX(0.75rem);
         }
     }
@@ -508,26 +502,35 @@
         .bullet-svg__scroll {
             fill: var(--dark);
         }
+
         .nav-submenu__trigger svg {
             margin-top: 0;
             width: 12px;
             height: 12px;
         }
 
-        .nav-list__children{
+        .nav-list__children {
             position: absolute;
             top: 3em;
             border-radius: 0.75rem;
             background: var(--light);
             box-shadow: 0px 32px 60px 32px rgba(20, 21, 26, .1);
         }
+
         .nav-link::before {
             background-color: var(--light);
         }
+
         .dropdown-link {
             font-size: 21px;
         }
+
+        .nav-link::before {
+            width: 8px;
+            height: 8px;
         }
+    }
+
 
     /* LG (for laptops and desktops - screens ≥ than 1200px wide) */
     @media (width >= 1200px) {

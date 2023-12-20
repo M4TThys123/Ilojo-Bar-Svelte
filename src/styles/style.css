@@ -93,6 +93,13 @@ p{
     font-size: 20px;
 }
 
+h3{
+    font-size: 28px;
+}
+h4{
+    font-size: 20px;
+}
+
 /*Page Transition done state*/
 .done {
     pointer-events: none;

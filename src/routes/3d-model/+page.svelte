@@ -133,6 +133,10 @@
     }
 </script>
 
+<svelte:head>
+    <title>Ilojo Bar - 3D Model</title>
+</svelte:head>
+
 
 <section class="content container">
     <h1 class=" mb-3">3D Model</h1>

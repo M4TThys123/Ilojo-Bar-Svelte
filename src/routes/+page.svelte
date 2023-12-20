@@ -3,6 +3,8 @@
     import {gsap} from 'gsap';
     import ScrollTrigger from 'gsap/dist/ScrollTrigger';
     import HomeHero from "$lib/components/HomeHero.svelte";
+    import SeeModel from "$lib/components/SeeModel.svelte";
+    import DiscoverButton from "$lib/components/DiscoverButton.svelte";
 
     // Register GSAP plugins
     onMount(() => {
@@ -72,6 +74,9 @@
     });
 </script>
 
+<svelte:head>
+    <title>Ilojo Bar - Home</title>
+</svelte:head>
 
 <HomeHero></HomeHero>
 
@@ -102,6 +107,13 @@
         </picture>
     </div>
 </section>
+
+
+<SeeModel></SeeModel>
+
+<DiscoverButton></DiscoverButton>
+
+
 
 <style>
     /*Scrolltrigger section */

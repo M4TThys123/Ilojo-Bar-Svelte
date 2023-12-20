@@ -9,6 +9,7 @@ export const load: LayoutLoad = async ({ fetch }) => {
           id
           publishedAt
           title
+          subtitle
           route
           updatedAt
       thumbnail {
