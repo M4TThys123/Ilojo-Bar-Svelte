@@ -37,20 +37,8 @@ git clone https://github.com/jornveltrop/ilojo-bar.git
 |     Caching                                                       | ✔   |
 
 
-
-## To-do
-Sadly we only had a limited time for this project, so their are still features/elements we want to add to this project. Here is a list of them:
-- [ ] Styling of the story pages
-- [ ] Make the 3D model responsive
-- [ ] Routes in modules
-- [ ] The option to add stories
-- [ ] Add music for immersion
-
 ## Authors
-The makers of this web application are [Jorn Veltrop](https://github.com/jornveltrop) and [Jeany de Vries](https://github.com/JeanyDeVries).
-
-## Contribution
-If you want to contribute to this web application, you can do that through an [issue](https://github.com/jornveltrop/ilojo-bar/issues).
+The makers of this web application are [Matthijs Blauw](https://github.com/M4TThys123).
 
 ## License
 ![image](https://user-images.githubusercontent.com/44086608/175332292-9de876e3-8886-4f3b-8463-51958dca3b23.png)
