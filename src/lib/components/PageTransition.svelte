@@ -81,8 +81,12 @@
 <style>
     :root  {
         /*Versie met Femke*/
-        --prm-page-transition-color: var(--red);
-        --sec-page-transition-color: var(--red);
+        /*--prm-page-transition-color: var(--red);*/
+        /*--sec-page-transition-color: var(--red);*/
+
+        /*Versie met Matthijs*/
+        --prm-page-transition-color: var(--grey);
+        --sec-page-transition-color: var(--grey);
     }
     /* || Page Transition || */
     .page-transition-container {

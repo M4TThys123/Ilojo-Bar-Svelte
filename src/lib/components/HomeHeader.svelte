@@ -15,7 +15,7 @@ import ScrollButton from "$lib/components/ScrollButton.svelte";
 	section {
 		position: absolute;
 		z-index: 1;
-		padding-top: 5.5rem;
+		padding-top: 8rem;
 		padding-bottom: 1.5rem;
 		left: 50%;
 		transform: translate(-50%);

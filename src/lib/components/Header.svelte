@@ -140,7 +140,9 @@
                                                             DISCOVER STORIES
                             </span>
                             </a>
-                            <button class="nav-submenu__trigger" on:click={toggleDropdown}>
+                            <button class="nav-submenu__trigger"
+                                    on:click={toggleDropdown}
+                            class:nav-link__active_bullet={$page.url.pathname === '/discover'}>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
                                      class="bullet-svg"
                                      class:bullet-svg__scroll={isScrolled}>
@@ -307,6 +309,12 @@
         display: flex;
         align-items: center;
         padding: 4px 0 0 0;
+        /*margin-left: 12px !important;*/
+
+    }
+
+    .nav-link__active_bullet {
+        margin-left: 12px !important;
     }
 
     .nav-submenu__trigger svg {
@@ -528,6 +536,10 @@
         .nav-link::before {
             width: 8px;
             height: 8px;
+        }
+
+        .nav-link__active_bullet {
+            margin-left: 0 !important;
         }
     }
 

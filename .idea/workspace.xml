@@ -102,7 +102,7 @@
       <workItem from="1700582810030" duration="34496000" />
       <workItem from="1701119238152" duration="103030000" />
       <workItem from="1702694569469" duration="14213000" />
-      <workItem from="1702911831657" duration="41620000" />
+      <workItem from="1702911831657" duration="44041000" />
     </task>
     <servers />
   </component>
@@ -114,7 +114,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/lib/components/Header.svelte</url>
-          <line>188</line>
+          <line>190</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
