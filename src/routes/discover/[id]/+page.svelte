@@ -1,10 +1,10 @@
 <script lang="ts">
     import {onMount} from 'svelte';
     import {goto} from '$app/navigation';
+    // import PaginationComponent from "$lib/components/PaginationComponent.svelte";
 
-    import type {PageData} from './$types';
-
-    export let data: PageData;
+    // import type {PageData} from './$types';
+    export let data;
 
     let currentPageRoute = data.route;
     let currentPageId = data.id;
@@ -67,33 +67,9 @@
     </section>
 
 
-    <div class="story-pagination mt-5 align-items-center">
-        <div class="previous-wrapper">
-            <a on:click={navigateToPrevious} class="previous pagination"
-               class:hide={previousPageId===null}>
-      <span class="pagination-text">
-        &lt; Previous
-          <!--{previousPageId}-->
-      </span>
-            </a>
-        </div>
-
-
-        <span>
-      {currentPageRoute}
-            <!--{currentPageId}-->
-    </span>
-        <div class="next-wrapper">
-            <a on:click={navigateToNext} class="next pagination"
-               class:hide={nextPageId===null}>
-      <span class="pagination-text">
-        Next &gt;
-          <!--{nextPageId}-->
-      </span>
-            </a>
-        </div>
-    </div>
+<!--    <PaginationComponent {data}></PaginationComponent>-->
 </section>
+
 
 
 <style>

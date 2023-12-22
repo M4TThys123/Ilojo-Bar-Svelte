@@ -25,6 +25,7 @@
         <option value="PageTransition" />
         <option value="SeeModel" />
         <option value="DiscoverButton" />
+        <option value="PaginationComponent" />
       </list>
     </option>
   </component>
@@ -101,7 +102,7 @@
       <workItem from="1700582810030" duration="34496000" />
       <workItem from="1701119238152" duration="103030000" />
       <workItem from="1702694569469" duration="14213000" />
-      <workItem from="1702911831657" duration="31271000" />
+      <workItem from="1702911831657" duration="41620000" />
     </task>
     <servers />
   </component>
@@ -185,15 +186,14 @@
           <option name="timeStamp" value="29" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/routes/discover/[id]/+page.svelte</url>
-          <line>8</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="30" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/routes/discover/+page.svelte</url>
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/routes/discover/[id]/+page.svelte</url>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="35" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
