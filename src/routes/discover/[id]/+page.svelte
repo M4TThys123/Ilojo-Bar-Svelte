@@ -58,25 +58,27 @@
     <title>Ilojo Bar - {data.title}</title>
 </svelte:head>
 
-<section class="story content container">
-    <!--    <span>{data.route}</span>-->
-    <h1 class="story__title mb-4">{data.title}</h1>
-    <h2 class="story__title mb-3 mb-md-5">{data.subtitle}</h2>
-    <section class="story__content">
-        {@html data.content.html}
+<div class="page">
+    <section class="page-content story container content page">
+
+        <!--    <span>{data.route}</span>-->
+
+        <h1 class="page-title mb-4">{data.title}</h1>
+        <h2 class="story__title mb-3 mb-md-5">{data.subtitle}</h2>
+        <section class="story__content">
+            {@html data.content.html}
+        </section>
+
+
+        <!--    <PaginationComponent {data}></PaginationComponent>-->
     </section>
-
-
-<!--    <PaginationComponent {data}></PaginationComponent>-->
-</section>
-
+</div>
 
 
 <style>
-    .story {
+    .page-content {
         display: grid;
         overflow-x: hidden;
-
         padding: 0.8rem 1rem;
         width: 100%;
     }
@@ -107,74 +109,12 @@
         margin-bottom: 1em;
     }
 
-    /* content specifiek styling */
-    :global(.story__content >p) {
-
-    }
-
-    :global(.story__content > img:nth-child(2)) {
-
-    }
-
-    :global(.story__content > img:nth-child(4)) {
-    }
-
-    :global(.story__content > p:nth-child(1)) {
-
-    }
-
-    :global(.story__content > p:nth-child(3)) {
-    }
-
-    .story-pagination {
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-        flex-wrap: wrap;
-    }
-
-    .pagination {
-        background-image: url(/assets/images/button_bg_light.webp);
-        background-position: center;
-        background-size: contain;
-        background-repeat: no-repeat;
-        text-decoration: none;
-        /*text-transform: uppercase;*/
-        /*width: auto;*/
-        display: flex;
-        justify-content: center;
-        transition: transform .75s ease;
-        width: 160px;
-    }
-
-    .previous-wrapper, .next-wrapper {
-        width: 160px;
-    }
-
-    .pagination-text {
-        color: var(--redLight);
-        font-size: 1em;
-        font-weight: bold;
-        padding: 1.2em 2em 1em 2em;
-    }
-
-    .previous {
-
-    }
-
-    .next {
-        /*text-align: right;*/
-    }
-
-    .hide {
-        display: none;
-    }
-
-    :global(.video-container iframe){
+    :global(.video-container iframe) {
         width: 100%;
         height: 20em;
     }
-    :global(.video-container){
+
+    :global(.video-container) {
         width: 100%;
         margin-top: 2em;
     }
@@ -219,8 +159,4 @@
             height: 45em;
         }
     }
-
-    /*!* LG (for laptops and desktops - screens ≥ than 1200px wide) *!*/
-    /*@media (width >= 1200px) {*/
-    /*}*/
 </style>

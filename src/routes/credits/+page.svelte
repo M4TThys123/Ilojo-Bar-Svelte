@@ -14,18 +14,24 @@
     <title>Ilojo Bar - Credits</title>
 </svelte:head>
 
-<section class="timeline-hero content container">
-    <h1 class="mb-4">{title}</h1>
-    <h2 class="mb-3">{subTitle}</h2>
-</section>
+<div class="page container">
+    <section class="page-content">
 
-<section class="credits-content">
-    <!--{@html data.content.html}-->
-</section>
+        <section class="timeline-hero">
+            <h1 class="">{title}</h1>
+            <h2 class="">{subTitle}</h2>
+        </section>
+
+        <section class="rich-text__field">
+            {@html content.html}
+        </section>
+    </section>
+</div>
 
 <style>
-    .credits-content{
+    .credits-content {
 
     }
+
 
 </style>

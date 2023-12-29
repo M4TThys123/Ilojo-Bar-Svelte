@@ -63,56 +63,142 @@ body.no-scroll {
 
 a {
     text-decoration: none !important;
-    color: white!important;
+    color: white !important;
 }
 
 li {
     list-style-type: none;
 }
 
-p{
+p {
     color: var(--light);
 }
 
- h1,  h2, h3, h4, h5{
+h1, h2, h3, h4, h5 {
     color: var(--light)
 }
 
- button{
-     border: none;
-     background: none;
- }
-.content {
+button {
+    border: none;
+    background: none;
+}
+
+/*Allgemene page styling*/
+.page {
     margin-top: 8rem;
 }
-.content h1 {
+
+h1 {
     font-size: 42px;
     text-transform: uppercase;
+    margin-bottom: 1.5rem !important;
 }
 
-.content h2 {
+h2 {
     font-size: 20px;
 }
 
-h3{
-    font-size: 28px;
+h3 {
+    font-size: 18px;
 }
-h4{
-    font-size: 20px;
+
+h4 {
+    font-size: 18px;
 }
+
+.rich-text__field {
+    position: relative;
+    font-family: Rubik, sans-serif;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+/* content global styling */
+:global(.rich-text__field p) {
+    font-size: 18px;
+}
+
+:global(.rich-text__field img) {
+    /*object-fit: fill;*/
+    border-radius: 15px;
+    width: 100%;
+    height: auto;
+    margin-bottom: 1em;
+}
+
+:global(.rich-text__field iframe) {
+    width: 100%;
+    height: 20em;
+}
+
+:global(.video-container) {
+    width: 100%;
+    margin-top: 2em;
+}
+
 
 /*Page Transition done state*/
 .done {
     pointer-events: none;
 }
 
+/*===============  BREAKPOINTS ===============*/
 /* SM (for tablets - screens ≥ than 768px wide) */
 @media (width >= 768px) {
     /* CSS rules for tablets go here */
-    .content h1 {
+    h1 {
         font-size: 52px;
     }
-    .content h2 {
+
+    h2 {
         font-size: 32px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    h4 {
+        font-size: 18px;
+    }
+}
+
+/* MD (for small laptops - screens ≥ than 992px wide) */
+@media (width >= 992px) {
+    .rich-text__field {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 5%;
+    }
+
+    :global(.rich-text__field p) {
+        width: 58%;
+        box-sizing: border-box;
+        font-size: 22px;
+        margin-top: 2em;
+    }
+
+    :global(.rich-text__field img) {
+        width: 37%;
+        margin-top: 2em;
+        height: fit-content;
+    }
+
+    :global(.text-large > p) {
+        width: 100%;
+    }
+
+    :global(.text-double) {
+        width: 58%;
+    }
+
+    :global(.text-double p) {
+        width: 100%;
+    }
+
+    :global(.video-container iframe) {
+        height: 45em;
     }
 }

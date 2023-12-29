@@ -52,7 +52,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/matthijs/Documents/Coding/Bedrijven/Ilojo Bar/Ilojo-Bar-Svelte/static/assets/images",
+    "last_opened_file_path": "/Users/matthijs/Documents/Coding/Bedrijven/Ilojo Bar/Ilojo-Bar-Svelte/static/assets/images/building",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -65,11 +65,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/static/assets/images/building" />
       <recent name="$PROJECT_DIR$/static/assets/images" />
       <recent name="$PROJECT_DIR$/src/routes/discover" />
       <recent name="$PROJECT_DIR$/static/assets" />
       <recent name="$PROJECT_DIR$/src/lib/components" />
-      <recent name="$PROJECT_DIR$/static/assets/images/timeline" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -102,7 +102,8 @@
       <workItem from="1700582810030" duration="34496000" />
       <workItem from="1701119238152" duration="103030000" />
       <workItem from="1702694569469" duration="14213000" />
-      <workItem from="1702911831657" duration="44041000" />
+      <workItem from="1702911831657" duration="47870000" />
+      <workItem from="1703850400936" duration="7282000" />
     </task>
     <servers />
   </component>
@@ -187,13 +188,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/routes/discover/+page.svelte</url>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="32" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/routes/discover/[id]/+page.svelte</url>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="35" />
+          <url>file://$PROJECT_DIR$/src/routes/credits/+page.svelte</url>
+          <line>12</line>
+          <option name="timeStamp" value="36" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
