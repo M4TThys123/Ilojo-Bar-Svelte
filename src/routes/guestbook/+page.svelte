@@ -2,9 +2,9 @@
     <title>Ilojo Bar - Guestbook</title>
 </svelte:head>
 
-<section class="timeline-hero content container">
-    <h1 class="mb-4">Guestbook</h1>
-    <h2 class="mb-5">Read through stroies from guests</h2>
+<section class="timeline-hero page container">
+    <h1>Guestbook</h1>
+    <h2>Read through stories from guests</h2>
     <p>
         People can leave there stories from ..
     </p>

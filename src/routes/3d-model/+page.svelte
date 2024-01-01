@@ -138,7 +138,7 @@
 </svelte:head>
 
 
-<section class="content container">
+<section class="page container">
     <h1 class=" mb-3">3D Model</h1>
 </section>
 

@@ -12,9 +12,9 @@
 </svelte:head>
 
 <!-- Render data from Hygraph -->
-<section class="timeline-hero content container">
-    <h1 class="mb-4">Timeline</h1>
-    <h2 class="mb-3">Discover the Legacy of Our Iconic Nigerian Building</h2>
+<section class="timeline-hero page container">
+    <h1>Timeline</h1>
+    <h2>Discover the Legacy of Our Iconic Nigerian Building</h2>
     <p class="timeline-para">
         Travel through time and explore the extraordinary history of our beloved Nigerian building. From the enchanting
         streets of the 1940s to the vibrant life of the 21st century, let us guide you on an enthralling journey through the

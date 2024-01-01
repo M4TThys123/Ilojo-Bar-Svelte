@@ -39,22 +39,22 @@
         <picture class="building-image__wrapper">
             <img src="/assets/images/building/building_high-res.png" alt="" class="building-image">
         </picture>
-            <a href="" class="window-one window-small"></a>
-            <a href="" class="window-two window-small"></a>
-            <a href="" class="window-three window-small"></a>
+            <a href="/discover/cl8vh8rmx4wx80bw26jscwzhn" class="window-one top-layer window-small"></a>
+            <a href="/discover/cl8vc7gt84tx30cuqor5bxqfy" class="window-two top-layer window-small"></a>
+            <a href="/discover/cl8vjb2rn4x9i0burl532c8t2" class="window-three top-layer window-small"></a>
 
-            <a href="" class="window-four window-big"></a>
-            <a href="" class="window-five window-big"></a>
-            <a href="" class="window-six window-big"></a>
+            <a href="/discover/cl8ysy2yw08zy0bvy1hq4bnkf" class="window-four top-layer window-big"></a>
+            <a href="/discover/cl8yszk6v08im0bvyodnw9lyy" class="window-five top-layer window-big"></a>
+            <a href="/discover/cl8yt1lbr08kt0bvyck52dg6p" class="window-six top-layer window-big"></a>
 
-            <a href="" class="window-seven window-small"></a>
-            <a href="" class="window-eight window-small"></a>
-            <a href="" class="window-nine window-small"></a>
+            <a href="/discover/cl8ysx9tz08cs0auqxhojha3y" class="window-seven bottom-layer window-small"></a>
+            <a href="/discover/cl8vjfmjh4yr00bw7jt60irl9" class="window-eight bottom-layer window-small"></a>
+            <a href="/discover/cl8ysw30o08be0auq4yw1n8tj" class="window-nine bottom-layer window-small"></a>
 
-            <a href="" class="door-frame door"></a>
+            <a href="/3d-model" class="door-frame bottom-layer door"></a>
 
-            <a href="" class="window-ten window-big"></a>
-            <a href="" class="window-eleven window-big"></a>
+            <a href="/credits" class="window-ten bottom-layer window-big"></a>
+            <a href="/guestbook" class="window-eleven bottom-layer window-big"></a>
 
         <div class="window-container">
         </div>
@@ -98,67 +98,62 @@
         height: 19.87152%;
     }
 
+    .top-layer{
+        top: 40.63532%;
+    }
 
     .window-one {
         left: 6.55376%;
-        top: 40.63532%;
     }
 
     .window-two {
         left: 24.08258%;
-        top: 40.63532%;
     }
 
     .window-three {
         left: 42.44487%;
-        top: 40.63532%;
     }
 
     .window-four {
         left: 58.12732%;
-        top: 40.63532%;
     }
 
     .window-five {
         left: 72.10727%;
-        top: 40.63532%;
     }
 
     .window-six {
-        left: 87.03972%;
-        top: 40.63532%;
+        left: 86.18552%;
     }
 
+    .bottom-layer{
+        top: 79.60415%;
+
+    }
     .window-seven {
         left: 6.55376%;
-        top: 79.60415%;
     }
 
     .window-eight {
         left: 24.14058%;
-        top: 79.60415%;
     }
 
     .window-nine {
         left: 42.44487%;
-        top: 79.60415%;
     }
 
     .door-frame {
         left: 57.95360%;
-        top: 79.66401%;
     }
 
     .window-ten {
         left: 72.10727%;
-        top: 79.60415%;
     }
 
     .window-eleven {
-        left: 87.03972%;
-        top: 79.60415%;
+        left: 86.18552%;
     }
-    
+
 
     /*.window-one x=166, y=588*/
     /*.window-two x=610, y=588*/

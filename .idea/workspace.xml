@@ -52,7 +52,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/matthijs/Documents/Coding/Bedrijven/Ilojo Bar/Ilojo-Bar-Svelte/static/assets/images/building",
+    "last_opened_file_path": "/Users/matthijs/Documents/Coding/Bedrijven/Ilojo Bar/Ilojo-Bar-Svelte/static/assets/images",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -65,13 +65,14 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/static/assets/images/building" />
       <recent name="$PROJECT_DIR$/static/assets/images" />
+      <recent name="$PROJECT_DIR$/static/assets/images/building" />
       <recent name="$PROJECT_DIR$/src/routes/discover" />
       <recent name="$PROJECT_DIR$/static/assets" />
       <recent name="$PROJECT_DIR$/src/lib/components" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/static/assets/images/building" />
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
@@ -103,7 +104,7 @@
       <workItem from="1701119238152" duration="103030000" />
       <workItem from="1702694569469" duration="14213000" />
       <workItem from="1702911831657" duration="47870000" />
-      <workItem from="1703850400936" duration="7282000" />
+      <workItem from="1703850400936" duration="11887000" />
     </task>
     <servers />
   </component>
