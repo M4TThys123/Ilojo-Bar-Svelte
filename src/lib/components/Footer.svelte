@@ -1,5 +1,6 @@
 <script>
   let currentYear = new Date().getFullYear();
+  import {page} from '$app/stores';
 </script>
 
 <style>
@@ -42,9 +43,14 @@
     background-color: rgba(0, 0, 0, 0.2);
     padding: 0.5em;
   }
+
+  .hidden{
+    display: none;
+  }
 </style>
 
-  <footer>
+  <footer class:hidden={$page.url.pathname === '/'}
+  >
     <div class="container footer-container">
       <img class="footer-logo mb-3" src="/assets/images/logo-ilojo-bar.webp" alt="logo">
 
@@ -75,3 +81,5 @@
       &#169; {currentYear} Ilojo Bar
     </div>
   </footer>
+
+

@@ -49,34 +49,35 @@
     // Use onMount to log pagination data when the component is mounted
     onMount(() => {
         console.log(pagination);
-
     });
 </script>
 
-    <div class="story-pagination mt-5 align-items-center">
+<div class="story-pagination mt-5 align-items-center">
     <div class="previous-wrapper">
-        <a on:click={navigateToPrevious} class="previous pagination"
-           class:hide={previousPageId===null}>
-      <span class="pagination-text">
+        <nav>
+            <a href="/discover/{previousPageId}" class="previous pagination"  class:hide={previousPageId === null}>
+                <span class="pagination-text">
         &lt; Previous
-          <!--{previousPageId}-->
+                    <!--{previousPageId}-->
       </span>
-        </a>
+            </a>
+        </nav>
     </div>
 
 
-    <span>
-      {currentPageRoute}
-        <!--{currentPageId}-->
-    </span>
+    <!--    <span>-->
+    <!--      {currentPageRoute}-->
+    <!--        &lt;!&ndash;{currentPageId}&ndash;&gt;-->
+    <!--    </span>-->
     <div class="next-wrapper">
-        <a on:click={navigateToNext} class="next pagination"
-           class:hide={nextPageId===null}>
+        <nav>
+            <a href="/discover/{nextPageId}" class="next pagination" class:hide={nextPageId===null}>
       <span class="pagination-text">
         Next &gt;
           <!--{nextPageId}-->
       </span>
-        </a>
+            </a>
+        </nav>
     </div>
 </div>
 

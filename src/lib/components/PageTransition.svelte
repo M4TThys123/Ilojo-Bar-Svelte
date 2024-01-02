@@ -92,7 +92,7 @@
     .page-transition-container {
         position: fixed;
         inset: 0;
-        z-index: 10000;
+        z-index: 100000;
     }
 
     .no-js .page-transition-container {
@@ -102,11 +102,11 @@
     .page-transition {
         position: absolute;
         inset: 0;
-        z-index: 10000;
+        z-index: 100000;
     }
 
     .page-transition.first {
-        z-index: 10001;
+        z-index: 100001;
     }
     .transition-image__wrapper{
         max-width: 10em;

@@ -4,7 +4,7 @@
 
     // Componenten
     import Header from "$lib/components/Header.svelte";
-    // import Footer from '$lib/components/Footer.svelte';
+    import Footer from '$lib/components/Footer.svelte';
 
 
     // Data voor Header Component
@@ -22,8 +22,13 @@
         <slot/>
     </main>
 
-    <PageTransition></PageTransition>
 
+    <Footer
+    >
+
+    </Footer>
+
+    <PageTransition></PageTransition>
 </div>
 
 <style>
@@ -32,6 +37,8 @@
         flex-direction: column;
         min-height: 100vh;
     }
+
+
 
 
 </style>

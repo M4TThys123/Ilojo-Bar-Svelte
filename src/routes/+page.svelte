@@ -5,6 +5,7 @@
     import HomeHero from "$lib/components/HomeHero.svelte";
     import SeeModel from "$lib/components/SeeModel.svelte";
     import DiscoverButton from "$lib/components/DiscoverButton.svelte";
+    import BuildingWithWindows from "$lib/components/BuildingWithWindows.svelte";
 
     // Register GSAP plugins
     onMount(() => {
@@ -107,6 +108,8 @@
         </picture>
     </div>
 </section>
+
+<BuildingWithWindows></BuildingWithWindows>
 
 
 <SeeModel></SeeModel>

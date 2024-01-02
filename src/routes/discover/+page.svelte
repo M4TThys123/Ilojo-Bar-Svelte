@@ -39,6 +39,7 @@
         <picture class="building-image__wrapper">
             <img src="/assets/images/building/building_high-res.png" alt="" class="building-image">
         </picture>
+        <nav>
             <a href="/discover/cl8vh8rmx4wx80bw26jscwzhn" class="window-one top-layer window-small"></a>
             <a href="/discover/cl8vc7gt84tx30cuqor5bxqfy" class="window-two top-layer window-small"></a>
             <a href="/discover/cl8vjb2rn4x9i0burl532c8t2" class="window-three top-layer window-small"></a>
@@ -55,7 +56,7 @@
 
             <a href="/credits" class="window-ten bottom-layer window-big"></a>
             <a href="/guestbook" class="window-eleven bottom-layer window-big"></a>
-
+        </nav>
         <div class="window-container">
         </div>
     </div>

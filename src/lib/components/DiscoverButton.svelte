@@ -43,10 +43,10 @@
         }
     }
 
-    /* MD (for small laptops - screens ≥ than 992px wide) */
-    @media (width >= 992px) {
+    /* LG (for laptops and desktops - screens ≥ than 1200px wide) */
+    @media (width >= 1200px) {
         .discover_cont {
-            bottom: 6em;
+            bottom: 4em;
         }
     }
 

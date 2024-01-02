@@ -1,7 +1,7 @@
 <script lang="ts">
     import {onMount} from 'svelte';
     import {goto} from '$app/navigation';
-    // import PaginationComponent from "$lib/components/PaginationComponent.svelte";
+    import PaginationComponent from "$lib/components/PaginationComponent.svelte";
 
     // import type {PageData} from './$types';
     export let data;
@@ -70,7 +70,7 @@
         </section>
 
 
-        <!--    <PaginationComponent {data}></PaginationComponent>-->
+            <PaginationComponent {data}></PaginationComponent>
     </section>
 </div>
 
