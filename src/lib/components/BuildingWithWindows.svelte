@@ -24,8 +24,8 @@
         <a href="/credits" class="window-ten bottom-layer window-big"></a>
         <a href="/guestbook" class="window-eleven bottom-layer window-big"></a>
     </nav>
-    <div class="window-container">
-    </div>
+<!--    <div class="window-container">-->
+<!--    </div>-->
 </div>
 
 <style>

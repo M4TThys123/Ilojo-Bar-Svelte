@@ -1,12 +1,14 @@
 <div class="see_model_cont">
-    <a href="/3d-model" class="btn_a btn_square">
-        <picture>
-            <source srcset="/assets/images/3d_building.webp" type="image/webp">
-            <source srcset="/assets/images/3d_building.png" type="image/png">
-            <img src="/assets/images/3d_building.png" alt="image 3D model Ilojo bar" width="270px" height="182px" loading="lazy">
-        </picture>
-        <p>Show in 3D</p>
-    </a>
+    <nav>
+        <a href="/3d-model" class="btn_a btn_square">
+            <picture>
+                <source srcset="/assets/images/3d_building.webp" type="image/webp">
+                <source srcset="/assets/images/3d_building.png" type="image/png">
+                <img src="/assets/images/3d_building.png" alt="image 3D model Ilojo bar" width="270px" height="182px" loading="lazy">
+            </picture>
+            <p>Show in 3D</p>
+        </a>
+    </nav>
 </div>
 
 <style>

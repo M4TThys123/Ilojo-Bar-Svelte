@@ -49,13 +49,16 @@
   }
 </style>
 
-  <footer class:hidden={$page.url.pathname === '/'}
+  <footer class:hidden={$page.url.pathname === '/'} class="mt-5"
   >
     <div class="container footer-container">
-      <img class="footer-logo mb-3" src="/assets/images/logo-ilojo-bar.webp" alt="logo">
-
       <nav class="footer-links mb-3">
-        <a href="/" class="footer-link">STORIES</a>
+        <a href="/">
+          <img class="footer-logo mb-3" src="/assets/images/logo-ilojo-bar.webp" alt="logo">
+        </a>
+      </nav>
+        <nav class="flex-row">
+        <a href="/discover/cl8vc7gt84tx30cuqor5bxqfy" class="footer-link">STORIES</a>
         <a href="/timeline" class="footer-link">TIMELINE</a>
         <a href="/3d-model" class="footer-link">3D MODEL</a>
         <a href="/guesbook" class="footer-link">GUESTBOOK</a>

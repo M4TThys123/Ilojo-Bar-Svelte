@@ -1,7 +1,9 @@
 <section class="discover_cont">
-    <a href="/discover" class="btn_a btn_breed">
-        Discover stories
-    </a>
+    <nav>
+        <a href="/discover" class="btn_a btn_breed">
+            Discover stories
+        </a>
+    </nav>
 </section>
 
 <style>

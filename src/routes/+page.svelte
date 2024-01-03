@@ -5,7 +5,7 @@
     import HomeHero from "$lib/components/HomeHero.svelte";
     import SeeModel from "$lib/components/SeeModel.svelte";
     import DiscoverButton from "$lib/components/DiscoverButton.svelte";
-    import BuildingWithWindows from "$lib/components/BuildingWithWindows.svelte";
+    // import BuildingWithWindows from "$lib/components/BuildingWithWindows.svelte";
 
     // Register GSAP plugins
     onMount(() => {
@@ -81,6 +81,11 @@
 
 <HomeHero></HomeHero>
 
+<!--<div class="position">-->
+<!--    <BuildingWithWindows></BuildingWithWindows>-->
+<!--</div>-->
+
+
 <section class="img_cont">
     <div class="scroll_cont">
         <picture>
@@ -109,7 +114,6 @@
     </div>
 </section>
 
-<BuildingWithWindows></BuildingWithWindows>
 
 
 <SeeModel></SeeModel>
@@ -157,6 +161,22 @@
     /*        object-position: 62% center !important;*/
     /*    }*/
     /*}*/
+
+    .position{
+        position: fixed;
+        top: 36.5%;
+        left: 20.08732%;
+        width: 56.9987%;
+        margin: 0 auto;
+        /*display: flex;*/
+        /*justify-content: center;*/
+    }
+
+    @media (width >= 992px) {
+        .position {
+            top: 23.5%;
+        }
+    }
 </style>
 
 

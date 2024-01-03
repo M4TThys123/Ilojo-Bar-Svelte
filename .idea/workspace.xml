@@ -106,7 +106,7 @@
       <workItem from="1702694569469" duration="14213000" />
       <workItem from="1702911831657" duration="47870000" />
       <workItem from="1703850400936" duration="11887000" />
-      <workItem from="1704112630057" duration="9779000" />
+      <workItem from="1704112630057" duration="12591000" />
     </task>
     <servers />
   </component>
@@ -128,13 +128,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="NONE" type="javascript">
           <url>file://$PROJECT_DIR$/src/routes/+page.svelte</url>
-          <line>154</line>
+          <line>158</line>
           <log-expression expression="        .img_cont{&#10;            object-position: 62% center !important;&#10;        }&#10;    }" language="JavaScript" />
           <option name="timeStamp" value="11" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/routes/+page.svelte</url>
-          <line>158</line>
+          <line>162</line>
           <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
@@ -197,6 +197,12 @@
           <url>file://$PROJECT_DIR$/src/routes/credits/+page.svelte</url>
           <line>12</line>
           <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/routes/+page.svelte</url>
+          <line>165</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="37" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
