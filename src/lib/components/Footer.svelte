@@ -58,7 +58,7 @@
         </a>
       </nav>
         <nav class="flex-row">
-        <a href="/discover/cl8vc7gt84tx30cuqor5bxqfy" class="footer-link">STORIES</a>
+        <a href="/discover" class="footer-link">STORIES</a>
         <a href="/timeline" class="footer-link">TIMELINE</a>
         <a href="/3d-model" class="footer-link">3D MODEL</a>
         <a href="/guestbook" class="footer-link">GUESTBOOK</a>
