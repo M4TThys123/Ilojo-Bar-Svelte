@@ -55,12 +55,15 @@
 <div class="story-pagination mt-5 align-items-center">
     <div class="previous-wrapper">
         <nav>
-            <a href="/discover/{previousPageId}" class="previous pagination"  class:hide={previousPageId === null}>
+            {#if previousPageId !== null}
+
+                <a href="/discover/{previousPageId}" class="previous pagination" class:hide={previousPageId === null}>
                 <span class="pagination-text">
         &lt; Previous
                     <!--{previousPageId}-->
       </span>
-            </a>
+                </a>
+            {/if}
         </nav>
     </div>
 
@@ -71,12 +74,16 @@
     <!--    </span>-->
     <div class="next-wrapper">
         <nav>
+            {#if nextPageId !== null}
+
             <a href="/discover/{nextPageId}" class="next pagination" class:hide={nextPageId===null}>
       <span class="pagination-text">
         Next &gt;
           <!--{nextPageId}-->
       </span>
             </a>
+            {/if}
+
         </nav>
     </div>
 </div>
