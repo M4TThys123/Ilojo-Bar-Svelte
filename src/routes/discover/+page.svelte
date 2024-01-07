@@ -1,4 +1,6 @@
 <script lang="ts">
+    import WindowOne from "$lib/components/windows/WindowOne.svelte";
+
     export let stories: { title: string, id: number, thumbnail: { url: string } }[] = [];
     console.log(stories)
 
@@ -39,8 +41,15 @@
         <picture class="building-image__wrapper">
             <img src="/assets/images/building/building_high-res.png" alt="" class="building-image">
         </picture>
+
+        <ul>
+            <li class="window-one top-layer window-small">
+                <WindowOne></WindowOne>
+            </li>
+        </ul>
+
         <nav>
-            <a href="/discover/cl8vh8rmx4wx80bw26jscwzhn" class="window-one top-layer window-small"></a>
+<!--            <a href="/discover/cl8vh8rmx4wx80bw26jscwzhn" class="window-one top-layer window-small"></a>-->
             <a href="/discover/cl8vc7gt84tx30cuqor5bxqfy" class="window-two top-layer window-small"></a>
             <a href="/discover/cl8vjb2rn4x9i0burl532c8t2" class="window-three top-layer window-small"></a>
 
@@ -103,6 +112,7 @@
 
     .window-one {
         left: 6.55376%;
+        position: absolute;
     }
 
     .window-two {
