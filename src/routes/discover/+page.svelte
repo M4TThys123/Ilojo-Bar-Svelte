@@ -46,12 +46,20 @@
             <li class="window-one top-layer window-small">
                 <WindowOne></WindowOne>
             </li>
+
+            <li class="window-two top-layer window-small">
+                <WindowOne></WindowOne>
+            </li>
+
+            <li class="window-three top-layer window-small">
+                <WindowOne></WindowOne>
+            </li>
         </ul>
 
         <nav>
 <!--            <a href="/discover/cl8vh8rmx4wx80bw26jscwzhn" class="window-one top-layer window-small"></a>-->
-            <a href="/discover/cl8vc7gt84tx30cuqor5bxqfy" class="window-two top-layer window-small"></a>
-            <a href="/discover/cl8vjb2rn4x9i0burl532c8t2" class="window-three top-layer window-small"></a>
+<!--            <a href="/discover/cl8vc7gt84tx30cuqor5bxqfy" class="window-two top-layer window-small"></a>-->
+<!--            <a href="/discover/cl8vjb2rn4x9i0burl532c8t2" class="window-three top-layer window-small"></a>-->
 
             <a href="/discover/cl8ysy2yw08zy0bvy1hq4bnkf" class="window-four top-layer window-big"></a>
             <a href="/discover/cl8yszk6v08im0bvyodnw9lyy" class="window-five top-layer window-big"></a>
@@ -70,6 +78,10 @@
 </section>
 
 <style>
+    li{
+        position: absolute;
+    }
+
     .building-container{
         position: relative;
     }
