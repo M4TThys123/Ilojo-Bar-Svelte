@@ -33,9 +33,9 @@
         /*top: -146px;*/
         /*width: 270px;*/
         /*height: 534px;*/
-        width: 119.469%;
-        height: 287.0967%;
-        top: -78.172%;
+        width: 108.13%;
+        height: 264.2365%;
+        top: -94.6236%;
         z-index: -1; /* Place it behind the .window-image */
     }
 
@@ -48,19 +48,19 @@
     .window_L, .window_R{
         transition: transform 1s ease,filter 1s ease;
         pointer-events: none;
-        width: 119.469%;
-        height: 287.0967%;
-        top: -78.172%;
+        width: 108.13%;
+        height: 264.2365%;
+        top: -94.6236%;
         position: absolute;
 
     }
 
     .window_L{
-        transform-origin: 8%;
+        transform-origin: 3%;
     }
 
     .window_R {
-        transform-origin: 92%;
+        transform-origin: 97%;
     }
 
     :hover.window-inner .window_L

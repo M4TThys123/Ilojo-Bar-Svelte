@@ -35,7 +35,7 @@
         /*height: 534px;*/
         width: 107.9646%;
         height: 235.4838%;
-        top: -.172%;
+        top: -78.172%;
         z-index: -1; /* Place it behind the .window-image */
     }
 
@@ -48,19 +48,19 @@
     .window_L, .window_R{
         transition: transform 1s ease,filter 1s ease;
         pointer-events: none;
-        width: 119.469%;
-        height: 287.0967%;
+        width: 107.9646%;
+        height: 235.4838%;
         top: -78.172%;
         position: absolute;
 
     }
 
     .window_L{
-        transform-origin: 8%;
+        transform-origin: 5%;
     }
 
     .window_R {
-        transform-origin: 92%;
+        transform-origin: 95%;
     }
 
     :hover.window-inner .window_L

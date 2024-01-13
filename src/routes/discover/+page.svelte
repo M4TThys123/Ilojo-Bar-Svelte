@@ -1,6 +1,9 @@
 <script lang="ts">
     import WindowOne from "$lib/components/windows/WindowOne.svelte";
     import WindowTwo from "$lib/components/windows/WindowTwo.svelte"
+    import WindowThree from "$lib/components/windows/WindowThree.svelte";
+    import WindowFour from "$lib/components/windows/WindowFour.svelte";
+    import Door from "$lib/components/windows/Door.svelte";
     export let stories: { title: string, id: number, thumbnail: { url: string } }[] = [];
     console.log(stories)
 
@@ -66,6 +69,31 @@
             <li class="window-six top-layer window-big">
                 <WindowTwo></WindowTwo>
             </li>
+
+<!--            Window 3-->
+            <li class="window-seven bottom-layer window-small">
+                <WindowThree></WindowThree>
+            </li>
+
+            <li class="window-eight bottom-layer window-small">
+                <WindowThree></WindowThree>
+            </li>
+
+            <li class="window-nine bottom-layer window-small">
+                <WindowThree></WindowThree>
+            </li>
+
+<!--            Door-->
+            <li class="door-frame bottom-layer door">
+                <Door></Door>
+            </li>
+<!--            Window 4 -->
+            <li class="window-ten bottom-layer window-big">
+                <WindowFour></WindowFour>
+            </li>
+            <li class="window-eleven bottom-layer window-big">
+                <WindowFour></WindowFour>
+            </li>
         </ul>
 
         <nav>
@@ -77,14 +105,14 @@
 <!--            <a href="/discover/cl8yszk6v08im0bvyodnw9lyy" class="window-five top-layer window-big"></a>-->
 <!--            <a href="/discover/cl8yt1lbr08kt0bvyck52dg6p" class="window-six top-layer window-big"></a>-->
 
-            <a href="/discover/cl8ysx9tz08cs0auqxhojha3y" class="window-seven bottom-layer window-small"></a>
-            <a href="/discover/cl8vjfmjh4yr00bw7jt60irl9" class="window-eight bottom-layer window-small"></a>
-            <a href="/discover/cl8ysw30o08be0auq4yw1n8tj" class="window-nine bottom-layer window-small"></a>
+<!--            <a href="/discover/cl8ysx9tz08cs0auqxhojha3y" class="window-seven bottom-layer window-small"></a>-->
+<!--            <a href="/discover/cl8vjfmjh4yr00bw7jt60irl9" class="window-eight bottom-layer window-small"></a>-->
+<!--            <a href="/discover/cl8ysw30o08be0auq4yw1n8tj" class="window-nine bottom-layer window-small"></a>-->
 
-            <a href="/3d-model" class="door-frame bottom-layer door"></a>
+<!--            <a href="/3d-model" class="door-frame bottom-layer door"></a>-->
 
-            <a href="/credits" class="window-ten bottom-layer window-big"></a>
-            <a href="/guestbook" class="window-eleven bottom-layer window-big"></a>
+<!--            <a href="/credits" class="window-ten bottom-layer window-big"></a>-->
+<!--            <a href="/guestbook" class="window-eleven bottom-layer window-big"></a>-->
         </nav>
     </div>
 </section>
