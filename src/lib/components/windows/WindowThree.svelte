@@ -2,9 +2,9 @@
     <a href="/discover/cl8vh8rmx4wx80bw26jscwzhn" class="window-small">
         <img src="https://media.graphassets.com/n3ASraESNOSwZQunBDFT" alt="" class="window-image"/>
     </a>
-    <img class="window_L"  src="/assets/images/building/window-one/window_L.png"
+    <img class="window_L"  src="/assets/images/building/window-three/window_L.png"
          alt="window left side Ilojo bar">
-    <img class="window_R"  src="/assets/images/building/window-one/window_R.png"
+    <img class="window_R"  src="/assets/images/building/window-three/window_R.png"
          alt="window left side Ilojo bar">
 </div>
 
@@ -29,13 +29,13 @@
     .window-inner::before {
         content: "";
         position: absolute;
-        background: url('/assets/images/building/window-one/window-frame.png') center/cover;
+        background: url('/assets/images/building/window-three/window-frame.png') center/cover;
         /*top: -146px;*/
         /*width: 270px;*/
         /*height: 534px;*/
-        width: 119.469%;
-        height: 287.0967%;
-        top: -78.172%;
+        width: 107.9646%;
+        height: 235.4838%;
+        top: -.172%;
         z-index: -1; /* Place it behind the .window-image */
     }
 

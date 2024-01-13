@@ -2,9 +2,9 @@
     <a href="/discover/cl8vh8rmx4wx80bw26jscwzhn" class="window-small">
         <img src="https://media.graphassets.com/n3ASraESNOSwZQunBDFT" alt="" class="window-image"/>
     </a>
-    <img class="window_L"  src="/assets/images/building/window-one/window_L.png"
+    <img class="window_L"  src="/assets/images/building/window-two/window_L.png"
          alt="window left side Ilojo bar">
-    <img class="window_R"  src="/assets/images/building/window-one/window_R.png"
+    <img class="window_R"  src="/assets/images/building/window-two/window_R.png"
          alt="window left side Ilojo bar">
 </div>
 
@@ -29,13 +29,13 @@
     .window-inner::before {
         content: "";
         position: absolute;
-        background: url('/assets/images/building/window-one/window-frame.png') center/cover;
+        background: url('/assets/images/building/window-two/window-frame.png') center/cover;
         /*top: -146px;*/
         /*width: 270px;*/
         /*height: 534px;*/
-        width: 119.469%;
-        height: 287.0967%;
-        top: -78.172%;
+        width: 108.13%;
+        height: 293.5483%;
+        top: -88.172%;
         z-index: -1; /* Place it behind the .window-image */
     }
 
@@ -48,19 +48,19 @@
     .window_L, .window_R{
         transition: transform 1s ease,filter 1s ease;
         pointer-events: none;
-        width: 119.469%;
-        height: 287.0967%;
-        top: -78.172%;
+        width: 108.13%;
+        height: 293.5483%;
+        top: -88.172%;
         position: absolute;
 
     }
 
     .window_L{
-        transform-origin: 8%;
+        transform-origin: 3%;
     }
 
     .window_R {
-        transform-origin: 92%;
+        transform-origin: 97%;
     }
 
     :hover.window-inner .window_L
