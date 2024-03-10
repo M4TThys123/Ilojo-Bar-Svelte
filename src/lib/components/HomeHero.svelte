@@ -72,17 +72,4 @@
         overflow: hidden;
         padding: 5px 5px;
     }
-    /* XXS (for phones - screens < than 400px wide) */
-    @media (width < 400px) {
-        /* CSS rules for phones go here */
-        .subtitle{
-            margin-top: 16.5rem;
-        }
-
-
-
-    }
-    @media (width >= 768px) {
-
-    }
 </style>

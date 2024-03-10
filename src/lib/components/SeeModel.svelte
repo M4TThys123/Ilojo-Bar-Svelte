@@ -64,5 +64,11 @@
         padding: 1.6em;
     }
 
+    @media (width < 400px) {
+        .see_model_cont{
+            display: none;
+        }
+    }
+
 </style>
 

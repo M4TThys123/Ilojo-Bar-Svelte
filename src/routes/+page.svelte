@@ -5,7 +5,7 @@
     import HomeHero from "$lib/components/HomeHero.svelte";
     import SeeModel from "$lib/components/SeeModel.svelte";
     import DiscoverButton from "$lib/components/DiscoverButton.svelte";
-    import BuildingWithWindows from "$lib/components/BuildingWithWindows.svelte";
+    // import BuildingWithWindows from "$lib/components/BuildingWithWindows.svelte";
 
     // Register GSAP plugins
     onMount(() => {
@@ -81,9 +81,9 @@
 
 <HomeHero></HomeHero>
 
-<div class="position">
-    <BuildingWithWindows></BuildingWithWindows>
-</div>
+<!--<div class="position">-->
+<!--    <BuildingWithWindows></BuildingWithWindows>-->
+<!--</div>-->
 
 
 <section class="img_cont">
