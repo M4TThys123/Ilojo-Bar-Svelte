@@ -122,7 +122,18 @@
       <workItem from="1708056919413" duration="2329000" />
       <workItem from="1708347065465" duration="2857000" />
       <workItem from="1709563921050" duration="4006000" />
-      <workItem from="1709729340742" duration="3088000" />
+      <workItem from="1709729340742" duration="4483000" />
+      <workItem from="1710193010687" duration="538000" />
+      <workItem from="1710324952677" duration="599000" />
+      <workItem from="1710588443632" duration="20474000" />
+      <workItem from="1712090026625" duration="1856000" />
+      <workItem from="1712997561317" duration="1345000" />
+      <workItem from="1713794469675" duration="52000" />
+      <workItem from="1713794532961" duration="5878000" />
+      <workItem from="1713817122633" duration="564000" />
+      <workItem from="1713820408234" duration="8386000" />
+      <workItem from="1714475624122" duration="597000" />
+      <workItem from="1714724880981" duration="2133000" />
     </task>
     <servers />
   </component>
@@ -218,6 +229,12 @@
           <url>file://$PROJECT_DIR$/src/routes/+page.svelte</url>
           <line>165</line>
           <option name="timeStamp" value="37" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/lib/components/PageTransition.svelte</url>
+          <line>6</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="38" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

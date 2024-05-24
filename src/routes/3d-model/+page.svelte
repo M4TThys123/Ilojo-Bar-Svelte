@@ -146,7 +146,7 @@
     <div id="progress">
         <div bind:this={loadingBar} id="loadingBar">0%</div>
     </div>
-
+    
     <div id="scene-container"></div>
 </section>
 
@@ -187,6 +187,8 @@
         line-height: 30px;
         color: white;
         border-radius: 15px;
+        font-family: Rubik, sans-serif;
+        font-weight: bold;
     }
 
     h1 {

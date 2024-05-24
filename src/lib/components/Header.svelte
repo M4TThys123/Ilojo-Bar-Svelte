@@ -197,10 +197,10 @@
         padding: 0.75rem 1rem;
         position: fixed;
         z-index: 10;
-        transition: transform .5s ease-out;
+        /*transition: transform .5s ease-out;*/
 
         width: 100%;
-        /*transition: all 0.3s ease;*/
+        transition: all 0.3s ease;
 
         /*padding: 1.5rem 1.875rem 1rem;*/
     }

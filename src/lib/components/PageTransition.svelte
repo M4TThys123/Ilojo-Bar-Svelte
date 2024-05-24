@@ -69,6 +69,8 @@
 <!-- PageTransition.svelte -->
 <div class="page-transition-container">
     <div class="page-transition first "></div>
+
+
     <div class="page-transition d-flex justify-content-center align-items-center" style="">
         <div class="transition-image__wrapper">
             <img src="/assets/images/logo-ilojo-bar-big.webp" class="transition-image">
@@ -107,6 +109,7 @@
 
     .page-transition.first {
         z-index: 1000010;
+        background: purple !important;
     }
     .transition-image__wrapper{
         max-width: 10em;
