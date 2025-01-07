@@ -6,6 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="edd92c6e-6616-46a6-b561-4b415c1a190f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/components/HomeHero.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/HomeHero.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/components/ScrollButton.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/ScrollButton.svelte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/+page.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/+page.svelte" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -151,7 +153,7 @@
       <workItem from="1725817540127" duration="598000" />
       <workItem from="1726179242705" duration="599000" />
       <workItem from="1733514446212" duration="3838000" />
-      <workItem from="1736238384714" duration="15166000" />
+      <workItem from="1736238384714" duration="20265000" />
     </task>
     <servers />
   </component>
@@ -179,11 +181,6 @@
           <url>file://$PROJECT_DIR$/src/routes/+page.svelte</url>
           <line>1</line>
           <option name="timeStamp" value="19" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/routes/+page.svelte</url>
-          <line>13</line>
-          <option name="timeStamp" value="20" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/routes/timeline/+page.svelte</url>

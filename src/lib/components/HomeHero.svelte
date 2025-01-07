@@ -4,8 +4,6 @@
 
 <section style="pointer-events: none">
     <div class="home-hero__container">
-<!--        <h2>Welcome to the <br /> Stories of Ilojo Bar</h2>-->
-
         <picture>
             <source srcset="/assets/images/logo-ilojo-bar.webp" type="image/webp">
             <source srcset="/assets/images/logo-ilojo-bar.png" type="image/png">
@@ -16,6 +14,7 @@
                  class="home-hero__image"
             >
         </picture>
+
         <p class="subtitle">
             <span>
                 <span  class="mask_span">Discover 9 stories about the shattered bar of Lagos</span>

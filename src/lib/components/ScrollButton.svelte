@@ -1,6 +1,5 @@
 <button class="scroll_btn">
     <i></i>
-<!--    <span>Scroll down or click</span>-->
     <span>Scroll down</span>
 </button>
 

@@ -57,30 +57,28 @@
             }, '<');
 
         scrollTL
-            .fromTo('.scroll_btn', {opacity: 1, duration: 0.3}, {opacity: 0})
-            .from('.scroll_cont', {scale: 1}, '<')
-            .fromTo('.color_building', {opacity: 0}, {opacity: 1}, '<')
-            .fromTo('#background', {opacity: 1}, {opacity: 0}, '-=50%')
+            .fromTo('.scroll_btn', { opacity: 1 }, { opacity: 0 })
+            .from('.scroll_cont', { scale: 1 }, '<')
+            .fromTo('.color_building', { opacity: 0 }, { opacity: 1 }, '<')
+            .fromTo('#background', { opacity: 1 }, { opacity: 0 }, '-=50%')
             .fromTo(
                 '#overlay',
-                {opacity: 1, scale: 1},
-                {opacity: 0, scale: 1.05},
+                { opacity: 1, scale: 1 },
+                { opacity: 0, scale: 1.05 },
                 '<25%'
-            )
-            .fromTo('#building-with-windows', {opacity: 0}, {opacity: 1})// Start direct na de vorige animatie
-            .fromTo('.color_building', {opacity: 1}, {opacity: 0},
-                // {display: 1}, {display: 0},
-                '+=25%')
+            );
 
-            .from(
-                '.discover_cont',
-                {opacity: 0, zIndex: 0, scale: 0.9, rotation: -3},
-                {opacity: 1, zIndex: 2, scale: 1, rotation: 0},
-                '<'
-            )
-            .from('.see_model_cont', {translateX: '100%', opacity: '0'}, '<')
-            // .fromTo('#building-with-windows', {opacity: 0}, {opacity: 1}, 'colorBuildingDone+=0.5') // Start na het label
-                .addLabel('end');
+        // Groter dan 992px
+        if (window.innerWidth > 992) {
+            scrollTL
+                .fromTo('#building-with-windows', { opacity: 0 }, { opacity: 1 }) // Start direct na de vorige animatie
+                .fromTo('.color_building', { opacity: 1 }, { opacity: 0 }, '+=25%');
+        }
+
+        scrollTL
+            .from('.discover_cont', { opacity: 0, zIndex: 0, scale: 0.9, rotation: -3 }, { opacity: 1, zIndex: 2, scale: 1, rotation: 0 }, '<')
+            .from('.see_model_cont', { translateX: '100%', opacity: 0 }, '<')
+            .addLabel('end');
 
         const btn = document.querySelector('.scroll_btn');
         btn.addEventListener('click', () => {
@@ -143,7 +141,7 @@
         background-size: cover;
         height: 100vh;
         width: 100vw;
-        position: relative;
+        position: absolute;
     }
 
     .scroll_cont {
