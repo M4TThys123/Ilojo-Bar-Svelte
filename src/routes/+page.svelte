@@ -68,6 +68,9 @@
                 '<25%'
             )
             .fromTo('#building-with-windows', {opacity: 0}, {opacity: 1})// Start direct na de vorige animatie
+            .fromTo('.color_building', {opacity: 1}, {opacity: 0},
+                // {display: 1}, {display: 0},
+                '+=25%')
 
             .from(
                 '.discover_cont',
@@ -97,12 +100,7 @@
     <title>Ilojo Bar - Home</title>
 </svelte:head>
 
-<!--<HomeHero></HomeHero>-->
-
-<!--<div class="position">-->
-<!--    <BuildingWithWindows></BuildingWithWindows>-->
-<!--</div>-->
-
+<HomeHero></HomeHero>
 
 <section class="img_cont">
     <div class="scroll_cont">
@@ -128,9 +126,9 @@
 
 
 
-<!--<SeeModel />-->
+<SeeModel />
 
-<!--<DiscoverButton />-->
+<DiscoverButton />
 
     <div hidden={!isWideScreen} class="window-wrapper">
         <WindowContainer />
@@ -183,9 +181,7 @@
     }
 
     @media (width >= 992px) {
-        .position {
-            top: 23.5%;
-        }
+
     }
 </style>
 
