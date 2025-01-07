@@ -1,25 +1,24 @@
+<!-- MainComponent.svelte -->
 <script>
     import * as THREE from 'three';
-    import {onMount} from "svelte";
-    import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls.js';
-    import {FBXLoader} from 'three/examples/jsm/loaders/FBXLoader.js';
+    import { onMount } from 'svelte';
+    import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
+    import { FBXLoader } from 'three/examples/jsm/loaders/FBXLoader.js';
+    import ProgressBar from './ProgressBar.svelte';
 
-    let scene, fbxLoader, hemiLight, spotLight, renderer, camera,
-        controls, container, buildingObj, model;
-
-    let loadingBar;
-    let progressBar;
+    let scene, fbxLoader, hemiLight, spotLight, renderer, camera, controls, container, buildingObj, model;
+    let progressBarPercentage = 0;
 
     export let modelPath = '/assets/models/building.fbx'; // You can pass the model path as a prop
+    export let simulation = false; // Boolean prop to control simulation
 
     onMount(() => {
-        progressBar = document.querySelector('#progress');
-
-        setTimeout(() => {
-            seeModel();
-        }, 1000); // 2000 milliseconds (2 seconds) delay
+        if (!simulation) {
+            setTimeout(() => {
+                seeModel();
+            }, 1000); // 1000 milliseconds (1 second) delay
+        }
     });
-
 
     function seeModel() {
         scene = new THREE.Scene();
@@ -52,19 +51,10 @@
                 buildingObj = object;
                 controls.enablePan = false;
                 scene.add(object);
-
-                // Hide the progress bar when the model is loaded
-                if (loadingBar) {
-                    loadingBar.style.display = 'none';
-                }
             },
             (xhr) => {
                 let percentage = (xhr.loaded / xhr.total) * 100;
-                console.log(percentage + '% loaded');
-                var roundedPerc = Math.round(percentage * 10) / 10;
-
-                loadingBar.style.width = roundedPerc + '%';
-                loadingBar.innerHTML = roundedPerc + '%';
+                progressBarPercentage = Math.round(percentage * 10) / 10;
             },
             (error) => {
                 console.log(error);
@@ -72,8 +62,6 @@
         );
 
         window.addEventListener('resize', onWindowResize, false);
-
-        // renderer.setSize(window.innerWidth, window.innerHeight);
 
         renderer.setSize(window.innerWidth, window.innerHeight);
         renderer.setClearColor(0x000000, 0); // the default
@@ -137,16 +125,12 @@
     <title>Ilojo Bar - 3D Model</title>
 </svelte:head>
 
-
 <section class="page container">
-    <h1 class=" mb-3">3D Model</h1>
+    <h1 class="mb-3">3D Model</h1>
 </section>
 
 <section class="model">
-    <div id="progress">
-        <div bind:this={loadingBar} id="loadingBar">0%</div>
-    </div>
-    
+    <ProgressBar percentage={progressBarPercentage} {simulation} />
     <div id="scene-container"></div>
 </section>
 
@@ -161,7 +145,6 @@
     }
 
     #scene-container {
-        /*margin-bottom: 100px;*/
         position: absolute;
         top: 60px;
     }
@@ -170,29 +153,4 @@
         margin-top: -150px;
         margin-bottom: -190px;
     }
-
-    #progress {
-        width: 100%;
-        max-width: 400px;
-        background-color: var(--grey);
-        border-radius: 15px;
-        margin-top: 150px;
-    }
-
-    #loadingBar {
-        width: 0%;
-        height: 30px;
-        background-color: var(--dark);
-        text-align: center;
-        line-height: 30px;
-        color: white;
-        border-radius: 15px;
-        font-family: Rubik, sans-serif;
-        font-weight: bold;
-    }
-
-    h1 {
-
-    }
-
 </style>

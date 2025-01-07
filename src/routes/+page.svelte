@@ -5,7 +5,7 @@
     import HomeHero from "$lib/components/HomeHero.svelte";
     import SeeModel from "$lib/components/SeeModel.svelte";
     import DiscoverButton from "$lib/components/DiscoverButton.svelte";
-    // import BuildingWithWindows from "$lib/components/BuildingWithWindows.svelte";
+    import WindowContainer from "$lib/components/windows/WindowContainer.svelte";
 
     // Register GSAP plugins
     onMount(() => {
@@ -59,7 +59,8 @@
                 '<'
             )
             .from('.see_model_cont', {translateX: '100%', opacity: '0'}, '<')
-            .addLabel('end');
+            .fromTo('#building-with-windows', {opacity: 0}, {opacity: 1}, '<')
+                .addLabel('end');
 
         const btn = document.querySelector('.scroll_btn');
         btn.addEventListener('click', () => {
@@ -79,7 +80,7 @@
     <title>Ilojo Bar - Home</title>
 </svelte:head>
 
-<HomeHero></HomeHero>
+<!--<HomeHero></HomeHero>-->
 
 <!--<div class="position">-->
 <!--    <BuildingWithWindows></BuildingWithWindows>-->
@@ -89,11 +90,6 @@
 <section class="img_cont">
     <div class="scroll_cont">
         <picture>
-            <source srcset="/assets/images/ilojo_bar_bw_2.webp" type="image/webp">
-            <source srcset="/assets/images/ilojo_bar_bw_2.png" type="image/png">
-            <img src="/assets/images/ilojo_bar_bw_2.png" alt="Colored Ilojo bar" width="1772px" height="1772px">
-        </picture>
-        <picture>
             <source srcset="/assets/images/ilojo_bar_bw_1.webp" type="image/webp">
             <source srcset="/assets/images/ilojo_bar_bw_1.jpg" type="image/jpeg">
             <img id="background" src="/assets/images/ilojo_bar_bw_1.jpg" alt="Ilojo bar old with environment"
@@ -102,8 +98,7 @@
             <picture>
                 <source srcset="/assets/images/ilojo_bar_bw_2.webp" type="image/webp">
                 <source srcset="/assets/images/ilojo_bar_bw_2.png" type="image/png">
-                <img class="color_building" src="/assets/images/ilojo_bar_bw_2.png" alt="Colored Ilojo bar"
-                     width="1772px" height="1772px">
+                <img class="color_building" src="/assets/images/ilojo_bar_bw_2.png" alt="Colored Ilojo bar" width="1772px" height="1772px">
             </picture>
         <picture>
             <source srcset="/assets/images/ilojo_bar_bw_3.webp" type="image/webp">
@@ -116,9 +111,13 @@
 
 
 
-<SeeModel></SeeModel>
+<!--<SeeModel />-->
 
-<DiscoverButton></DiscoverButton>
+<!--<DiscoverButton />-->
+
+<div class="window-wrapper">
+    <WindowContainer />
+</div>
 
 
 
@@ -156,20 +155,15 @@
         opacity: 0;
     }
 
-    /*@media (max-width: 55rem) {*/
-    /*    .img_cont{*/
-    /*        object-position: 62% center !important;*/
-    /*    }*/
-    /*}*/
 
-    .position{
+    .window-wrapper{
         position: fixed;
-        top: 36.5%;
-        left: 20.08732%;
-        width: 56.9987%;
-        margin: 0 auto;
-        /*display: flex;*/
-        /*justify-content: center;*/
+        top: 0;
+
+
+        /*top: 40%;*/
+        /*padding: 20% 22%;*/
+        padding: 13.8% 23% 13.8% 20%;
     }
 
     @media (width >= 992px) {

@@ -2,7 +2,7 @@
     import ScrollButton from "$lib/components/ScrollButton.svelte";
 </script>
 
-<section>
+<section style="pointer-events: none">
     <div class="home-hero__container">
 <!--        <h2>Welcome to the <br /> Stories of Ilojo Bar</h2>-->
 

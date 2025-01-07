@@ -96,6 +96,8 @@
             </li>
         </ul>
 
+
+
         <nav>
 <!--            <a href="/discover/cl8vh8rmx4wx80bw26jscwzhn" class="window-one top-layer window-small"></a>-->
 <!--            <a href="/discover/cl8vc7gt84tx30cuqor5bxqfy" class="window-two top-layer window-small"></a>-->
@@ -131,11 +133,6 @@
 
     .building-image, building-image__wrapper{
         width: 100%;
-    }
-    .window-container{
-        width: 100%;
-        height: 100%;
-        position: absolute;
     }
 
     .window-small, .window-big, .door{
@@ -214,21 +211,6 @@
     .window-eleven {
         left: 86.18552%;
     }
-
-
-    /*.window-one x=166, y=588*/
-    /*.window-two x=610, y=588*/
-    /*.window-three x= 1076, y=588*/
-    /*.window-four x= 1473, y=588*/
-    /*.window-five x= 1828, y=588*/
-    /*.window-six x= 2184, y=588*/
-    /*.window-seven x= 166, y=1153*/
-    /*.window-eight x= 611, y=1153*/
-    /*.window-nine x= 1076, y=1153*/
-    /*.door x= 1470,y=1155*/
-    /*.window-ten x= 1828, y=1153*/
-    /*.window-eleven x= 2184, y=1153*/
-
 
 
     .discover-content{

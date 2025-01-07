@@ -1,9 +1,5 @@
 <script>
-    import WindowOne from "$lib/components/windows/WindowOne.svelte";
-    import WindowThree from "$lib/components/windows/WindowThree.svelte";
-    import WindowTwo from "$lib/components/windows/WindowTwo.svelte";
-    import WindowFour from "$lib/components/windows/WindowFour.svelte";
-    import Door from "$lib/components/windows/Door.svelte";
+
 
     export let data;
     console.log(data);
@@ -14,42 +10,15 @@
 </svelte:head>
 
 <section class="page container">
-    <h1>Guestbook</h1>
-    <h2>Read through stories from guests</h2>
-    <p>People can leave their stories from ..</p>
-
-    <section class="discover-windows">
-        <ul>
-<!--            <li>-->
-<!--                <div class="window-inner" >-->
-<!--                    <a href="/discover/cl8vh8rmx4wx80bw26jscwzhn" class="window-small">-->
-<!--                        <img src="https://media.graphassets.com/n3ASraESNOSwZQunBDFT" alt="" class="window-image"/>-->
-<!--                    </a>-->
-<!--                    <img class="window_L"  src="/assets/images/building/window-one/window_L.png"-->
-<!--                         alt="window left side Ilojo bar">-->
-<!--                    <img class="window_R"  src="/assets/images/building/window-one/window_R.png"-->
-<!--                         alt="window left side Ilojo bar">-->
-<!--                </div>-->
-<!--            </li>-->
-            <li class="window-small">
-                <WindowOne></WindowOne>
-            </li>
-            <li class="window-large">
-                <WindowTwo></WindowTwo>
-            </li>
-            <li class="window-small">
-                <WindowThree></WindowThree>
-            </li>
-
-<!--            <li class="door">-->
-<!--                <Door></Door>-->
-<!--            </li>-->
-
-            <li class="window-large">
-                <WindowFour></WindowFour>
-            </li>
-        </ul>
+    <section class="timeline-hero page container">
+        <h1>Your turn</h1>
+        <h2>Share your own Ilojo Bar story</h2>
+        <p class="timeline-para">
+            What are your memories of the iconic building on Lagos Island? Did you know the monument as Casa do Fernandez, Ilojo Bar, Angel House? Fill this form and your own memory will be shared on this page, contributing to the storytelling of this Lagos monument.
+        </p>
     </section>
+
+
 </section>
 
 <style>

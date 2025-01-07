@@ -1,6 +1,7 @@
 <script>
     import { onMount, onDestroy } from 'svelte';
     import { gsap } from 'gsap';
+    import ProgressBar from "../../routes/3d-model/ProgressBar.svelte";
 
     let menuItems;
 
@@ -78,6 +79,8 @@
     </div>
 </div>
 
+<!--<ProgressBar></ProgressBar>-->
+
 
 
 <style>
@@ -109,7 +112,7 @@
 
     .page-transition.first {
         z-index: 1000010;
-        background: purple !important;
+        background: #8c0500 !important;
     }
     .transition-image__wrapper{
         max-width: 10em;
