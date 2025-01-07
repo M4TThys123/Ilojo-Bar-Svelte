@@ -7,8 +7,23 @@
     import DiscoverButton from "$lib/components/DiscoverButton.svelte";
     import WindowContainer from "$lib/components/windows/WindowContainer.svelte";
 
+    let isWideScreen = false;
+
+
     // Register GSAP plugins
     onMount(() => {
+        const checkScreenSize = () => {
+            isWideScreen = window.innerWidth > 992;
+        };
+
+        checkScreenSize(); // Controleer bij laden
+
+        window.addEventListener('resize', checkScreenSize); // Luister naar schermveranderingen
+
+        // return () => {
+        //     window.removeEventListener('resize', checkScreenSize); // Opruimen
+        // };
+
         gsap.registerPlugin(ScrollTrigger);
 
         const tl = gsap.timeline();
@@ -21,7 +36,7 @@
                 pin: true,
                 snap: 1,
             },
-        });
+        })
 
         tl.from('.home-hero__image', {
             translateY: '-210%',
@@ -52,6 +67,8 @@
                 {opacity: 0, scale: 1.05},
                 '<25%'
             )
+            .fromTo('#building-with-windows', {opacity: 0}, {opacity: 1})// Start direct na de vorige animatie
+
             .from(
                 '.discover_cont',
                 {opacity: 0, zIndex: 0, scale: 0.9, rotation: -3},
@@ -59,7 +76,7 @@
                 '<'
             )
             .from('.see_model_cont', {translateX: '100%', opacity: '0'}, '<')
-            .fromTo('#building-with-windows', {opacity: 0}, {opacity: 1}, '<')
+            // .fromTo('#building-with-windows', {opacity: 0}, {opacity: 1}, 'colorBuildingDone+=0.5') // Start na het label
                 .addLabel('end');
 
         const btn = document.querySelector('.scroll_btn');
@@ -115,10 +132,9 @@
 
 <!--<DiscoverButton />-->
 
-<div class="window-wrapper">
-    <WindowContainer />
-</div>
-
+    <div hidden={!isWideScreen} class="window-wrapper">
+        <WindowContainer />
+    </div>
 
 
 <style>
