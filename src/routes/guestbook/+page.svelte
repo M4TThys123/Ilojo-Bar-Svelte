@@ -1,6 +1,8 @@
 <script>
 
 
+    import Form from "$lib/components/form/Form.svelte";
+
     export let data;
     console.log(data);
 </script>
@@ -12,13 +14,11 @@
 <section class="page container">
     <section class="timeline-hero page container">
         <h1>Your turn</h1>
-        <h2>Share your own Ilojo Bar story</h2>
-        <p class="timeline-para">
+        <p class="timeline-para mb-5">
             What are your memories of the iconic building on Lagos Island? Did you know the monument as Casa do Fernandez, Ilojo Bar, Angel House? Fill this form and your own memory will be shared on this page, contributing to the storytelling of this Lagos monument.
         </p>
+        <Form/>
     </section>
-
-
 </section>
 
 <style>

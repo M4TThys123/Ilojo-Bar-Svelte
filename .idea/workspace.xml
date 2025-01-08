@@ -5,13 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="edd92c6e-6616-46a6-b561-4b415c1a190f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/lib/components/form/Form.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/images/Bookstand.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/components/DiscoverButton.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/DiscoverButton.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/fonts/AustralSansStamp-Regular.woff" beforeDir="false" afterPath="$PROJECT_DIR$/static/fonts/AustralSansStamp-Regular.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/fonts/AustralSansStamp-Regular.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/static/fonts/AustralSansStamp-Regular.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/fonts/Black-Ground.woff" beforeDir="false" afterPath="$PROJECT_DIR$/static/fonts/Black-Ground.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/fonts/Black-Ground.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/static/fonts/Black-Ground.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/guestbook/+page.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/guestbook/+page.svelte" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +36,7 @@
         <option value="ProgressBar" />
         <option value="DiscoverWindows" />
         <option value="WindowContainer" />
+        <option value="Form1" />
       </list>
     </option>
   </component>
@@ -60,29 +58,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/matthijs/Documents/Coding/Bedrijven/Ilojo Bar/Ilojo-Bar-Svelte/src/lib/components/windows&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Users/matthijs/Documents/Coding/Bedrijven/Ilojo Bar/Ilojo-Bar-Svelte/node_modules/typescript/lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/matthijs/Documents/Coding/Bedrijven/Ilojo Bar/Ilojo-Bar-Svelte/static/assets/images",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "ts.external.directory.path": "/Users/matthijs/Documents/Coding/Bedrijven/Ilojo Bar/Ilojo-Bar-Svelte/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/static/assets/images" />
+      <recent name="$PROJECT_DIR$/src/lib/components/form" />
       <recent name="$PROJECT_DIR$/src/lib/components/windows" />
       <recent name="$PROJECT_DIR$/static/assets/images/building/window-one" />
       <recent name="$PROJECT_DIR$/static/assets/images/building" />
-      <recent name="$PROJECT_DIR$/static/assets/images" />
-      <recent name="$PROJECT_DIR$/src/routes/discover" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/static" />
@@ -157,7 +155,7 @@
       <workItem from="1725817540127" duration="598000" />
       <workItem from="1726179242705" duration="599000" />
       <workItem from="1733514446212" duration="3838000" />
-      <workItem from="1736238384714" duration="26564000" />
+      <workItem from="1736238384714" duration="28586000" />
     </task>
     <servers />
   </component>
