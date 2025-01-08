@@ -20,6 +20,7 @@
     }
 
     .btn_a {
+        font-family: 'Black-Ground', sans-serif !important;
         background-image: url(/assets/images/button_bg_light.webp);
         background-position: center;
         background-size: contain;

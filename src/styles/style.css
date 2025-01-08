@@ -9,34 +9,25 @@
     --header-height: 45px;
 }
 
-/*@font-face {*/
-/*    font-family: 'Austral-Sans_Stamp-Regular';*/
-/*    font-display: swap;*/
-/*    src: url('/assets/fonts/AustralSansStamp-Regular.woff2') format('woff2'),*/
-/*        url('/assets/fonts/AustralSansStamp-Regular.woff') format('woff');*/
-/*    font-weight: normal;*/
-/*    font-style: normal;*/
-/*    font-display: swap;*/
-/*}*/
+@font-face {
+    font-family: 'Austral-Sans_Stamp-Regular';
+    font-display: swap;
+    src: url('/fonts/AustralSansStamp-Regular.woff2') format('woff2'),
+        url('/fonts/AustralSansStamp-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
 
-/*@font-face {*/
-/*    font-family: 'Black Ground';*/
-/*    src: url('../../static/assets/fonts/Black-Ground.woff2') format('woff2'),*/
-/*    url('../../static/assets/fonts/Black-Ground.woff') format('woff');*/
-/*    font-weight: normal;*/
-/*    font-style: normal;*/
-/*    font-display: swap;*/
-/*}*/
+@font-face {
+    font-family: 'Black-Ground';
+    src: url('/fonts/Black-Ground.woff2') format('woff2'),
+    url('/fonts/Black-Ground.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
 
-/*@font-face {*/
-/*    font-family: 'Austral Sans';*/
-/*    src: url('../../static/assets/fonts/AustralSansStamp-Regular.woff2') format('woff2'),*/
-/*    url('../../static/assets/fonts/AustralSansStamp-Regular.woff') format('woff');*/
-
-/*    font-weight: normal;*/
-/*    font-style: normal;*/
-/*    font-display: swap;*/
-/*}*/
 
 * {
     box-sizing: border-box;
@@ -45,14 +36,12 @@
 
     padding: 0;
     margin: 0;
-    font-family: 'Rubik', sans-serif;
+    font-family: 'Austral-Sans_Stamp-Regular', 'Rubik', sans-serif !important;
     color: var(--light)
 }
 
 body {
-    /*font-family: 'Austral Sans', sans-serif !important;*/
     background-color: var(--red) !important;
-
     max-width: 100vw;
     overflow-x: hidden;
     transition: background-color 0.5s ease; /* Voegt een soepele overgang toe */
