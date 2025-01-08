@@ -15,51 +15,51 @@
     <ul>
         <!--            Window 1-->
         <li class="window-one top-layer window-small">
-            <WindowOne></WindowOne>
+            <WindowOne link={'/discover/cl8vh8rmx4wx80bw26jscwzhn'} image={'https://media.graphassets.com/n3ASraESNOSwZQunBDFT'}></WindowOne>
         </li>
 
         <li class="window-two top-layer window-small">
-            <WindowOne></WindowOne>
+            <WindowOne link={'/discover/cl8vc7gt84tx30cuqor5bxqfy'} image={'https://media.graphassets.com/n3ASraESNOSwZQunBDFT'}></WindowOne>
         </li>
 
         <li class="window-three top-layer window-small">
-            <WindowOne></WindowOne>
+            <WindowOne link={'/discover/cl8vjb2rn4x9i0burl532c8t2'} image={'https://media.graphassets.com/n3ASraESNOSwZQunBDFT'}></WindowOne>
         </li>
 
         <!--            Window 2-->
         <li class="window-four top-layer window-big">
-            <WindowTwo></WindowTwo>
+            <WindowTwo link={'/discover/cl8ysy2yw08zy0bvy1hq4bnkf'} image={'https://media.graphassets.com/n3ASraESNOSwZQunBDFT'}></WindowTwo>
         </li>
         <li class="window-five top-layer window-big">
-            <WindowTwo></WindowTwo>
+            <WindowTwo link={'/discover/cl8yszk6v08im0bvyodnw9lyy'} image={'https://media.graphassets.com/n3ASraESNOSwZQunBDFT'}></WindowTwo>
         </li>
         <li class="window-six top-layer window-big">
-            <WindowTwo></WindowTwo>
+            <WindowTwo link={'/discover/cl8yt1lbr08kt0bvyck52dg6p'} image={'https://media.graphassets.com/n3ASraESNOSwZQunBDFT'}></WindowTwo>
         </li>
 
         <!--            Window 3-->
         <li class="window-seven bottom-layer window-small">
-            <WindowThree></WindowThree>
+            <WindowThree link={'/discover/cl8ysx9tz08cs0auqxhojha3y'} image={'https://media.graphassets.com/n3ASraESNOSwZQunBDFT'}></WindowThree>
         </li>
 
         <li class="window-eight bottom-layer window-small">
-            <WindowThree></WindowThree>
+            <WindowThree link={'/discover/cl8vjfmjh4yr00bw7jt60irl9'} image={'https://media.graphassets.com/n3ASraESNOSwZQunBDFT'}></WindowThree>
         </li>
 
         <li class="window-nine bottom-layer window-small">
-            <WindowThree></WindowThree>
+            <WindowThree link={'/discover/cl8ysw30o08be0auq4yw1n8tj'} image={'https://media.graphassets.com/n3ASraESNOSwZQunBDFT'}></WindowThree>
         </li>
 
         <!--            Door-->
         <li class="door-frame bottom-layer door">
-            <Door></Door>
+            <Door link={'/3d-model'} image={'https://media.graphassets.com/n3ASraESNOSwZQunBDFT'}></Door>
         </li>
         <!--            Window 4 -->
         <li class="window-ten bottom-layer window-big">
-            <WindowFour></WindowFour>
+            <WindowFour link={'/credits'} image={'https://media.graphassets.com/n3ASraESNOSwZQunBDFT'}></WindowFour>
         </li>
         <li class="window-eleven bottom-layer window-big">
-            <WindowFour></WindowFour>
+            <WindowFour link={'/guestbook'} image={'https://media.graphassets.com/n3ASraESNOSwZQunBDFT'}></WindowFour>
         </li>
     </ul>
 

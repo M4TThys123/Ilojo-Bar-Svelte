@@ -29,7 +29,8 @@
     section {
         position: fixed;
         z-index: 1;
-        padding-top: 5.5rem;
+        padding-top: 4.5rem;
+
         padding-bottom: 1.5rem;
 
         color: white;
@@ -61,14 +62,27 @@
     }
 
     p {
-        font-size: 22px;
-        margin-top: .5rem;
+        font-size: 18px;
         text-shadow: 0 0 5px rgb(0 0 0 / .4);
         text-align: center;
     }
     p > span{
         display: inline-block;
         overflow: hidden;
-        padding: 5px 5px;
+        padding: 5px 20px;
+    }
+
+    @media (width >= 378px) {
+        section{
+            padding-top: 5.5rem;
+        }
+        p {
+            font-size: 22px;
+            margin-top: .5rem;
+        }
+
+        p > span{
+            padding: 5px 5px;
+        }
     }
 </style>

@@ -1,6 +1,31 @@
-<div class="window-inner" >
-    <a href="/discover/cl8vh8rmx4wx80bw26jscwzhn" class="window-small">
-        <img src="https://media.graphassets.com/n3ASraESNOSwZQunBDFT" alt="" class="window-image"/>
+<script>
+    export let link;
+    export let image;
+
+    let isHovered = false;
+
+    const handleMouseEnter = () => {
+        isHovered = true;
+        document.body.classList.add('light-red');
+    };
+
+    const handleMouseLeave = () => {
+        isHovered = false;
+        document.body.classList.remove('light-red');
+    };
+</script>
+
+<div
+        class="window-inner {isHovered ? 'hovered' : ''}"
+        on:mouseenter={handleMouseEnter}
+        on:mouseleave={handleMouseLeave}
+>
+    <a href={link} class="window-small">
+        <img
+                src={image}
+                alt="Window small image"
+                class="window-image"
+        />
     </a>
     <img class="window_L"  src="/assets/images/building/door/door_L.png"
          alt="window left side Ilojo bar">

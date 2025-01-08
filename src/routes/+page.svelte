@@ -145,8 +145,8 @@
     }
 
     .scroll_cont {
-        transform: scale(1.6);
-        transform-origin: 86% 50%;
+        transform: scale(1.40);
+        transform-origin: 76% 50%;
         height: 100%;
     }
 
@@ -178,8 +178,18 @@
         padding: 13.8% 23% 13.8% 20%;
     }
 
-    @media (width >= 992px) {
+    @media (width >= 378px) {
+        .scroll_cont {
+            transform: scale(1.25);
+            transform-origin: 74% 50%;
+        }
+    }
 
+    @media (width >= 992px) {
+        .scroll_cont {
+            transform: scale(1.6);
+            transform-origin: 86% 50%;
+        }
     }
 </style>
 

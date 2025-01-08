@@ -7,8 +7,14 @@
     <list default="true" id="edd92c6e-6616-46a6-b561-4b415c1a190f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lib/components/HomeHero.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/HomeHero.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/components/ScrollButton.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/ScrollButton.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/components/windows/Door.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/windows/Door.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/components/windows/WindowContainer.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/windows/WindowContainer.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/components/windows/WindowFour.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/windows/WindowFour.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/components/windows/WindowOne.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/windows/WindowOne.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/components/windows/WindowThree.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/windows/WindowThree.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/components/windows/WindowTwo.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/windows/WindowTwo.svelte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/+page.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/+page.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,7 +159,7 @@
       <workItem from="1725817540127" duration="598000" />
       <workItem from="1726179242705" duration="599000" />
       <workItem from="1733514446212" duration="3838000" />
-      <workItem from="1736238384714" duration="20265000" />
+      <workItem from="1736238384714" duration="24408000" />
     </task>
     <servers />
   </component>

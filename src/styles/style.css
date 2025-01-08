@@ -55,10 +55,21 @@ body {
 
     max-width: 100vw;
     overflow-x: hidden;
+    transition: background-color 0.5s ease; /* Voegt een soepele overgang toe */
 }
 
 body.no-scroll {
     overflow: hidden;
+}
+
+/* Kleur veranderen bij hover */
+body.light-red {
+    background-color: var(--redLight) !important;
+}
+
+/* Hover effect */
+.window-inner:hover ~ body {
+    background-color: var(--redLight); /* Of je kan direct de kleur zetten */
 }
 
 a {
