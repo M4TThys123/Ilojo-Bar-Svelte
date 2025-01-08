@@ -1,4 +1,4 @@
-<section class=" ">
+<section class="discover_cont">
     <nav>
         <a href="/discover" class="btn_a btn_breed">
             Discover stories

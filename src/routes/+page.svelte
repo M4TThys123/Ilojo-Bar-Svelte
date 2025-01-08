@@ -9,7 +9,6 @@
 
     let isWideScreen = false;
 
-
     // Register GSAP plugins
     onMount(() => {
         const checkScreenSize = () => {
@@ -68,7 +67,6 @@
                 '<25%'
             );
 
-        // Groter dan 992px
         if (window.innerWidth > 992) {
             scrollTL
                 .fromTo('#building-with-windows', { opacity: 0 }, { opacity: 1 }) // Start direct na de vorige animatie
@@ -76,8 +74,13 @@
         }
 
         scrollTL
-            .from('.discover_cont', { opacity: 0, zIndex: 0, scale: 0.9, rotation: -3 }, { opacity: 1, zIndex: 2, scale: 1, rotation: 0 }, '<')
             .from('.see_model_cont', { translateX: '100%', opacity: 0 }, '<')
+            .from(
+                '.discover_cont',
+                { opacity: 0, zIndex: 0, scale: 0.9, rotation: -3 },
+                { opacity: 1, zIndex: 2, scale: 1, rotation: 0 },
+                '+=4.5' // Vertraging van 0.5 seconden
+            )
             .addLabel('end');
 
         const btn = document.querySelector('.scroll_btn');
