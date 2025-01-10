@@ -386,12 +386,16 @@
         transition: color .5s;
         color: var(--dark);
         text-decoration: none;
-        font-size: 1.3em;
+        font-size: 1.4em;
         width: fit-content;
         display: flex;
         gap: 0.1em;
         flex-direction: column;
         transition: transform 1s ease, color .3s ease;
+    }
+
+    .nav-link .nav-text {
+        font-family: 'Black-Ground', sans-serif !important;
     }
 
     .nav-link::before {
@@ -461,7 +465,7 @@
     @media (width >= 992px) {
         .nav-text {
             color: var(--light);
-            font-size: 19px;
+            font-size: 24px;
         }
 
         .has-children .nav-text__container {
