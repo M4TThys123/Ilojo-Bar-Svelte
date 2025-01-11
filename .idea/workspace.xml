@@ -5,11 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="edd92c6e-6616-46a6-b561-4b415c1a190f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/lib/components/discover/Stories.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/components/slider/Slider01.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/components/slider/Slider02.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/script/windows.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/components/Header.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/Header.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/components/slider/Slider01.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/slider/Slider01.svelte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lib/components/windows/WindowContainer.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/windows/WindowContainer.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/components/windows/WindowOne.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/windows/WindowOne.svelte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/discover/+page.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/discover/+page.svelte" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -28,7 +29,6 @@
         <option value="+page" />
         <option value="TypeScript File" />
         <option value="FrameComponent" />
-        <option value="JavaScript File" />
         <option value="PageTransition" />
         <option value="SeeModel" />
         <option value="DiscoverButton" />
@@ -41,6 +41,7 @@
         <option value="Form1" />
         <option value="Slider01" />
         <option value="Stories" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -67,7 +68,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/matthijs/Documents/Coding/Bedrijven/Ilojo Bar/Ilojo-Bar-Svelte/static/assets/images",
+    "last_opened_file_path": "/Users/matthijs/Documents/Coding/Bedrijven/Ilojo Bar/Ilojo-Bar-Svelte/src/lib/components/slider",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -80,11 +81,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/lib/components/slider" />
       <recent name="$PROJECT_DIR$/static/assets/images" />
       <recent name="$PROJECT_DIR$/src/lib/components/form" />
       <recent name="$PROJECT_DIR$/src/lib/components/windows" />
       <recent name="$PROJECT_DIR$/static/assets/images/building/window-one" />
-      <recent name="$PROJECT_DIR$/static/assets/images/building" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/static" />
@@ -159,7 +160,7 @@
       <workItem from="1725817540127" duration="598000" />
       <workItem from="1726179242705" duration="599000" />
       <workItem from="1733514446212" duration="3838000" />
-      <workItem from="1736238384714" duration="38470000" />
+      <workItem from="1736238384714" duration="48297000" />
     </task>
     <servers />
   </component>
@@ -245,6 +246,11 @@
           <line>6</line>
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="40" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/lib/components/slider/Slider02.svelte</url>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="43" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

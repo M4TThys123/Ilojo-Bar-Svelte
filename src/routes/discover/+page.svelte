@@ -1,28 +1,28 @@
 <script lang="ts">
-    import Stories from "$lib/components/discover/Stories.svelte";
-    import Slider01 from "$lib/components/slider/Slider01.svelte";
+    import Slider02 from "$lib/components/slider/Slider02.svelte";
 
     export let stories: { title: string, id: number, thumbnail: { url: string } }[] = [];
     console.log(stories)
 
     export let data
     console.log(data.stories)
+    import { windows } from '$lib/script/windows.js'
+    console.log(windows)
 </script>
 
 <svelte:head>
     <title>Ilojo Bar - Discover</title>
 </svelte:head>
 
-<section class="discover-wrapper">
+<section class="discover-wrapper page">
     <div class="discover">
+        <div class="text-center">
+            <h1>Discover stories</h1>
+        </div>
 
-    <div class="discover-header">
-        <h2>Discover stories</h2>
 
-    </div>
+    <Slider02/>
 
-    <Slider01 data={data}/>
-    <!--    <Stories data={data}/>-->
     </div>
 
 </section>
@@ -30,6 +30,7 @@
 <style>
     discover-wrapper {
         padding: .8em 1.9em;
+        height: 80vh;
     }
 
 

@@ -1,31 +1,43 @@
 <script>
-    export let data
+    import { windows } from '$lib/script/windows.js'
+    import WindowOne  from "$lib/components/windows/WindowOne.svelte";
+    import WindowTwo  from "$lib/components/windows/WindowTwo.svelte";
+    import WindowThree  from "$lib/components/windows/WindowThree.svelte";
+    import WindowFour  from "$lib/components/windows/WindowFour.svelte";
+    import Door  from "$lib/components/windows/Door.svelte";
+
 </script>
 
 <ol class="storiesList">
-    {#each data.stories as story}
+    {#each windows as window}
         <li class="in-view">
-            <div class="window_wrap">
-                <div class="window_img_cont">
-                    <div class="window_img_inner">
-                        <img    src={story.thumbnail.url}
-                                alt={story.title}
-                                loading="lazy"
-                                width="350px"
-                                height="300px">
-                    </div>
-                </div>
-                    <img class="window door window_L" srcset="/images/window_L.webp" src="/images/window_L.png" alt="window left side Ilojo bar" width="354px" height="525px" draggable="false" />
-                    <img class="window door window_R" srcset="/images/window_R.webp" src="/images/window_R.png" alt="window right side Ilojo bar" width="354px" height="525px" draggable="false"/>
-                    <img class="window window_bg" srcset="/images/window_bg.webp" src="/images/window_bg.png" alt="window Ilojo bar" width="354px" height="525px" draggable="false" />
+            <div    class="window-wrapper"
+                    class:window-small={window.component == 'WindowOne' || window.component == 'WindowThree'}
+                    class:window-large={window.component == 'WindowTwo' || window.component == 'WindowFour'}
+                    class:door={window.component == 'Door'}>
+                {#if window.component == 'WindowOne'}
+                    <WindowOne link={window.link} image={window.image} />
+                {:else if window.component == 'WindowTwo'}
+                    <WindowTwo link={window.link} image={window.image} />
+                {:else if window.component == 'WindowThree'}
+                    <WindowThree link={window.link} image={window.image} />
+                {:else if window.component == 'WindowFour'}
+                    <WindowFour link={window.link} image={window.image} />
+                {:else if window.component == 'Door'}
+                    <Door link={window.link} image={window.image} />
+                {:else}
+                    <p>Unknown component type: {window.component}</p>
+                {/if}
             </div>
 
-            <h3>
-                {story.title}
-            </h3>
-            <a href="<%- story.url %>" aria-label="<%- story.title %>" class="btn_a">
-                Discover
-            </a>
+            <div  class="window-wrapper__text">
+                <h3>
+                    {window.text}
+                </h3>
+                <a href={window.link} aria-label={window.text} class="btn_a">
+                    Discover
+                </a>
+            </div>
         </li>
     {/each}
 </ol>
@@ -34,20 +46,49 @@
      ol {
         padding: 0;
         margin: 0;
-        margin-top: 1em;
+        padding-left: 3em !important;
+        margin-top: 3em;
         list-style: none;
         display: flex;
         overflow-x: scroll;
         /*scroll-snap-type: x mandatory;*/
         width: 100%;
-        height: 100%;
+         height: 600px;
         -ms-overflow-style: none;
         scrollbar-width: none;
-        gap: .5em;
+        gap: 5.5em;
         padding: 0 1.5em;
         transition: all 0.2s;
         cursor: grab;
     }
+     .window-wrapper{
+         margin-top: 165px;
+     }
+
+     .window-small{
+         width: 226px;
+         height: 186px;
+     }
+
+     .window-large{
+         width: 246px;
+         height: 186px;
+     }
+
+     .door{
+         width: 250px;
+         height: 288px;
+     }
+
+     .in-view{
+        position: relative;
+     }
+     .window-wrapper__text{
+         position: absolute;
+         bottom: 0;
+         text-align: center;
+         width: 100%;
+     }
 
     .discover ol:active {
         cursor:grabbing;
@@ -59,7 +100,6 @@
 
     .discover li {
         scroll-snap-align: center;
-        height: 100%;
         display: flex;
         color: var(--light);
         flex-direction: column;
@@ -67,14 +107,6 @@
         position: relative;
         padding-top: .5em;
     }
-
-    .discover li .window_wrap {
-        height: 60vh;
-        position: relative;
-        display: flex;
-        justify-content: center;
-    }
-
 
     .discover li img {
         object-fit: contain;

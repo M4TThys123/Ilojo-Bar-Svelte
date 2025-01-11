@@ -1,7 +1,6 @@
 <script>
     export let link;
     export let image;
-
     let isHovered = false;
 
     const handleMouseEnter = () => {
