@@ -10,7 +10,7 @@
     /* Discover button section */
     .discover_cont {
         position: fixed;
-        bottom: 1.5em;
+        bottom: 1em;
         width: 100%;
         display: flex;
         align-items: center;
@@ -42,15 +42,9 @@
     /* SM (for tablets - screens ≥ than 768px wide) */
     @media (width >= 768px) {
         .discover_cont {
-            bottom: 3em;
+            bottom: 1.5em;
         }
     }
 
-    /* LG (for laptops and desktops - screens ≥ than 1200px wide) */
-    @media (width >= 1200px) {
-        .discover_cont {
-            bottom: 4em;
-        }
-    }
 
 </style>

@@ -123,10 +123,10 @@
                  width="1772px" height="1772px">
         </picture>
 
-        <div class="window-component__wrapper">
-            <div class="window-component__inner">
-            </div>
-        </div>
+<!--        <div class="window-component__wrapper">-->
+<!--            <div class="window-component__inner">-->
+<!--            </div>-->
+<!--        </div>-->
     </div>
 </section>
 
@@ -136,9 +136,9 @@
 
 <DiscoverButton />
 
-<!--    <div hidden={!isWideScreen} class="window-wrapper">-->
-<!--        <WindowContainer />-->
-<!--    </div>-->
+    <div hidden={!isWideScreen} class="window-wrapper">
+        <WindowContainer />
+    </div>
 
 
 <style>
