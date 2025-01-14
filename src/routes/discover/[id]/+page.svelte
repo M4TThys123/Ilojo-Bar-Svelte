@@ -124,15 +124,15 @@
 
     :global(.story__content img) {
         /*object-fit: fill;*/
-        border-radius: 15px;
         width: 100%;
         height: auto;
         margin-bottom: 1em;
         cursor: pointer;
-        transition: transform 0.3s;
+        transition: transform 0.3s, border-radius 0.3s;
     }
     :global(.story__content img:hover) {
         transform: scale(1.05);
+        border-radius: 15px;
     }
 
     :global(.video-container iframe) {

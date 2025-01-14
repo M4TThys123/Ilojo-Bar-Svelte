@@ -6,8 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="edd92c6e-6616-46a6-b561-4b415c1a190f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/components/DiscoverButton.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/DiscoverButton.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/+page.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/+page.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/discover/[id]/+page.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/discover/[id]/+page.svelte" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -158,7 +157,7 @@
       <workItem from="1726179242705" duration="599000" />
       <workItem from="1733514446212" duration="3838000" />
       <workItem from="1736238384714" duration="59374000" />
-      <workItem from="1736861233924" duration="3993000" />
+      <workItem from="1736861233924" duration="5593000" />
     </task>
     <servers />
   </component>
