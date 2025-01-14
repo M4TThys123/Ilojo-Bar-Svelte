@@ -2,15 +2,31 @@
     import {onMount} from 'svelte';
     import {goto} from '$app/navigation';
     import PaginationComponent from "$lib/components/PaginationComponent.svelte";
+    import LightBox from "$lib/components/discover/LightBox.svelte";
 
     // import type {PageData} from './$types';
     export let data;
 
+    // LightBox
+    let images = [];
+    let currentImageIndex = 0;
+    let isLightboxOpen = false;
+
+    function openLightbox(index) {
+        currentImageIndex = index;
+        isLightboxOpen = true;
+
+        console.log(currentImageIndex)
+    }
+
+    function closeLightbox() {
+        isLightboxOpen = false; // Sluit de Lightbox
+    }
+
+    // Pagination Logic
     let currentPageRoute = data.route;
     let currentPageId = data.id;
-
     let pagination = [];
-
     let hyData = data.stories;
     for (let i = 0; i < hyData.length; i++) {
         pagination.push({
@@ -18,26 +34,17 @@
             id: hyData[i].id,
         });
     }
-
-    // Find the index of the current page in the pagination array
     let currentIndex = pagination.findIndex((item) => item.id === currentPageId);
-
-    // Get the previous and next pages
     let previousIndex = currentIndex - 1 >= 0 ? currentIndex - 1 : null;
     let nextIndex = currentIndex + 1 < pagination.length ? currentIndex + 1 : null;
-
     let previousPageId = previousIndex !== null ? pagination[previousIndex].id : null;
     let nextPageId = nextIndex !== null ? pagination[nextIndex].id : null;
-
-    // Function to handle navigation to previous page
     const navigateToPrevious = () => {
         if (previousPageId !== null) {
 
             goto(`/discover/${previousPageId}`);
         }
     };
-
-    // Function to handle navigation to next page
     const navigateToNext = () => {
         if (nextPageId !== null) {
 
@@ -46,11 +53,21 @@
         }
     };
 
-
-    // Use onMount to log pagination data when the component is mounted
     onMount(() => {
-        console.log(pagination);
+        // Verzamel afbeeldingen uit de HTML content
+        const imgElements = document.querySelectorAll('.story__content img');
+        images = Array.from(imgElements).map((img, i) => ({
+            src: img.getAttribute('src'),
+            alt: img.getAttribute('alt') || `Image ${i + 1}`,
+            caption: img.getAttribute('title') || `Image ${i + 1}`,
+        }));
 
+        console.log(images)
+
+        // Voeg klikgebeurtenis toe aan afbeeldingen
+        imgElements.forEach((img, index) => {
+            img.addEventListener('click', () => openLightbox(index));
+        });
     });
 </script>
 
@@ -72,7 +89,11 @@
 
             <PaginationComponent {data}></PaginationComponent>
     </section>
-</div>
+
+    <!-- Lightbox tonen als open -->
+    {#if isLightboxOpen}
+        <LightBox {images} bind:currentImageIndex on:close={closeLightbox} />
+    {/if}</div>
 
 
 <style>
@@ -107,6 +128,11 @@
         width: 100%;
         height: auto;
         margin-bottom: 1em;
+        cursor: pointer;
+        transition: transform 0.3s;
+    }
+    :global(.story__content img:hover) {
+        transform: scale(1.05);
     }
 
     :global(.video-container iframe) {
@@ -118,6 +144,7 @@
         width: 100%;
         margin-top: 2em;
     }
+
 
     /*===============  BREAKPOINTS ===============*/
     /* MD (for small laptops - screens ≥ than 992px wide) */

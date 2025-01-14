@@ -21,9 +21,11 @@
         on:mouseenter={handleMouseEnter}
         on:mouseleave={handleMouseLeave}
 >
-    <a href={link} class="window-small">
-        <img src={image} alt="" class="window-image"/>
-    </a>
+    <nav>
+        <a href={link} class="window-small">
+            <img src={image} alt="" class="window-image"/>
+        </a>
+    </nav>
     <img class="window_L"  src="/assets/images/building/window-two/window_L.png"
          alt="window left side Ilojo bar">
     <img class="window_R"  src="/assets/images/building/window-two/window_R.png"

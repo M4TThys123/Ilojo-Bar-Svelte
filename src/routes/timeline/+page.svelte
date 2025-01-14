@@ -1,9 +1,24 @@
 <script lang="ts">
+    import LightBox from "$lib/components/discover/LightBox.svelte";
+
     export let data;
 
-    // Ensure data is available and timelines is an array
-    if (!data || !data.timelines || !Array.isArray(data.timelines)) {
-        console.error('Invalid data format');
+    let images = []; // Collect all timeline images
+    let currentImageIndex = 0; // Index of the clicked image
+    let isLightboxOpen = false; // Lightbox toggle
+
+    function openLightbox(index) {
+        currentImageIndex = index; // Set the clicked image index
+        isLightboxOpen = true; // Open the Lightbox
+    }
+
+    // Populate images array from data.timelines
+    if (data && data.timelines && Array.isArray(data.timelines)) {
+        images = data.timelines.map((timeline, index) => ({
+            src: timeline.afbeelding.url,
+            alt: `Timeline Image ${index + 1}`,
+            caption: `${timeline.titel} - ${timeline.beschrijving}`
+        }));
     }
 </script>
 
@@ -25,13 +40,15 @@
 <section class="timeline-section mt-4 mt-lg-5">
     <section class="timeline-container container">
         <section class="timeline container">
-            {#each data.timelines as { nummer, jaartal, titel, beschrijving, afbeelding }}
+            {#each data.timelines as { nummer, jaartal, titel, beschrijving, afbeelding }, index}
                 <div class="timeline-block">
                     <div class="timeline-dot"></div>
 
                     <div class="timeline-inner row align-items-center justify-content-md-between mb-5">
                         <div class="timeline-image__wrapper col-12 col-md-5 mb-3">
-                                <img class="timeline-image" src={afbeelding.url} alt="">
+                            <!-- Clickable image -->
+                            <img class="timeline-image" src={afbeelding.url} alt=""
+                                 on:click={() => openLightbox(index)} />
                         </div>
 
                         <section class="timeline-content col-12 col-md-5">
@@ -45,6 +62,12 @@
         </section>
     </section>
 </section>
+
+<!-- Lightbox integration -->
+{#if isLightboxOpen}
+    <LightBox {images} bind:currentImageIndex bind:isOpen={isLightboxOpen} />
+{/if}
+
 
 <style>
     * {
@@ -117,6 +140,15 @@
         border-width: 20px;
         border-style: solid;
         border-image: url(/assets/images/timeline/frame.png) 30 round;
+    }
+
+    .timeline-image {
+        cursor: pointer;
+        transition: transform 0.2s;
+    }
+
+    .timeline-image:hover {
+        transform: scale(1.05);
     }
 
 

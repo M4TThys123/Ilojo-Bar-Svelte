@@ -5,13 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="edd92c6e-6616-46a6-b561-4b415c1a190f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/lib/components/slider/Slider02.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/script/windows.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/components/discover/LightBox.svelte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/components/slider/Slider01.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/slider/Slider01.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/components/windows/WindowContainer.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/windows/WindowContainer.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/components/DiscoverButton.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/DiscoverButton.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/components/SeeModel.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/SeeModel.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/components/windows/Door.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/windows/Door.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/components/windows/WindowFour.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/windows/WindowFour.svelte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lib/components/windows/WindowOne.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/windows/WindowOne.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/discover/+page.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/discover/+page.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/components/windows/WindowThree.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/windows/WindowThree.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/components/windows/WindowTwo.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/windows/WindowTwo.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/script/windows.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/script/windows.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/discover/[id]/+page.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/discover/[id]/+page.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/home/+page.server.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/home/+page.svelte" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/timeline/+page.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/timeline/+page.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +50,7 @@
         <option value="Slider01" />
         <option value="Stories" />
         <option value="JavaScript File" />
+        <option value="LightBox" />
       </list>
     </option>
   </component>
@@ -160,7 +169,7 @@
       <workItem from="1725817540127" duration="598000" />
       <workItem from="1726179242705" duration="599000" />
       <workItem from="1733514446212" duration="3838000" />
-      <workItem from="1736238384714" duration="48297000" />
+      <workItem from="1736238384714" duration="59374000" />
     </task>
     <servers />
   </component>
@@ -191,7 +200,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/routes/timeline/+page.svelte</url>
-          <line>17</line>
+          <line>32</line>
           <option name="timeStamp" value="22" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
@@ -210,7 +219,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/routes/timeline/+page.svelte</url>
-          <line>48</line>
+          <line>71</line>
           <option name="timeStamp" value="27" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">

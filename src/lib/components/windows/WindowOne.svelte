@@ -19,13 +19,15 @@
         on:mouseenter={handleMouseEnter}
         on:mouseleave={handleMouseLeave}
 >
-    <a href={link} class="window-small">
-        <img
-                src={image}
-                alt="Window small image"
-                class="window-image"
-        />
-    </a>
+    <nav>
+        <a href={link} class="window-small">
+            <img
+                    src={image}
+                    alt="Window small image"
+                    class="window-image"
+            />
+        </a>
+    </nav>
     <img
             class="window_L"
             src="/assets/images/building/window-one/window_L.png"
@@ -52,6 +54,7 @@
         width: 100%;
         height: 100%;
     }
+
 
     .window-inner::before {
         content: "";

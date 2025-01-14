@@ -21,7 +21,7 @@
 
     .btn_a {
         font-family: 'Black-Ground', sans-serif !important;
-        background-image: url(/assets/images/button_bg_light.webp);
+        background-image: url(/assets/images/button_bg_light.png);
         background-position: center;
         background-size: contain;
         background-repeat: no-repeat;
