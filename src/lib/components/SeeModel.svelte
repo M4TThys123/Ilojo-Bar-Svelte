@@ -64,7 +64,7 @@
         padding: 1.6em;
     }
 
-    @media (width < 400px) {
+    @media (width < 750px) {
         .see_model_cont{
             display: none;
         }

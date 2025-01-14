@@ -118,6 +118,7 @@
                 aria-controls="navbarNav"
                 aria-expanded="false"
                 aria-label="Toggle navigation"
+                style="padding: 0"
         >
             <HamburgerButton {isBlur} {isNavOpen}></HamburgerButton>
         </button>

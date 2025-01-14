@@ -70,7 +70,7 @@
         if (window.innerWidth > 992) {
             scrollTL
                 .fromTo('#building-with-windows', { opacity: 0 }, { opacity: 1 }) // Start direct na de vorige animatie
-                .fromTo('.color_building', { opacity: 1 }, { opacity: 0 }, '+=25%');
+                // .fromTo('.color_building', { opacity: 1 }, { opacity: 0 }, '+=25%');
         }
 
         scrollTL
@@ -122,6 +122,11 @@
             <img id="overlay" src="/assets/images/ilojo_bar_bw_3.png" alt="Ilojo bar old with environment"
                  width="1772px" height="1772px">
         </picture>
+
+        <div class="window-component__wrapper">
+            <div class="window-component__inner">
+            </div>
+        </div>
     </div>
 </section>
 
@@ -131,9 +136,9 @@
 
 <DiscoverButton />
 
-    <div hidden={!isWideScreen} class="window-wrapper">
-        <WindowContainer />
-    </div>
+<!--    <div hidden={!isWideScreen} class="window-wrapper">-->
+<!--        <WindowContainer />-->
+<!--    </div>-->
 
 
 <style>
@@ -148,8 +153,9 @@
     }
 
     .scroll_cont {
-        transform: scale(1.40);
-        transform-origin: 76% 50%;
+        position: relative;
+        transform: scale(1.20);
+        transform-origin: 76% 20%;
         height: 100%;
     }
 
@@ -161,6 +167,32 @@
         display: block;
         position: absolute;
     }
+
+    .window-component__wrapper{
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+
+    .window-component__inner{
+        position: absolute;
+        height: 20.1%;
+        width: 36.4%;
+        top: 41.7%;
+        left: 44.8%;
+        background: black;
+        opacity: .5;
+    }
+
+    /*.window-component__wrapper{*/
+    /*    position: absolute;*/
+    /*    height: 36.48%;*/
+    /*    width: 35.5%;*/
+    /*    top: 35%;*/
+    /*    left: 44.8%;*/
+    /*    background: black;*/
+    /*    opacity: .5;*/
+    /*}*/
 
     #overlay {
         transform-origin: 80% 50%;
@@ -181,17 +213,33 @@
         padding: 13.8% 23% 13.8% 20%;
     }
 
-    @media (width >= 378px) {
+        @media (width >= 360px) {
         .scroll_cont {
-            transform: scale(1.25);
-            transform-origin: 74% 50%;
+            transform-origin: 86% 20%;
         }
     }
 
+    @media (width >= 378px) {
+        .scroll_cont {
+            transform: scale(1.25) ;
+            transform-origin: 74% 20%;
+        }
+    }
+    @media (width >= 420px) {
+        .scroll_cont {
+            transform-origin: 91% 20%;
+        }
+    }
+    @media (width >= 700px) {
+        .scroll_cont {
+            transform: scale(1.45) ;
+            transform-origin: 95% 30%;
+        }}
+
     @media (width >= 992px) {
         .scroll_cont {
-            transform: scale(1.6);
-            transform-origin: 86% 50%;
+            transform: scale(1.6) ;
+            transform-origin: 86% 40%;
         }
     }
 </style>
